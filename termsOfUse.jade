@@ -1,0 +1,92 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner.jpg");')
+                    .container
+                        h2 Hello. How can Cambodia help you?
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Terms Of Use
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='contactUs.html')
+                                        span Contact us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='aboutUs.html')
+                                        span About us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='faq.html')
+                                        span FAQ
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='policy.html')
+                                        span Privacy Policy
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='termsOfUse.html')
+                                        span Terms of Use
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                            .layoutInfo__cont
+                                .termsOfUse
+                                    h3.mb15 Terms Of Use
+                                    p Conditions of website use
+                                    p By accessing and using our website for any purpose of searching, referencing or booking, you acknowledge that you’re fully understanding and accepting, as well as agreeing not to violate our Terms and Conditions.
+                                    p You’re strongly recommended to read the following terms and conditions carefully before purchasing our products. If you do not agree to any of it please leave our website immediately.
+                                    p Please also be noted that we reserves the right to cancel or terminate any booking if it’s in such case: • (i) required by law. • (ii) payment is not made in time. • (iii) ticket availability issues. • (iv) system errors or any technical problems that may cause us in processing customer’s request.
+                                    p - Acting as a travel agency, ticketing fee should be collected per passenger on each flight and ticket price is not the same with other websites.
+                                    p - All information on this site is conducted and belongs to www.philippineairfare.com, which should not be used, copied, changed or modified by any individual or organization. Failing of this condition shall be involved to law.
+                                    p I. Baggage
+                                    p 1. Free Baggage allowance
+                                    p The free of charge Baggage must be subject to the conditions and limitations of Philippines Airlines and Our Regulations and are detailed in our baggage page.
+                                    p 2. Excess Baggage
+                                    p You will be required to pay a charge for carriage of Baggage in excess of the free Baggage allowance. The payment terms are shown in Our Regulations and may be founded in our baggage page.
+                                    p 3. Items unacceptable as Baggage
+                                    p You must not include in your Baggage: money, jewelry, precious metals, silver ware, negotiable papers, securities, or other valuables (cameras, electronic devices), business documents, passports and other identification documents or samples in their check-in baggage.
+                                    p You must not bring dangerous goods such as: corrosives battery, gases/LPG/Camp Stove, flammable liquids paint, radioactive materials, infectious substances blood, lighters, matches, explosives, fireworks, organic peroxides bleach, firearms, stunning devices, sharp objects, worker’s tools, blunt instruments…
+                                    p 4. Right to refuse carriage
+                                    p The airlines may refuse to carry as Baggage the items described in Article 3, and they may refuse further carriage of any such items upon discovery that it is included in your Baggage. Unless advance arrangements for its carriage have been made with us, we may carry on later flights Baggage, which is in excess of the applicable free allowance. The airlines may refuse to accept Baggage as Checked Baggage unless it is properly and securely packed in suitcases and suitable containers to ensure safe carriage with ordinary care in handling.
+                                    p For code-shared flights or connecting flights, the airlines shall not check through Baggage for other code-shared carriers where they do not have an interline agreement with them. Therefore, please check in advance with us or other carrier if they have an agreement with the Philippines Airlines to know if your baggage can be checked through. If there’s no agreement between both airlines, you are responsible for clearing your Baggage and having it checked-in and re-tagged for the next flight. In this case, the airlines are not liable for any Damage to you and to your Baggage. For further supports, kindly contact the carrier.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

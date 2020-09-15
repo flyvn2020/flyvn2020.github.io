@@ -1,0 +1,1286 @@
+- var page = "index1";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.flightCheap
+                .homeBanner
+                    .homeBanner__img
+                        img(src='images/cheapBanner.jpg')
+                    .container
+                        h1 Find cheap flights to Bangkok
+                        .searchBox
+                            ul.searchBox__tab
+                                li.active(data-tab='tab-1')
+                                    button(type='button')
+                                        svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='#662F8E')
+                                        span book your trip
+                                        svg.svgArrow(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589966 10.58L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.58Z', fill='#662F8E')
+                            #tab-1.searchBox__item.open
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__trip
+                                    .searchBox__radio
+                                        .radio
+                                            input#fl1(type='radio', name='fl' checked='')
+                                            label(for='fl1') Round Trip
+                                        .radio
+                                            input#fl2(type='radio', name='fl')
+                                            label(for='fl2') One Way
+
+                                        .radio
+                                            input#fl3(type='radio', name='fl')
+                                            label(for='fl3') Multi - Cities
+                                    .noMulti
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                                .suggestPlace.suggestPlace_little
+                                                    .suggestPlace__group
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                            .t-datepicker
+                                                .t-datepicker__item
+                                                    label Depart
+                                                    .t-check-in
+                                                .t-datepicker__item#return
+                                                    label Return
+                                                    .t-check-out
+                                            .form-group.w19
+                                                label
+                                                    | Adults&nbsp;
+                                                    i (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Children&nbsp;
+                                                    i (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Infants&nbsp;
+                                                    i (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                                    .multi.hidden
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Tp Ho Chi Minh')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Danang')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        button.searchBox__add(type='button')
+                                            svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M14 10H10V14H8V10H4V8H8V4H10V8H14V10ZM16 0H2C0.89 0 0 0.89 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 0.89 17.1 0 16 0Z', fill='#F79320')
+                                            span ADD ANOTHER FLIGHT
+                                        .searchBox__form
+                                            .form-group.w19
+                                                label
+                                                    | Adults&nbsp;
+                                                    i (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Children&nbsp;
+                                                    i (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Infants&nbsp;
+                                                    i (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                .cheapBox
+                    .container
+                        ul.breadcrumb
+                            li
+                                a(href='index.html') Home
+                            li
+                                a(href='fligthCheap.html') Cheap Flights
+                            li.active Cheap Flights To Bangkok
+                        h2.mb30.text-center CHEAP FLIGHTS TO BANGKOK
+                        .row
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-jetstar.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-jetstar.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                            .col-6
+                                .cheapBox__desktop
+                                    .cheapBox__item
+                                        .cheapBox__left
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            p.cheapBox__way One Way
+                                            .textTrip
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .d-svg
+                                                    svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                .d-block
+                                                    p.text16.colorBlack85.medium Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+                                        .cheapBox__right
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                            .cheapBox__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+
+                                .cheapBox__mobile
+                                    a.cheapBox__item(href='#')
+                                        .cheapBox__top
+                                            .cheapBox__logo
+                                                img(src='images/logo-vietjet.png')
+                                            .cheapBox__price
+                                                p.text14.colorBlack55 From
+                                                p.colorOrange.text16.medium
+                                                    span USD&nbsp;
+                                                    | 418.22
+                                        .cheapBox__bottom
+                                            p.cheapBox__way One Way
+                                                .textTrip
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Hanoi (HAN)
+                                                        p.text14.colorBlack55 Vietnam
+                                                    .d-svg
+                                                        svg(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .d-block
+                                                        p.text16.colorBlack85.medium Bangkok (BKK)
+                                                        p.text14.colorBlack55 Thailand
+
+
+                        .alert.alert_blue
+                            .alert__icon
+                            svg.svg1point5(width='22', height='22', viewBox='0 0 22 22', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M11 0C4.92545 0 0 4.92545 0 11C0 17.0746 4.92545 22 11 22C17.0746 22 22 17.0746 22 11C22 4.92545 17.0746 0 11 0ZM11 20.1339C5.9567 20.1339 1.86607 16.0433 1.86607 11C1.86607 5.9567 5.9567 1.86607 11 1.86607C16.0433 1.86607 20.1339 5.9567 20.1339 11C20.1339 16.0433 16.0433 20.1339 11 20.1339Z', fill='#1890FF')
+                                path(d='M9.82129 6.67857C9.82129 6.99115 9.94546 7.29092 10.1665 7.51195C10.3875 7.73297 10.6873 7.85714 10.9999 7.85714C11.3124 7.85714 11.6122 7.73297 11.8332 7.51195C12.0543 7.29092 12.1784 6.99115 12.1784 6.67857C12.1784 6.36599 12.0543 6.06622 11.8332 5.8452C11.6122 5.62417 11.3124 5.5 10.9999 5.5C10.6873 5.5 10.3875 5.62417 10.1665 5.8452C9.94546 6.06622 9.82129 6.36599 9.82129 6.67857ZM11.5891 9.42857H10.4106C10.3025 9.42857 10.2141 9.51696 10.2141 9.625V16.3036C10.2141 16.4116 10.3025 16.5 10.4106 16.5H11.5891C11.6972 16.5 11.7856 16.4116 11.7856 16.3036V9.625C11.7856 9.51696 11.6972 9.42857 11.5891 9.42857Z', fill='#1890FF')
+                            .alert__text
+                                p Prices shown are for 1 adult ticket including taxes & fees.(As ticket fares can change frequently, these advertised prices are for reference only. The actual prices will be shown at time of booking.)
+                .cheapFaq
+                    .container
+                        h2.mb30.text-center FLIGHTS TO BANGKOK’S FAQ
+                        .faq
+                            .faq__item
+                                button.faq__btn
+                                    span 1. What is the average flight ticket price from Hanoi to Bangkok?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p The average ticket price to is VND4,766,534 . Please use this price as a reference only.
+                            .faq__item
+                                button.faq__btn
+                                    span 2. The most popular month to visit Bangkok from Hanoi?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 3. The least popular month to visit Bangkok from Hanoi?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 4. Major airports in Bangkok?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                            .faq__item
+                                button.faq__btn
+                                    span 5. Popular Airlines that fly to Bangkok?
+                                    i.fas.fa-plus
+                                .faq__body
+                                    .faq__cont
+                                        p If the schedule change or cancellation affects your connecting flight, please approach our ground staff for support.
+                .cheapSchedules
+                    .container
+                        h2.mb30.text-center FLIGHTS TO BANGKOK’S SCHEDULES
+                        .cheapSchedules__desktop
+                            table.table.table-flight
+                                thead
+                                    tr
+                                        th FLIGHT INFO
+                                        th
+                                            | DEPARTURE
+                                            button(type='button')
+                                                svg.svg1(width='10', height='12', viewBox='0 0 10 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M5 0L0 5H10L5 0ZM0 7L5 12L10 7H0Z', fill='white')
+
+                                        th &nbsp;
+                                        th
+                                            | ARRIVAL
+                                            button(type='button')
+                                                svg.svg1(width='10', height='12', viewBox='0 0 10 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M5 0L0 5H10L5 0ZM0 7L5 12L10 7H0Z', fill='white')
+                                        th WEEKLY SCHEDULES
+                                        th &nbsp;
+                                tbody
+                                    tr
+                                        td
+                                            .cheapSchedules__logo
+                                                img(src='images/logo-vietjet.png')
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 04:50 am
+                                                p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                p.text14.colorBlack55 Vietnam
+                                        td
+                                            .cheapSchedules__numb
+                                                p.text14.colorBlack55 VJ 888
+                                                svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 10:20 am
+                                                p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                p.text14.colorBlack55 Thailand
+                                        td
+                                            .cheapSchedules__weekly
+                                                span S
+                                                span M
+                                                span T
+                                                span W
+                                                span T
+                                                span S
+                                                span S
+                                        td
+                                            .cheapSchedules__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+                                    tr
+                                        td
+                                            .cheapSchedules__logo
+                                                img(src='images/logo-vietjet.png')
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 04:50 am
+                                                p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                p.text14.colorBlack55 Vietnam
+                                        td
+                                            .cheapSchedules__numb
+                                                p.text14.colorBlack55 VJ 888
+                                                svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 10:20 am
+                                                p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                p.text14.colorBlack55 Thailand
+                                        td
+                                            .cheapSchedules__weekly
+                                                span S
+                                                span M
+                                                span T
+                                                span W
+                                                span T
+                                                span S
+                                                span S
+                                        td
+                                            .cheapSchedules__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+                                    tr
+                                        td
+                                            .cheapSchedules__logo
+                                                img(src='images/logo-vietjet.png')
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 04:50 am
+                                                p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                p.text14.colorBlack55 Vietnam
+                                        td
+                                            .cheapSchedules__numb
+                                                p.text14.colorBlack55 VJ 888
+                                                svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 10:20 am
+                                                p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                p.text14.colorBlack55 Thailand
+                                        td
+                                            .cheapSchedules__weekly
+                                                span S
+                                                span M
+                                                span T
+                                                span W
+                                                span T
+                                                span S
+                                                span S
+                                        td
+                                            .cheapSchedules__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+                                    tr
+                                        td
+                                            .cheapSchedules__logo
+                                                img(src='images/logo-vietjet.png')
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 04:50 am
+                                                p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                p.text14.colorBlack55 Vietnam
+                                        td
+                                            .cheapSchedules__numb
+                                                p.text14.colorBlack55 VJ 888
+                                                svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 10:20 am
+                                                p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                p.text14.colorBlack55 Thailand
+                                        td
+                                            .cheapSchedules__weekly
+                                                span S
+                                                span M
+                                                span T
+                                                span W
+                                                span T
+                                                span S
+                                                span S
+                                        td
+                                            .cheapSchedules__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+                                    tr
+                                        td
+                                            .cheapSchedules__logo
+                                                img(src='images/logo-vietjet.png')
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 04:50 am
+                                                p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                p.text14.colorBlack55 Vietnam
+                                        td
+                                            .cheapSchedules__numb
+                                                p.text14.colorBlack55 VJ 888
+                                                svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+
+                                        td
+                                            .cheapSchedules__text
+                                                p.text16.medium.colorBlack85.mb5 10:20 am
+                                                p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                p.text14.colorBlack55 Thailand
+                                        td
+                                            .cheapSchedules__weekly
+                                                span S
+                                                span M
+                                                span T
+                                                span W
+                                                span T
+                                                span S
+                                                span S
+                                        td
+                                            .cheapSchedules__btn
+                                                a.btn.btn-orange-1(href='#') SEARCH
+                        .flightSchedules__mobile
+                            table.table.table-flight-mobile
+                                thead
+                                    tr
+                                        th
+                                            | DEPART
+                                            button(type='button')
+                                                svg.svg1(width='10', height='12', viewBox='0 0 10 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M5 0L0 5H10L5 0ZM0 7L5 12L10 7H0Z', fill='white')
+                                        th
+                                            | ARRIVE
+                                            button(type='button')
+                                                svg.svg1(width='10', height='12', viewBox='0 0 10 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M5 0L0 5H10L5 0ZM0 7L5 12L10 7H0Z', fill='white')
+                                tbody
+                                    tr
+                                        td(colspan=2)
+                                            .cheapSchedules__item
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 04:50 am
+                                                    p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .cheapSchedules__info
+                                                    .cheapSchedules__numb
+                                                        p.text14.colorBlack55 VJ 888
+                                                        svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .cheapSchedules__logo
+                                                        img(src='images/logo-vietjet.png')
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 10:20 am
+                                                    p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+
+                                            .cheapSchedules__item
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 04:50 am
+                                                    p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .cheapSchedules__info
+                                                    .cheapSchedules__numb
+                                                        p.text14.colorBlack55 VJ 888
+                                                        svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .cheapSchedules__logo
+                                                        img(src='images/logo-vietjet.png')
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 10:20 am
+                                                    p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+
+                                            .cheapSchedules__item
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 04:50 am
+                                                    p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .cheapSchedules__info
+                                                    .cheapSchedules__numb
+                                                        p.text14.colorBlack55 VJ 888
+                                                        svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .cheapSchedules__logo
+                                                        img(src='images/logo-vietjet.png')
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 10:20 am
+                                                    p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+
+                                            .cheapSchedules__item
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 04:50 am
+                                                    p.text16.medium.colorBlack85.mb5 Hanoi (HAN)
+                                                    p.text14.colorBlack55 Vietnam
+                                                .cheapSchedules__info
+                                                    .cheapSchedules__numb
+                                                        p.text14.colorBlack55 VJ 888
+                                                        svg.svg1(width='19', height='8', viewBox='0 0 19 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M19 4L15 0V3H0V5H15V8L19 4Z', fill='black', fill-opacity='0.35')
+                                                    .cheapSchedules__logo
+                                                        img(src='images/logo-vietjet.png')
+                                                .cheapSchedules__text
+                                                    p.text16.medium.colorBlack85.mb5 10:20 am
+                                                    p.text16.medium.colorBlack85.mb5 Bangkok (BKK)
+                                                    p.text14.colorBlack55 Thailand
+
+                .cheapOther
+                    .container
+                        h2.mb30.text-center FLIGHTS TO ORTHER CITIES IN THAILAND
+                        .row
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+                            .col-4
+                                a.cheapOther__item(href='#')
+                                    .cheapOther__img
+                                        img(src='images/cheapOther-img.jpg')
+                                    .cheapOther__cont
+                                        .cheapOther__info
+                                            p.text14.colorBlack55 FLIGHT TO
+                                            p.text14.medium.colorBlack85 Hanoi
+                                        .cheapOther__price
+                                            p.text14.colorBlack55 From
+                                            p.colorOrange.text16.medium
+                                                span USD&nbsp;
+                                                | 418.22
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+
+        script.
+            // searchBox
+            if (screen.width < 768) {
+                $('.searchBox__item').removeClass('open');
+                $('.searchBox__tab li').removeClass('active');
+            };
+            $(".searchBox__tab button").click(function () {
+                var tab_id = $(this).parents('.searchBox__tab li').attr('data-tab');
+
+                $('.searchBox__tab li').removeClass('active');
+                $(this).parents('.searchBox__tab li').addClass('active');
+                $('.searchBox__item').removeClass('open');
+                $("#" + tab_id).addClass('open');
+            });
+
+            $(".searchBox__close button").click(function () {
+                $('.searchBox__tab li').removeClass('active');
+                $('.searchBox__item').removeClass('open');
+            });
+            $(".inputSvg .form-control").click(function () {
+                $(this).parents('.form-group').find('.suggestPlace').addClass('open');
+            });
+            $(document).mouseup(function (e) {
+                var suggestPlace = $('.suggestPlace');
+                if (!suggestPlace.is(e.target) && suggestPlace.has(e.target).length === 0) {
+                    $('.suggestPlace').removeClass('open');
+                }
+                ;
+            });
+            $(".btnPromotion").click(function () {
+                $('.searchBox__promotion').addClass('show');
+                $(this).addClass('hidden');
+            });
+
+            $("#fl1").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').removeClass('hidden');
+            });
+            $("#fl2").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').addClass('hidden');
+            });
+            $("#fl3").click(function () {
+                $('.noMulti').addClass('hidden');
+                $('.multi').removeClass('hidden');
+            });
+            $("#r1").click(function () {
+                $('.route').removeClass('hidden');
+                $('.flightNumber').addClass('hidden');
+            });
+            $("#r2").click(function () {
+                $('.route').addClass('hidden');
+                $('.flightNumber').removeClass('hidden');
+            });
+        script.
+            $(".faq__btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this)
+                        .siblings(".faq__body")
+                        .slideUp(200);
+                    $(".faq__btn i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                } else {
+                    $(".faq__btn i")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                    $(this)
+                        .find("i")
+                        .removeClass("fa-plus")
+                        .addClass("fa-minus");
+                    $(".faq__btn").removeClass("active");
+                    $(this).addClass("active");
+                    $(".faq__body").slideUp(200);
+                    $(this)
+                        .siblings(".faq__body")
+                        .slideDown(200);
+                }
+            });
+
+
+
+

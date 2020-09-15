@@ -1,0 +1,236 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner1.jpg");')
+                    .container
+                        h2 Manage Booking
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Manage Booking
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='bookingStatus.html')
+                                        span Booking status
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='refundRequest.html')
+                                        span Refund request
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='fareRules.html')
+                                        span Fare rules
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='bookingChange.html')
+                                        span Booking change
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                            .layoutInfo__cont
+                                .fareRules
+                                    h3.mb15 Fare Rules
+                                    .fareRules__cont
+                                        p Depending our the fare type, you may request to cancel or change your current ticket to other travel date or flight title with same ticket class or higher classes (not allowed downing grade to lower classes) and charges (change/refund fee + different fee between two flights - if available) should be applied. Different ticket classes and different flight types (domestic and international) will have different charge policies as follows:
+                                        p.medium Domestic Flights
+                                        .fareRules__table
+                                            table.table.table-purple
+                                                thead
+                                                    tr
+                                                        th(rowspan='2' colspan='1') Class
+                                                        th(colspan='2') Changes
+                                                        th(colspan='2') Cancellation
+                                                        th(rowspan='2' colspan='1') No-show
+                                                    tr
+                                                        th Before
+                                                        th On/ After
+                                                        th Before
+                                                        th On/ After
+                                                tbody
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Promotion
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Not permitted
+                                                        td
+                                                            p.colorBlack85 Not permitted
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Saver
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Freedom
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Blue Ribbon
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                        p.medium International Flights
+                                        .fareRules__table
+                                            table.table.table-purple
+                                                thead
+                                                    tr
+                                                        th(rowspan='2' colspan='1') Class
+                                                        th(colspan='2') Changes
+                                                        th(colspan='2') Cancellation
+                                                        th(rowspan='2' colspan='1') No-show
+                                                    tr
+                                                        th Before
+                                                        th On/ After
+                                                        th Before
+                                                        th On/ After
+                                                tbody
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Promotion
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Not permitted
+                                                        td
+                                                            p.colorBlack85 Not permitted
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Saver
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Web Freedom
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                                    tr
+                                                        td
+                                                            p.medium.colorBlack85 Blue Ribbon
+                                                        td
+                                                            p.colorBlack85.mb5 Permitted with fee
+                                                            p.colorBlack85 Different fee applied
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85 Permitted with fee
+                                                        td
+                                                            p.colorBlack85.italic No-Show fee (USD85) should be applied for requests come after flight date.
+
+
+                                        p.medium Changes
+                                        p 1. Name change: Not permitted. Please go to refund process instead.
+                                        p 2. Misspelling name: Must be the same person and apply the same fee as refund for promotional fares and nonrefundable fares - apply refund fee of refundable fare in the same sector.
+                                        p 3. Change fee rate depending on the route and different fee between original booking and new booking, please contact us through email support 24/7: .. ................ for support on change procedure and fee.
+                                        p.medium Cancellation
+                                        p 1. Ticketing fee is not refundable in any case.
+                                        p The cancellation fees for different routes are different. Please contact us via email support 24/7: .................. for support on cancellation fee.
+                                        p.medium Important Note:
+                                        p Combination fare between Web promotion and other classes will not be permitted for cancellation or refund.
+                                        p - Taxes and Airport fee is not refundable for web promotion class.
+                                        p - We support passengers to cancel their tickets right after issuance with charges (advised on request) and conditions applied (ticket cancellation request should be sent to us within the issued date and before 23:00 PM following Thailand Time).
+                                        p - The above general fare rules are for reference only. Specific fare rules may vary and different from the general fare rules and should be provided on request.
+                                        p - In cases of force majeure problems such as natural disasters, epidemics, etc., the above fare rules (refund/reschedule/reroute) may not be applied and must comply with the Airline's own policies during that period.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

@@ -1,0 +1,98 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner1.jpg");')
+                    .container
+                        h2 Manage Booking
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Manage Booking
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='bookingStatus.html')
+                                        span Booking status
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='refundRequest.html')
+                                        span Refund request
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='fareRules.html')
+                                        span Fare rules
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='bookingChange.html')
+                                        span Booking change
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                            .layoutInfo__cont
+                                .refundRequest
+                                    h3.mb15 Refund request
+                                    .form-group
+                                        .alert.alert_blue
+                                            .alert__icon
+                                            svg.svg1point5(width='22', height='22', viewBox='0 0 22 22', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M11 0C4.92545 0 0 4.92545 0 11C0 17.0746 4.92545 22 11 22C17.0746 22 22 17.0746 22 11C22 4.92545 17.0746 0 11 0ZM11 20.1339C5.9567 20.1339 1.86607 16.0433 1.86607 11C1.86607 5.9567 5.9567 1.86607 11 1.86607C16.0433 1.86607 20.1339 5.9567 20.1339 11C20.1339 16.0433 16.0433 20.1339 11 20.1339Z', fill='#1890FF')
+                                                path(d='M9.82129 6.67857C9.82129 6.99115 9.94546 7.29092 10.1665 7.51195C10.3875 7.73297 10.6873 7.85714 10.9999 7.85714C11.3124 7.85714 11.6122 7.73297 11.8332 7.51195C12.0543 7.29092 12.1784 6.99115 12.1784 6.67857C12.1784 6.36599 12.0543 6.06622 11.8332 5.8452C11.6122 5.62417 11.3124 5.5 10.9999 5.5C10.6873 5.5 10.3875 5.62417 10.1665 5.8452C9.94546 6.06622 9.82129 6.36599 9.82129 6.67857ZM11.5891 9.42857H10.4106C10.3025 9.42857 10.2141 9.51696 10.2141 9.625V16.3036C10.2141 16.4116 10.3025 16.5 10.4106 16.5H11.5891C11.6972 16.5 11.7856 16.4116 11.7856 16.3036V9.625C11.7856 9.51696 11.6972 9.42857 11.5891 9.42857Z', fill='#1890FF')
+                                            .alert__text
+                                                p Note: It is only accepted for bookings on our website!
+                                    .layoutInfo__form
+                                        .form-group
+                                            label Your Name
+                                            input.form-control.form-control-lg(type='text' placeholder='Your Name')
+                                        .form-group
+                                            label Your Email
+                                            input.form-control.form-control-lg(type='text' placeholder='Your Email')
+                                        .form-group
+                                            label Order Number
+                                            input.form-control.form-control-lg(type='text' placeholder='Order Number')
+                                        .form-group
+                                            label Subject
+                                            select.form-control.form-control-lg
+                                                option Refund Request
+                                                option question 1
+                                                option question 2
+                                        .form-group
+                                            label Message
+                                            textarea.form-control
+                                        .layoutInfo__btn
+                                            button.btn.btn-orange-1(type='button') SEND MESSAGE
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

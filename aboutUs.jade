@@ -1,0 +1,81 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner.jpg");')
+                    .container
+                        h2 Hello. How can Cambodia help you?
+                .layoutInfo__body
+                    .container
+                        h2.mb15 About us
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='contactUs.html')
+                                        span Contact us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='aboutUs.html')
+                                        span About us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='faq.html')
+                                        span FAQ
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='policy.html')
+                                        span Privacy Policy
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='termsOfUse.html')
+                                        span Terms of Use
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                            .layoutInfo__cont
+                                .aboutUs
+                                    h3.mb15 About us
+                                    .aboutUs__cont
+                                        img(src='images/aboutUs-img.jpg')
+                                        p.text14.mb15 Bring more travelers from all over the world to get closer to the ASEAN is our biggest dream and especially Cambodia country with different cultures waiting for your discovery, we have now created a website named as cambodiaangkora to support our beloved clients Camdobia Airlines' tickets from international to domestic flights, hotels, tours, transports and airport pick-up. This website is another son of AN group, a travel company was founded since 2019.
+                                        p.text14.mb15 We commit to provide our beloved clients all tourism services at the best fares, flexible time and unlimited supports. Our website is highly secured and protected 24/7 to ensure your safety is our first mission and your smile is our happinesss.
+                                        p.text14.mb15 Please contact us by email at booking@cambodiaangkorailines.com for any concern in regards to airlines tickets within Philippines and from/to Philippines, Hotels, Car Rental...
+                                        p.text14.mb15 Thank you for always being there with us.
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

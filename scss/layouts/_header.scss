@@ -1,0 +1,377 @@
+.header{
+  display: flex;
+  align-items: center;
+  @include breakpoint(xs){
+    background-color: $purple;
+    height: 56px;
+  }
+  @include breakpoint(sm){
+    background-color: #fff;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+    height: 4vw;
+  }
+  &.header_home{
+    @include breakpoint(sm){
+      background-color: rgba(102, 47, 142, 0.8);
+
+    }
+    .camNavbar{
+      &__nav{
+        > li{
+          > a{
+            color: #fff;
+            svg{
+              path{
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+      &__other{
+        .inputSearch{
+          .form-control{
+            @include breakpoint(sm){
+              background: transparent;
+              color: #fff;
+              border-color: #fff;
+              &::-webkit-input-placeholder {color:#fff;}
+              &::-moz-placeholder {color:#fff;}
+              &:-ms-input-placeholder {color:#fff;}
+              &:-moz-placeholder {color:#fff;}
+            }
+          }
+          svg{
+            @include breakpoint(sm){
+              path{
+                fill: #fff;
+              }
+            }
+          }
+        }
+        .langBox{
+          .dropdown-toggle{
+            svg{
+              @include breakpoint(sm){
+                path{
+                  fill: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__logo{
+        .imgMobile{
+          @include breakpoint(sm){
+            display: block;
+          }
+        }
+        .imgDesktop{
+          @include breakpoint(sm){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.logo{
+  a{
+    display: flex;
+    align-items: center;
+    img{
+      @include breakpoint(xs){
+        width: 240px;
+      }
+      @include breakpoint(sm){
+        width: 18vw;
+      }
+      &.imgDesktop{
+        @include breakpoint(xs){
+          display: none;
+        }
+      }
+      &.imgMobile{
+        @include breakpoint(sm){
+          display: none;
+        }
+      }
+    }
+  }
+}
+.camNavbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__toggle{
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__main{
+    @include breakpoint(xs){
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 99;
+      transition: all .3s ease-in-out;
+      bottom: 0;
+      visibility: hidden;
+      &.open{
+        visibility: visible;
+        .camNavbar{
+          &__body{
+            transform: none;
+            visibility: visible;
+          }
+          &__backdrop{
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @include breakpoint(sm){
+      width: calc(100% - 5vw);
+    }
+  }
+  &__body{
+    @include breakpoint(xs){
+      width: calc(100% - 80px);
+      height: 100%;
+      transition: all .3s ease-in-out;
+      background-color: $purple;
+      transform: translateX(-100%);
+      visibility: hidden;
+    }
+  }
+  &__header{
+    @include breakpoint(xs){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      height: 56px;
+      border-bottom: 1px solid #9860B9;
+    }
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__backdrop{
+    @include breakpoint(xs){
+      background-color: rgba(0,0,0,.75);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      transition: all .3s ease-in-out;
+      bottom: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__cont{
+    @include breakpoint(xs){
+      height: calc(100% - 56px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 15px;
+    }
+    @include breakpoint(sm){
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 1vw;
+    }
+  }
+  &__nav{
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
+    > li{
+      @include breakpoint(sm){
+        position: relative;
+        &:hover{
+          .camNavbar__sub{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      &.active{
+        > a{
+          color: $orange!important;
+          svg{
+            @include breakpoint(xs){
+              transform: rotate(180deg);
+            }
+            path{
+              fill: $orange!important;
+            }
+          }
+        }
+      }
+    }
+    a{
+      font-weight: 500;
+      @include breakpoint(xs){
+        font-size: 14px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #9860B9;
+      }
+      @include breakpoint(sm){
+        display: block;
+        font-size: 1vw;
+        color: #000;
+        padding: .5vw 1vw;
+        transition: all .1s;
+        &:hover{
+          color: $orange;
+          text-decoration: none;
+          svg{
+            path{
+              fill: $orange;
+            }
+          }
+        }
+      }
+      svg{
+        @include breakpoint(xs){
+          path{
+            fill: #fff;
+          }
+        }
+        @include breakpoint(sm){
+          margin-left: .5vw;
+        }
+      }
+    }
+  }
+  &__sub{
+    @include breakpoint(xs){
+      padding: 0 30px;
+      display: none;
+    }
+    @include breakpoint(sm){
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      background-color: #fff;
+      box-shadow: 0 1px 8px rgba(0,0,0,.15);
+      border-bottom: 4px solid $purple;
+      min-width: 15vw;
+      border-radius: 3px;
+      transition: all .3s;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &__other{
+    @include breakpoint(xs){
+      padding: 15px 0;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
+    .inputSearch{
+      @include breakpoint(xs){
+        padding: 15px 0;
+        .form-control{
+          background: transparent;
+          border-color: #fff;
+          color: #fff;
+          &::-webkit-input-placeholder {color:#fff;}
+          &::-moz-placeholder {color:#fff;}
+          &:-ms-input-placeholder {color:#fff;}
+          &:-moz-placeholder {color:#fff;}
+        }
+        svg{
+          path{
+            fill: #fff;
+          }
+        }
+      }
+
+    }
+  }
+}
+.langBox{
+  @include breakpoint(xs){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  @include breakpoint(sm){
+    margin-left: 2vw;
+  }
+  > p{
+    color: #fff;
+    font-weight: 500;
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  img{
+    width: 30px;
+    display: block;
+    border-radius: 2px;
+    @include breakpoint(sm){
+      width: 2vw;
+    }
+  }
+  .dropdown-toggle{
+    display: flex;
+    align-items: center;
+    &:after{
+      display: none;
+    }
+    svg{
+      @include breakpoint(xs){
+        margin-left: 5px;
+        path{
+          fill: #fff;
+        }
+      }
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+  }
+  .dropdown-menu{
+    @include breakpoint(xs){
+      min-width: 200px;
+    }
+    @include breakpoint(sm){
+      min-width: 10vw;
+    }
+  }
+  .dropdown-item{
+    display: flex;
+    align-items: center;
+    @include breakpoint(sm){
+      text-align: center;
+    }
+    span{
+      margin-left: 5px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+  }
+}

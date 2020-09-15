@@ -1,0 +1,116 @@
+.flightPayment{
+  &__body{
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 3vw 0;
+    }
+  }
+  &__box{
+    background: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 15px;
+    @include breakpoint(sm){
+      padding: 4vw;
+    }
+  }
+  &__icon{
+    text-align: center;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+    }
+  }
+  &__title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      font-size: 2vw;
+      margin-bottom: 1vw;
+    }
+  }
+  &__cont{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm){
+      width: 75%;
+      margin: 0 auto 1.5vw;
+    }
+  }
+  &__list{
+    @include breakpoint(sm){
+      display: flex;
+      justify-content: center;
+    }
+    ul{
+      list-style: disc;
+      @include breakpoint(xs){
+        padding-left: 15px;
+      }
+      li{
+        font-size: 12px;
+        color: $black55;
+        padding-bottom: 5px;
+        @include breakpoint(sm){
+          font-size: .9vw;
+          padding-bottom: .5vw;
+        }
+      }
+    }
+  }
+  &__btn{
+    text-align: center;
+    .btn{
+      width: 200px;
+      @include breakpoint(sm){
+        width: 14vw;
+      }
+    }
+  }
+  &__text{
+    text-align: center;
+  }
+  &__booking{
+    .viewMore{
+      font-weight: 500;
+      svg{
+        margin-right: 15px;
+        margin-left: 0;
+        @include breakpoint(sm){
+          margin-right: 1vw;
+        }
+      }
+    }
+  }
+  &__price{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $purple;
+    color: #fff;
+    border-radius: 150px;
+    padding: 0 15px;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0;
+    @include breakpoint(sm){
+      padding: 0 1vw;
+      margin: 1vw 0;
+      font-size: 1.1vw;
+      height: 3vw;
+    }
+  }
+  &__link{
+    p{
+      font-size: 14px;
+      color: $black55;
+      @include breakpoint(sm){
+        font-size: 1vw;
+      }
+    }
+  }
+}

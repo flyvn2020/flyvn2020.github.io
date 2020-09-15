@@ -1,0 +1,139 @@
+.footer{
+  &__top{
+    background-color: rgba(102, 47, 142, 0.6);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    @include breakpoint(xs){
+      padding: 30px 0;
+    }
+    @include breakpoint(sm){
+      padding: 3vw 0;
+    }
+  }
+  &__title{
+    font-size: 20px;
+    color: $orange;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+      font-size: 1.5vw;
+    }
+  }
+  &__list{
+    @include breakpoint(sm){
+      display: flex;
+      margin: 0 -1vw;
+    }
+    ul{
+      @include breakpoint(xs){
+        margin-bottom: 20px;
+      }
+      @include breakpoint(sm){
+        width: 25%;
+        padding: 0 1vw;
+      }
+      li{
+        @include breakpoint(only-ipad){
+          line-height: 1.1;
+        }
+        &.liTitle{
+          font-size: 16px;
+          margin-bottom: 5px;
+          color: #fff;
+          font-weight: 500;
+          @include breakpoint(sm){
+            font-size: 1.1vw;
+            margin-bottom: 1vw;
+          }
+        }
+        a{
+          font-size: 14px;
+          color: #fff;
+          @include breakpoint(sm){
+            font-size: 1vw;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__input{
+    display: flex;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+    }
+    .btn{
+      @include breakpoint(xs){
+        width: 130px;
+        margin-left: 15px;
+      }
+      @include breakpoint(sm){
+        width: 10vw;
+        margin-left: 1vw;
+      }
+    }
+  }
+  &__group{
+    @include breakpoint(sm){
+      display: flex;
+      margin: 0 -1vw;
+    }
+  }
+  &__icon{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint(sm){
+      padding: 0 1vw;
+    }
+    p{
+      font-size: 16px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 5px;
+      @include breakpoint(sm){
+        font-size: 1.1vw;
+        margin-bottom: 1vw;
+      }
+    }
+    ul{
+      display: flex;
+      li{
+        + li{
+          margin-left: 15px;
+          @include breakpoint(sm){
+            margin-left: 1vw;
+          }
+        }
+      }
+    }
+  }
+  &__bottom{
+    background-color: $purple;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: #fff;
+    @include breakpoint(sm){
+      padding: .7vw 1vw;
+      font-size: .9vw;
+    }
+  }
+  .col-8,
+  .col-4{
+    @include breakpoint(xs){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

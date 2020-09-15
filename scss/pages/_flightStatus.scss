@@ -1,0 +1,134 @@
+.flightStatus{
+  &__body{
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 3vw 0;
+    }
+  }
+  &__desktop{
+    @include breakpoint(xs){
+      display: none;
+    }
+    .table-flight{
+      th,td{
+        vertical-align: top;
+        &:nth-child(1){
+          width: 30%;
+        }
+        &:nth-child(2){
+          width: 50%;
+        }
+        &:nth-child(3){
+          width: 20%;
+        }
+      }
+    }
+  }
+  &__mobile{
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__header{
+    background-color:rgba(102, 47, 142, 0.8);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    background-blend-mode: multiply;
+    padding: 65px 0;
+    @include breakpoint(sm){
+      padding: 5vw 0;
+    }
+    h2{
+      color: #fff;
+    }
+  }
+  .statusShow{
+    display: none;
+  }
+}
+.modal-status{
+  &__cont{
+    padding: 30px 0;
+    @include breakpoint(sm){
+      padding: 2vw 0;
+    }
+    h2{
+      text-align: center;
+    }
+  }
+  .searchBox__form{
+    @include breakpoint(sm){
+      justify-content: flex-end;
+    }
+  }
+}
+.flNumber{
+  @include breakpoint(sm){
+    display: flex;
+    margin: 0 -1vw 4vw;
+  }
+  &__col{
+    @include breakpoint(sm){
+      width: 50%;
+      padding: 0 1vw;
+    }
+  }
+  &__item{
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    @include breakpoint(xs){
+      margin-bottom: 30px;
+    }
+    @include breakpoint(sm){
+      height: 100%;
+    }
+  }
+  &__header{
+    display: flex;
+  }
+  &__name{
+    background-color: $purple;
+    color: #fff;
+    width: 60%;
+    padding: 15px;
+    @include breakpoint(sm){
+      padding: 1vw;
+    }
+  }
+  &__status{
+    width: 40%;
+    background-color: #81BE33;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    @include breakpoint(sm){
+      padding: 1vw;
+    }
+    &.arrived{
+      background-color: #828282;
+    }
+  }
+  &__body{
+    padding: 15px;
+    @include breakpoint(sm){
+      padding: 0 1vw;
+    }
+    .d-row{
+      padding: 15px 0;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+      display: flex;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    .d-block{
+      width: 50%;
+    }
+  }
+}

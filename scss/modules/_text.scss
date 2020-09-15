@@ -1,0 +1,37 @@
+.textDashed{
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: $medium;
+  border-bottom: 1px dashed #000;
+  display: inline-block;
+  @include breakpoint(sm){
+    font-size: 1vw;
+  }
+}
+.textNote{
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 15px;
+  @include breakpoint(sm){
+    padding: 1vw;
+  }
+  &__icon{
+    img{
+      width: 60px;
+      @include breakpoint(sm){
+        width: 5vw;
+      }
+    }
+  }
+  &__text{
+    flex: 1;
+    padding-left: 15px;
+    @include breakpoint(sm){
+      padding-left: 1.5vw;
+    }
+  }
+}

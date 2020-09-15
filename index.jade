@@ -1,0 +1,1053 @@
+- var page = "index1";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.home
+                .homeBanner
+                    .homeBanner__img
+                        img(src='images/homeBanner.jpg')
+                    .container
+                        .searchBox
+                            ul.searchBox__tab
+                                li.active(data-tab='tab-1')
+                                    button(type='button')
+                                        svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='#662F8E')
+                                        span book your trip
+                                        svg.svgArrow(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589966 10.58L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.58Z', fill='#662F8E')
+
+                                li(data-tab='tab-2')
+                                    button(type='button')
+                                        svg.svg1point5(width='18', height='20', viewBox='0 0 18 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(fill-rule='evenodd', clip-rule='evenodd', d='M11.82 2H16C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V18C18 18.5304 17.7893 19.0391 17.4142 19.4142C17.0391 19.7893 16.5304 20 16 20H2C1.46957 20 0.960859 19.7893 0.585786 19.4142C0.210714 19.0391 0 18.5304 0 18V4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H6.18C6.6 0.84 7.7 0 9 0C10.3 0 11.4 0.84 11.82 2ZM9.70711 2.29289C9.51957 2.10536 9.26522 2 9 2C8.73478 2 8.48043 2.10536 8.29289 2.29289C8.10536 2.48043 8 2.73478 8 3C8 3.26522 8.10536 3.51957 8.29289 3.70711C8.48043 3.89464 8.73478 4 9 4C9.26522 4 9.51957 3.89464 9.70711 3.70711C9.89464 3.51957 10 3.26522 10 3C10 2.73478 9.89464 2.48043 9.70711 2.29289ZM14 12.3158V13.3684L9.78947 12.0526V14.9474L10.8421 15.7368V16.5263L9 16L7.1579 16.5263V15.7368L8.21053 14.9474V12.0526L4 13.3684V12.3158L8.21053 9.68421V6.78947C8.21053 6.58009 8.2937 6.37929 8.44176 6.23123C8.58981 6.08318 8.79062 6 9 6C9.20938 6 9.41019 6.08318 9.55824 6.23123C9.7063 6.37929 9.78947 6.58009 9.78947 6.78947V9.68421L14 12.3158Z', fill='#662F8E')
+
+                                        span booking status
+                                        svg.svgArrow(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589966 10.58L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.58Z', fill='#662F8E')
+
+                                li(data-tab='tab-3')
+                                    button(type='button')
+                                        svg.svg1point5(width='20', height='22', viewBox='0 0 20 22', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M12 12H13.5V14.82L15.94 16.23L15.19 17.53L12 15.69V12ZM16 7H2V18H6.67C6.24 17.09 6 16.07 6 15C6 13.1435 6.7375 11.363 8.05025 10.0503C9.36301 8.7375 11.1435 8 13 8C14.07 8 15.09 8.24 16 8.67V7ZM2 20C0.89 20 0 19.1 0 18V4C0 2.89 0.89 2 2 2H3V0H5V2H13V0H15V2H16C16.5304 2 17.0391 2.21071 17.4142 2.58579C17.7893 2.96086 18 3.46957 18 4V10.1C19.24 11.36 20 13.09 20 15C20 16.8565 19.2625 18.637 17.9497 19.9497C16.637 21.2625 14.8565 22 13 22C11.09 22 9.36 21.24 8.1 20H2ZM13 10.15C11.7137 10.15 10.4801 10.661 9.57053 11.5705C8.66098 12.4801 8.15 13.7137 8.15 15C8.15 17.68 10.32 19.85 13 19.85C13.6369 19.85 14.2676 19.7246 14.856 19.4808C15.4444 19.2371 15.9791 18.8798 16.4295 18.4295C16.8798 17.9791 17.2371 17.4444 17.4808 16.856C17.7246 16.2676 17.85 15.6369 17.85 15C17.85 12.32 15.68 10.15 13 10.15Z', fill='#662F8E')
+
+                                        span flight schedules
+                                        svg.svgArrow(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589966 10.58L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.58Z', fill='#662F8E')
+
+                                li(data-tab='tab-4')
+                                    button(type='button')
+                                        svg.svg1point5(width='22', height='20', viewBox='0 0 22 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M5.27 15.05C5.72 15.58 6 16.25 6 17C6 18.66 4.66 20 3 20C1.34 20 0 18.66 0 17C0 15.34 1.34 14 3 14C3.18 14 3.36 14 3.53 14.05L6.6 8.69L4.86 7.7L8.95 6.58L10.07 10.67L8.33 9.68L5.27 15.05ZM19 14C17.7 14 16.6 14.84 16.18 16H10V14L7 17L10 20V18H16.18C16.6 19.16 17.7 20 19 20C20.66 20 22 18.66 22 17C22 15.34 20.66 14 19 14ZM11 6C11.18 6 11.36 6 11.53 5.95L14.6 11.31L12.86 12.3L16.95 13.42L18.07 9.33L16.33 10.32L13.27 4.95C13.72 4.42 14 3.75 14 3C14 1.34 12.66 0 11 0C9.34 0 8 1.34 8 3C8 4.66 9.34 6 11 6Z', fill='#662F8E')
+
+                                        span flight status
+                                        svg.svgArrow(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589966 10.58L5.16997 6L0.589966 1.41L1.99997 0L7.99997 6L1.99997 12L0.589966 10.58Z', fill='#662F8E')
+
+                            #tab-1.searchBox__item.open
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__trip
+                                    .searchBox__radio
+                                        .radio
+                                            input#fl1(type='radio', name='fl' checked='')
+                                            label(for='fl1') Round Trip
+                                        .radio
+                                            input#fl2(type='radio', name='fl')
+                                            label(for='fl2') One Way
+
+                                        .radio
+                                            input#fl3(type='radio', name='fl')
+                                            label(for='fl3') Multi - Cities
+                                    .noMulti
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                                .suggestPlace.suggestPlace_little
+                                                    .suggestPlace__group
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                        .suggestPlace__col
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                            ul.suggestPlace__item
+                                                                li.liTitle Thailand
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                                                li
+                                                                    a(href='#') Bangkok (BKK)
+
+                                            .t-datepicker
+                                                .t-datepicker__item
+                                                    label Depart
+                                                    .t-check-in
+                                                .t-datepicker__item#return
+                                                    label Return
+                                                    .t-check-out
+                                            .form-group.w19
+                                                label
+                                                    | Adults&nbsp;
+                                                    i (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Children&nbsp;
+                                                    i (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Infants&nbsp;
+                                                    i (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                                    .multi.hidden
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Tp Ho Chi Minh')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        .searchBox__form.selected
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' value='Danang')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            .t-datepicker.w25
+                                                .t-datepicker__item.w100
+                                                    label Depart
+                                                    .t-check-in
+                                            .searchBox__remove
+                                                button(type='button')
+                                                    svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                    span Remove Flight
+                                        button.searchBox__add(type='button')
+                                            svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M14 10H10V14H8V10H4V8H8V4H10V8H14V10ZM16 0H2C0.89 0 0 0.89 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 0.89 17.1 0 16 0Z', fill='#F79320')
+                                            span ADD ANOTHER FLIGHT
+                                        .searchBox__form
+                                            .form-group.w19
+                                                label
+                                                    | Adults&nbsp;
+                                                    i (>12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Adults
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Children&nbsp;
+                                                    i (2 - 12 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19
+                                                label
+                                                    | Infants&nbsp;
+                                                    i (<2 yrs)
+                                                .dropdown
+                                                    button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                        svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                        span Children
+                                                    .dropdown-menu
+                                                        a.dropdown-item 1
+                                                        a.dropdown-item 2
+                                                        a.dropdown-item 3
+                                                        a.dropdown-item 4
+                                                        a.dropdown-item 5
+                                            .form-group.w19.searchBox__promotion
+                                                label Promotion code
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                    svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                            button.iconLine.btnPromotion(type='button')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='#662F8E')
+                                                span Promotion code
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                            #tab-2.searchBox__item
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__booking
+                                    p.text14.colorBlack65.mb15 Please enter the reservation code and last name standing on the booking to view and/or manage the booking details such as select/change seat, special meal, specify ROP number, contact information or purchase excess baggage.
+                                    .searchBox__form
+                                        .form-group.w38
+                                            label Booking Ref or E-ticket number
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Booking Ref or E-ticket number')
+                                                svg.svg1point5(width='20', height='16', viewBox='0 0 20 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M11 4.5H9V2.5H11V4.5ZM11 9H9V7H11V9ZM11 13.5H9V11.5H11V13.5ZM20 6V2C20 0.89 19.1 0 18 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V6C1.11 6 2 6.9 2 8C2 8.53043 1.78929 9.03914 1.41421 9.41421C1.03914 9.78929 0.530433 10 0 10V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V10C19.4696 10 18.9609 9.78929 18.5858 9.41421C18.2107 9.03914 18 8.53043 18 8C18 7.46957 18.2107 6.96086 18.5858 6.58579C18.9609 6.21071 19.4696 6 20 6Z', fill='black', fill-opacity='0.25')
+
+                                        .form-group.w38
+                                            label Email
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Email')
+                                                svg.svg1point5(width='20', height='16', viewBox='0 0 20 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L10 9L2 4V2L10 7L18 2V4ZM18 0H2C0.89 0 0 0.89 0 2V14C0 14.5304 0.210714 15.0391 0.585786 15.4142C0.960859 15.7893 1.46957 16 2 16H18C18.5304 16 19.0391 15.7893 19.4142 15.4142C19.7893 15.0391 20 14.5304 20 14V2C20 0.89 19.1 0 18 0Z', fill='black', fill-opacity='0.25')
+
+                                        .searchBox__btn
+                                            a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND MY BOOKING
+                                    .alert.alert_blue
+                                        .alert__icon
+                                        svg.svg1point5(width='22', height='22', viewBox='0 0 22 22', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M11 0C4.92545 0 0 4.92545 0 11C0 17.0746 4.92545 22 11 22C17.0746 22 22 17.0746 22 11C22 4.92545 17.0746 0 11 0ZM11 20.1339C5.9567 20.1339 1.86607 16.0433 1.86607 11C1.86607 5.9567 5.9567 1.86607 11 1.86607C16.0433 1.86607 20.1339 5.9567 20.1339 11C20.1339 16.0433 16.0433 20.1339 11 20.1339Z', fill='#1890FF')
+                                            path(d='M9.82129 6.67857C9.82129 6.99115 9.94546 7.29092 10.1665 7.51195C10.3875 7.73297 10.6873 7.85714 10.9999 7.85714C11.3124 7.85714 11.6122 7.73297 11.8332 7.51195C12.0543 7.29092 12.1784 6.99115 12.1784 6.67857C12.1784 6.36599 12.0543 6.06622 11.8332 5.8452C11.6122 5.62417 11.3124 5.5 10.9999 5.5C10.6873 5.5 10.3875 5.62417 10.1665 5.8452C9.94546 6.06622 9.82129 6.36599 9.82129 6.67857ZM11.5891 9.42857H10.4106C10.3025 9.42857 10.2141 9.51696 10.2141 9.625V16.3036C10.2141 16.4116 10.3025 16.5 10.4106 16.5H11.5891C11.6972 16.5 11.7856 16.4116 11.7856 16.3036V9.625C11.7856 9.51696 11.6972 9.42857 11.5891 9.42857Z', fill='#1890FF')
+                                        .alert__text
+                                            p Note: It is only accepted for bookings on our website!
+                            #tab-3.searchBox__item
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__schedules
+                                    p.text16.colorBlack85.mb15.medium Enter Flight Information
+                                    .searchBox__form
+                                        .form-group.w25
+                                            label Origin
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            include jades/suggestPlace
+                                        button.btnRound(type='button')
+                                            svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                        .form-group.w25
+                                            label Destination
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            include jades/suggestPlace
+                                        .t-datepicker.w25
+                                            .t-datepicker__item.w100
+                                                label Depart
+                                                .t-check-in
+                                        .searchBox__btn
+                                            a.btn.btn-orange-1.btn-lg(href='flightSchedules.html') FIND FLIGHTS
+                            #tab-4.searchBox__item
+                                .searchBox__close
+                                    button(type='button')
+                                        svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .searchBox__status
+                                    p.text16.colorBlack85.mb15.medium Enter Flight Information
+                                    .searchBox__radio
+                                        .radio
+                                            input#r1(type='radio', name='fl' checked='')
+                                            label(for='r1') Route
+                                        .radio
+                                            input#r2(type='radio', name='fl')
+                                            label(for='r2') Flight Number
+                                    .route
+                                        .searchBox__form
+                                            .form-group.w25
+                                                label Origin
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                    svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            button.btnRound(type='button')
+                                                svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                            .form-group.w25
+                                                label Destination
+                                                .inputSvg
+                                                    input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                    svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                                include jades/suggestPlace
+                                            .form-group.w25
+                                                label Depart
+                                                button.btn.btn-orange.btn-lg.w-100(type='button')
+                                                    span Today Apr 20
+                                            .form-group.w25
+                                                button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                    span Tomorrow Apr 21
+                                            .searchBox__btn
+                                                a.btn.btn-orange-1.btn-lg(href='flightStatus_route.html') FIND FLIGHTS
+                                    .flightNumber.hidden
+                                         .searchBox__form
+                                             .form-group.w28
+                                                 label Flight Number
+                                                 input.form-control.form-control-lg(type='text' placeholder='Flight Number')
+                                             .form-group.w25
+                                                 label Depart
+                                                 button.btn.btn-orange.btn-lg.w-100(type='button')
+                                                     span Yesterday Apr 19
+                                             .form-group.w25
+                                                 label Depart
+                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                     span Today Apr 20
+                                             .form-group.w25
+                                                 button.btn.btn-outline.btn-lg.w-100(type='button')
+                                                     span Tomorrow Apr 21
+                                             .searchBox__btn
+                                                 a.btn.btn-orange-1.btn-lg(href='flightStatus_number.html') FIND FLIGHTS
+                .offersBox
+                    .container
+                        h2.text-center.mb30 VIEW THE LATEST OFFERS DEPARTING FROM
+                        .offersBox__slide
+                            .offersBox__col
+                                .offersBox__item
+                                    a.offersBox__img(href='flightCheap.html')
+                                        img(src='images/offer-1.jpg')
+                                    .offersBox__cont
+                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Sapa
+                                        .offersBox__line
+                                            p.offersBox__icon
+                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
+                                                span One Way
+                                            p.offersBox__price
+                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
+                                                span USD 289
+                            .offersBox__col
+                                .offersBox__item
+                                    a.offersBox__img(href='flightCheap.html')
+                                        img(src='images/offer-2.jpg')
+                                    .offersBox__cont
+                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Thailand
+                                        .offersBox__line
+                                            p.offersBox__icon
+                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
+                                                span Round Trip
+                                            p.offersBox__price
+                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
+                                                span USD 289
+                            .offersBox__col
+                                .offersBox__item
+                                    a.offersBox__img(href='flightCheap.html')
+                                        img(src='images/offer-3.jpg')
+                                    .offersBox__cont
+                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Japan
+                                        .offersBox__line
+                                            p.offersBox__icon
+                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
+                                                span One Way
+                                            p.offersBox__price
+                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
+                                                span USD 289
+                            .offersBox__col
+                                .offersBox__item
+                                    a.offersBox__img(href='flightCheap.html')
+                                        img(src='images/offer-2.jpg')
+                                    .offersBox__cont
+                                        a.offersBox__link(href='flightCheap.html') From Phnom Penh to Thailand
+                                        .offersBox__line
+                                            p.offersBox__icon
+                                                svg.svg1point5(width='19', height='20', viewBox='0 0 19 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M19 14V12L11 7V1.5C11 1.10218 10.842 0.720644 10.5607 0.43934C10.2794 0.158035 9.89782 0 9.5 0C9.10218 0 8.72064 0.158035 8.43934 0.43934C8.15804 0.720644 8 1.10218 8 1.5V7L0 12V14L8 11.5V17L6 18.5V20L9.5 19L13 20V18.5L11 17V11.5L19 14Z', fill='black', fill-opacity='0.45')
+                                                span Round Trip
+                                            p.offersBox__price
+                                                svg.svg1point5(width='20', height='20', viewBox='0 0 20 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M3.5 5C3.10218 5 2.72064 4.84196 2.43934 4.56066C2.15804 4.27936 2 3.89782 2 3.5C2 3.10218 2.15804 2.72064 2.43934 2.43934C2.72064 2.15804 3.10218 2 3.5 2C3.89782 2 4.27936 2.15804 4.56066 2.43934C4.84196 2.72064 5 3.10218 5 3.5C5 3.89782 4.84196 4.27936 4.56066 4.56066C4.27936 4.84196 3.89782 5 3.5 5ZM19.41 9.58L10.41 0.58C10.05 0.22 9.55 0 9 0H2C0.89 0 0 0.89 0 2V9C0 9.55 0.22 10.05 0.59 10.41L9.58 19.41C9.95 19.77 10.45 20 11 20C11.55 20 12.05 19.77 12.41 19.41L19.41 12.41C19.78 12.05 20 11.55 20 11C20 10.44 19.77 9.94 19.41 9.58Z', fill='#662F8E')
+                                                span USD 289
+                        .offersBox__more
+                            a.viewMore(href='#')
+                                span View More
+                                svg(width='12', height='8', viewBox='0 0 12 8', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M1.42 0.589843L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L-6.16331e-08 1.99984L1.42 0.589843Z', fill='#318FDB')
+
+                        .offersBox__featured
+                            h2.text-center.mb30 FEATURED FLIGHT DESTINATIONS
+                            ul
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Cebu
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Jakarta
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Hanoi
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Chengdu
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Phuket
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Macau
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Cebu
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Jakarta
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Hanoi
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Chengdu
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Phuket
+
+                                li
+                                    a(href='flightCheap.html')
+                                        svg(width='17', height='18', viewBox='0 0 17 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M16.5003 12.5002V10.8335L9.83366 6.66683V2.0835C9.83366 1.75198 9.70196 1.43403 9.46754 1.19961C9.23312 0.965192 8.91518 0.833496 8.58366 0.833496C8.25214 0.833496 7.9342 0.965192 7.69978 1.19961C7.46535 1.43403 7.33366 1.75198 7.33366 2.0835V6.66683L0.666992 10.8335V12.5002L7.33366 10.4168V15.0002L5.66699 16.2502V17.5002L8.58366 16.6668L11.5003 17.5002V16.2502L9.83366 15.0002V10.4168L16.5003 12.5002Z', fill='#318FDB')
+                                        span Flights to Macau
+
+                .servicesBox
+                    .container
+                        h2.text-center.mb30 EXTRA SERVICES
+                        .row
+                            .col-6
+                                a.servicesBox__item.servicesBox_lg(href='#')
+                                    img(src='images/service-1.jpg')
+                                    .servicesBox__cont
+                                        h4 HOTEL
+                                        p We have wide selection of hotels and promotions.
+
+                            .col-6
+                                a.servicesBox__item.servicesBox_lg(href='#')
+                                    img(src='images/service-2.jpg')
+                                    .servicesBox__cont
+                                        h4 TRANSPORTATION
+                                        p We provide information on airport transfer services, and car rentals.
+
+                            .col-4
+                                a.servicesBox__item(href='#')
+                                    img(src='images/service-3.jpg')
+                                    .servicesBox__cont
+                                        h4 TOURS
+                                        p Book sightseeing tours, attractions, excursions, things to do.
+
+                            .col-4
+                                a.servicesBox__item(href='#')
+                                    img(src='images/service-4.jpg')
+                                    .servicesBox__cont
+                                        h4 EXCESS BAGGAGE
+                                        p Baggage is always an important part of your journey.
+
+                            .col-4
+                                a.servicesBox__item(href='#')
+                                    img(src='images/service-5.jpg')
+                                    .servicesBox__cont
+                                        h4 VISA ON ARRIVAL
+                                        p Apply Visa On Arrival online through Internet to make your trip happen to Thailand.
+
+                .promoBanner(style='background-image: url("images/promoBanner.jpg");')
+                    .container
+                        .promoBanner__cont
+                            p.p1 SPECIAL PROMOTIONS
+                            p.p2 IT’S A GREAT REASON TO EXPERIENCE NEW PLACES
+                            p.p3
+                                | Specials and offers on Bangkok Airways flights for your holidays
+                                br
+                                | Customer support: cs@cambodiaangkorailines.com
+                            a.btn.btn-orange.btn-lg(href='#') BOOK NOW
+                .destination
+                    .container
+                        h2.text-center.mb30 FAVOURITE DESTINATIONS
+                        .destination__slide
+                            .destination__col
+                                .destination__item
+                                    .destination__img
+                                        img(src='images/dest-1.jpg')
+                                        .destination__btn
+                                            a.btn.btn-orange-1(href='#') READ MORE
+                                    .destination__cont
+                                        .destination__address
+                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
+                                            span Bangkok, Thailand
+                                        a.destination__link(href='#') Bali is called as the island of the gods
+                                        p.destination__text The best time to travel to Bali is around April to July. However, this ...
+
+                            .destination__col
+                                .destination__item
+                                    .destination__img
+                                        img(src='images/dest-2.jpg')
+                                        .destination__btn
+                                            a.btn.btn-orange-1(href='#') READ MORE
+                                    .destination__cont
+                                        .destination__address
+                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
+                                            span Chiang Mai, Thailand
+                                        a.destination__link(href='#') As part of the Maluku Islands in the East of Sulawesi and the ...
+                                        p.destination__text Admire the statue of the female warrior Christina Martha Tiahahu ...
+
+                            .destination__col
+                                .destination__item
+                                    .destination__img
+                                        img(src='images/dest-3.jpg')
+                                        .destination__btn
+                                            a.btn.btn-orange-1(href='#') READ MORE
+                                    .destination__cont
+                                        .destination__address
+                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
+                                            span Phuket, Thailand
+                                        a.destination__link(href='#') Let's see why Balikpapan is so attractive to you
+                                        p.destination__text When it comes to Indonesia, you will definitely think of beautiful and ...
+
+                            .destination__col
+                                .destination__item
+                                    .destination__img
+                                        img(src='images/dest-4.jpg')
+                                        .destination__btn
+                                            a.btn.btn-orange-1(href='#') READ MORE
+                                    .destination__cont
+                                        .destination__address
+                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
+                                            span Koh Samui, Thailand
+                                        a.destination__link(href='#') Located in the northern pole of Sumatra is the Banda Aceh...
+                                        p.destination__text Mesjid Raya Mosque is the first place you must definitely visit.
+
+                            .destination__col
+                                .destination__item
+                                    .destination__img
+                                        img(src='images/dest-2.jpg')
+                                        .destination__btn
+                                            a.btn.btn-orange-1(href='#') READ MORE
+                                    .destination__cont
+                                        .destination__address
+                                            svg.svg1point5(width='14', height='20', viewBox='0 0 14 20', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5ZM7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 12.25 7 20 7 20C7 20 14 12.25 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0Z', fill='#318FDB')
+                                            span Chiang Mai, Thailand
+                                        a.destination__link(href='#') As part of the Maluku Islands in the East of Sulawesi and the ...
+                                        p.destination__text Admire the statue of the female warrior Christina Martha Tiahahu ...
+
+                .appBox
+                    .container
+                        .row
+                            .col-7
+                                .appBox__cont
+                                    h2.mb30 YOUR ALL IN ONE FLIGHT BOOKING APP
+                                    p.text16.colorBlack65.mb15 Book flights, hotels, tours & rental cars anywhere in the world in just seconds. Get real-time flight updates, travel info, exclusive deals, and Special Promotions only on the app!
+                                    p.text16.colorBlack65.mb15 Enter your phone number to receive a text with a link to download our app
+                                    .appBox__group
+                                        .appBox__form
+                                            .inputSelect.form-control.form-control-lg
+                                                svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M3.62 7.79C5.06 10.62 7.38 12.94 10.21 14.38L12.41 12.18C12.69 11.9 13.08 11.82 13.43 11.93C14.55 12.3 15.75 12.5 17 12.5C17.2652 12.5 17.5196 12.6054 17.7071 12.7929C17.8946 12.9804 18 13.2348 18 13.5V17C18 17.2652 17.8946 17.5196 17.7071 17.7071C17.5196 17.8946 17.2652 18 17 18C12.4913 18 8.1673 16.2089 4.97918 13.0208C1.79107 9.8327 0 5.50868 0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H4.5C4.76522 0 5.01957 0.105357 5.20711 0.292893C5.39464 0.48043 5.5 0.734784 5.5 1C5.5 2.25 5.7 3.45 6.07 4.57C6.18 4.92 6.1 5.31 5.82 5.59L3.62 7.79Z', fill='black', fill-opacity='0.25')
+                                                select(style='background-image: url("../images/arrow-down.png");')
+                                                    option (+61)
+                                                    option (+62)
+                                                    option (+63)
+                                                input(type='text' placeholder='Phone number')
+                                            button.btn.btn-orange-1.btn-lg.w-100(type='button') SEND APP LINK
+                                        .appBox__line
+                                            span or
+                                        .appBox__download
+                                            .appBox__logo
+                                                a(href='#')
+                                                    img(src='images/googleplay.png')
+                                                a(href='#')
+                                                    img(src='images/appstore.png')
+                                            .appBox__qrcode
+                                                a(href='#')
+                                                    img(src='images/qrcode.png')
+
+                            .col-5
+                                .appBox__img
+                                    img(src='images/phone-img.png')
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+
+        script.
+            // searchBox
+            if (screen.width < 768) {
+                $('.searchBox__item').removeClass('open');
+                $('.searchBox__tab li').removeClass('active');
+            };
+            $(".searchBox__tab button").click(function () {
+                var tab_id = $(this).parents('.searchBox__tab li').attr('data-tab');
+
+                $('.searchBox__tab li').removeClass('active');
+                $(this).parents('.searchBox__tab li').addClass('active');
+                $('.searchBox__item').removeClass('open');
+                $("#" + tab_id).addClass('open');
+            });
+
+            $(".searchBox__close button").click(function () {
+                $('.searchBox__tab li').removeClass('active');
+                $('.searchBox__item').removeClass('open');
+            });
+            $(".inputSvg .form-control").click(function () {
+                $(this).parents('.form-group').find('.suggestPlace').addClass('open');
+            });
+            $(document).mouseup(function (e) {
+                var suggestPlace = $('.suggestPlace');
+                if (!suggestPlace.is(e.target) && suggestPlace.has(e.target).length === 0) {
+                    $('.suggestPlace').removeClass('open');
+                }
+                ;
+            });
+            $(".btnPromotion").click(function () {
+                $('.searchBox__promotion').addClass('show');
+                $(this).addClass('hidden');
+            });
+
+            $("#fl1").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').removeClass('hidden');
+            });
+            $("#fl2").click(function () {
+                $('.noMulti').removeClass('hidden');
+                $('.multi').addClass('hidden');
+                $('#return').addClass('hidden');
+            });
+            $("#fl3").click(function () {
+                $('.noMulti').addClass('hidden');
+                $('.multi').removeClass('hidden');
+            });
+            $("#r1").click(function () {
+                $('.route').removeClass('hidden');
+                $('.flightNumber').addClass('hidden');
+            });
+            $("#r2").click(function () {
+                $('.route').addClass('hidden');
+                $('.flightNumber').removeClass('hidden');
+            });
+        script.
+            $(".offersBox__slide").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                autoplaySpeed: 5000,
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        script.
+            $(".destination__slide").slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                //autoplay: true,
+                speed: 500,
+                autoplaySpeed: 5000,
+                arrows: true,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        script.
+            $('.offersBox .viewMore').click(function () {
+                var featured = $(this).parents('.offersBox').find('.offersBox__featured');
+                if ($(this).hasClass('rotate')) {
+                    featured.slideUp(300);
+                    $(this).find('span').text('View More');
+                    $(this).removeClass('rotate');
+                } else {
+                    featured.slideDown(300);
+                    $(this).find('span').text('View Less');
+                    $(this).addClass('rotate');
+                }
+                return false;
+            });
+
+
+

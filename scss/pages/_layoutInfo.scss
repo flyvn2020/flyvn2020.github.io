@@ -1,0 +1,377 @@
+.layoutInfo {
+  &__banner {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(102, 47, 142, 0.8);
+    background-blend-mode: darken;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    @include breakpoint(sm) {
+      padding: 4vw 0;
+    }
+  }
+
+  &__body {
+    padding: 30px 0;
+    @include breakpoint(sm) {
+      padding: 2vw 0;
+    }
+  }
+
+  &__box {
+    @include breakpoint(sm) {
+      display: flex;
+      align-items: flex-start;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      padding: 2vw 0;
+    }
+  }
+
+  &__navbar {
+    background-color: #fff;
+    @include breakpoint(xs) {
+      display: none;
+    }
+    @include breakpoint(sm) {
+      width: 25%;
+      border-right: 1px dashed rgba(0, 0, 0, 0.45);
+    }
+
+    > li {
+      @include breakpoint(sm) {
+        padding: 0 1vw;
+      }
+
+      &.active {
+        > a {
+          color: $orange;
+          font-weight: 500;
+        }
+      }
+
+      &:first-child {
+        > a {
+          @include breakpoint(sm) {
+            padding-top: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        > a {
+          border-bottom: none;
+          @include breakpoint(sm) {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      > a {
+        font-size: 16px;
+        color: $black85;
+        padding: 15px 0;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.45);
+        @include breakpoint(xs) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        @include breakpoint(sm) {
+          font-size: 1.1vw;
+          padding: 1vw 0;
+          display: block;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+
+        svg {
+          @include breakpoint(sm) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__sub {
+    padding: 5px 0;
+    @include breakpoint(sm) {
+      padding: .5vw 0;
+    }
+
+    li {
+      &.active {
+        a {
+          color: $orange;
+          font-weight: 500;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        color: $black85;
+        display: block;
+        padding: 5px 15px;
+        @include breakpoint(sm) {
+          font-size: 1vw;
+          padding: .5vw 1vw;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__cont {
+    @include breakpoint(xs) {
+      background-color: #fff;
+      overflow-y: auto;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      border-radius: 4px;
+    }
+    @include breakpoint(sm) {
+      width: 75%;
+      padding: 0 2vw;
+    }
+  }
+
+  &__form {
+    @include breakpoint(sm) {
+      padding-right: 10vw;
+    }
+
+    .form-group {
+      @include breakpoint(sm) {
+        margin-bottom: 1.5vw;
+      }
+
+      > label {
+        &:after {
+          content: '*';
+          color: $red;
+          margin-left: 2px;
+          @include breakpoint(sm) {
+            margin-left: .3vw;
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include breakpoint(sm) {
+      text-align: right;
+    }
+
+    .btn {
+      @include breakpoint(xs) {
+        width: 100%;
+      }
+      @include breakpoint(sm) {
+        width: 14vw;
+      }
+    }
+  }
+}
+
+.aboutUs {
+  &__cont {
+    > img {
+      width: 100%;
+      display: block;
+      margin-bottom: 15px;
+      @include breakpoint(sm) {
+        margin-bottom: 1vw;
+      }
+    }
+  }
+}
+
+.faq {
+  &__item {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    @include breakpoint(sm) {
+      margin-bottom: 1vw;
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black85;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    transition: all .2s;
+    text-align: left;
+    @include breakpoint(sm) {
+      font-size: 1vw;
+      padding: .5vw 1vw;
+      align-items: center;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &.active {
+      color: $orange;
+    }
+
+    span {
+      margin-right: 15px;
+      @include breakpoint(sm) {
+        margin-right: 1vw;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 15px;
+    display: none;
+    @include breakpoint(sm) {
+      padding: 0 1vw;
+    }
+  }
+
+  &__cont {
+    padding: 15px 0;
+    border-top: 1px dashed rgba(0, 0, 0, 0.35);
+    @include breakpoint(sm) {
+      padding: 1vw 0;
+      border-top: 1px dashed rgba(0, 0, 0, 0.35);
+    }
+
+    p {
+      font-size: 14px;
+      color: $black55;
+      @include breakpoint(sm) {
+        font-size: 1vw;
+      }
+    }
+  }
+}
+
+.policy {
+  p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: $black85;
+    @include breakpoint(sm) {
+      margin-bottom: 1vw;
+      font-size: 1vw;
+    }
+  }
+}
+
+.termsOfUse {
+  p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: $black85;
+    @include breakpoint(sm) {
+      margin-bottom: 1vw;
+      font-size: 1vw;
+    }
+  }
+}
+
+.fareRules {
+  &__cont {
+    > p {
+      font-size: 14px;
+      color: $black85;
+      margin-bottom: 15px;
+      @include breakpoint(sm) {
+        font-size: 1vw;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+
+  &__table {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    @include breakpoint(xs) {
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @include breakpoint(sm) {
+      margin-bottom: 2vw;
+    }
+  }
+
+  .table-purple {
+    td {
+      &:last-child {
+        @include breakpoint(xs) {
+          min-width: 300px;
+        }
+      }
+    }
+
+    th, td {
+      text-align: center;
+    }
+  }
+}
+
+.favDes {
+  &__cont {
+    > p {
+      font-size: 14px;
+      color: $black85;
+      margin-bottom: 15px;
+      @include breakpoint(sm) {
+        font-size: 1vw;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 15px;
+    @include breakpoint(sm) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1vw;
+      margin-left: -1vw;
+      margin-right: -1vw;
+    }
+
+    li {
+      @include breakpoint(sm) {
+        width: 25%;
+      }
+
+      a {
+        font-size: 14px;
+        color: #318FDB;
+        padding: 5px 15px;
+        display: block;
+        @include breakpoint(sm) {
+          font-size: 1vw;
+          padding: .5vw 1vw;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

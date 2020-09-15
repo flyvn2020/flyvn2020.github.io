@@ -1,0 +1,100 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner.jpg");')
+                    .container
+                        h2 Hello. How can Cambodia help you?
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Contact us
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li.active
+                                    a(href='contactUs.html')
+                                        span Contact us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                                li
+                                    a(href='aboutUs.html')
+                                        span About us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                                li
+                                    a(href='faq.html')
+                                        span FAQ
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                                li
+                                    a(href='policy.html')
+                                        span Privacy Policy
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                                li
+                                    a(href='termsOfUse.html')
+                                        span Terms of Use
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                            .layoutInfo__cont
+                                .contactUs
+                                    h3.mb15 Ask a question
+                                    .layoutInfo__form
+                                        .form-group
+                                            label Your Name
+                                            input.form-control.form-control-lg(type='text' placeholder='Your Name')
+                                        .form-group
+                                            label Your Email Address
+                                            input.form-control.form-control-lg(type='text' placeholder='Your Email')
+                                        .form-group
+                                            label Phone number
+                                            input.form-control.form-control-lg(type='text' placeholder='Phone Number')
+                                        .form-group
+                                            label Subject
+                                            select.form-control.form-control-lg
+                                                option Ask A Question?
+                                                option question 1
+                                                option question 2
+                                        .form-group
+                                            label Message
+                                            textarea.form-control
+                                        .layoutInfo__btn
+                                            button.btn.btn-orange-1(type='button') SEND MESSAGE
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+

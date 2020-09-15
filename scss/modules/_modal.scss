@@ -1,0 +1,30 @@
+.modal-dialog{
+  @include breakpoint(sm){
+    max-width: 690px;
+    margin: 3vw auto;
+  }
+  @include breakpoint(md){
+    max-width: 790px;
+  }
+  @include breakpoint(lg){
+    max-width: calc(80% - 30px);
+  }
+}
+.modal-body{
+  padding: 24px;
+  @include breakpoint(sm){
+    padding: 1.5vw;
+  }
+}
+button.close{
+  padding: 5px;
+  float: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  @include breakpoint(sm){
+    padding: .5vw;
+    top: 1vw;
+    right: 1vw;
+  }
+}

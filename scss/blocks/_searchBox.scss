@@ -1,0 +1,594 @@
+.searchBox{
+  &__tab{
+    @include breakpoint(xs){
+      margin: 0 -15px;
+    }
+    @include breakpoint(sm){
+      display: flex;
+    }
+    li{
+      @include breakpoint(xs){
+        border-bottom: 1px solid #fff;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+      @include breakpoint(sm){
+        width: 25%;
+        border-right: 1px solid #fff;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      &:first-child{
+        button{
+          @include breakpoint(sm){
+            border-top-left-radius: .4vw;
+          }
+        }
+      }
+      &:last-child{
+        button{
+          @include breakpoint(sm){
+            border-top-right-radius: .4vw;
+          }
+        }
+      }
+      &.active{
+        button{
+          background: $purple;
+          color: #fff;
+          svg{
+            path{
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    button{
+      background: #F2D8F8;
+      color: $purple;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @include breakpoint(xs){
+        font-size: 14px;
+        height: 48px;
+        position: relative;
+        padding: 0 15px;
+      }
+      @include breakpoint(sm){
+        font-size: 1vw;
+        height: 3.3vw;
+        justify-content: center;
+      }
+      span{
+        margin-left: 10px;
+        @include breakpoint(sm){
+          margin-left: .5vw;
+        }
+      }
+      .svgArrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        @include breakpoint(sm){
+          display: none;
+        }
+      }
+    }
+    .flightCheap & {
+      @include breakpoint(sm){
+        display: none;
+      }
+    }
+  }
+  &__item{
+    background: #fff;
+    @include breakpoint(xs){
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      padding: 15px 15px 30px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      transition: all .3s ease-in-out;
+      transform: translateX(-100%);
+      visibility: hidden;
+    }
+    @include breakpoint(sm){
+      padding: 1vw 2vw;
+      display: none;
+      animation: opacityShow .2s ease-in-out;
+    }
+    &.open{
+      @include breakpoint(xs){
+        transform: none;
+        visibility: visible;
+      }
+      @include breakpoint(sm){
+        display: block;
+      }
+    }
+    .flightCheap & {
+      @include breakpoint(sm){
+        border-radius: 4px;
+      }
+    }
+  }
+  &__radio{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+    }
+    .radio{
+      +.radio{
+        @include breakpoint(xs){
+          margin-left: 15px;
+        }
+        @include breakpoint(sm){
+          margin-left: 3vw;
+        }
+      }
+    }
+  }
+  &__form{
+    @include breakpoint(xs){
+      position: relative;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin: 0 -.7vw;
+    }
+    &.selected{
+      @include breakpoint(xs){
+        padding-right: 39px;
+      }
+      .btnRound{
+        @include breakpoint(xs){
+          right: 39px;
+        }
+      }
+      .t-datepicker{
+        cursor: not-allowed!important;
+        .t-dates{
+          pointer-events: none;
+          opacity: .5;
+        }
+      }
+    }
+    .form-group{
+      position: relative;
+      @include breakpoint(sm){
+        padding: 0 .7vw;
+      }
+      > label{
+        font-weight: 400;
+      }
+      .dropdown-menu{
+        min-width: 100%;
+      }
+    }
+    .btnRound{
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+      @include breakpoint(xs){
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 85px;
+        svg{
+          width: 16px;
+        }
+      }
+      @include breakpoint(sm){
+        width: 2.2vw;
+        height: 2.2vw;
+        margin-bottom: 1.4vw;
+      }
+    }
+    .w25{
+      @include breakpoint(sm){
+        width: calc((100% - 2.2vw)/4) !important;
+      }
+    }
+    .w28{
+      @include breakpoint(sm){
+        width: calc(100% - ((100% - 2.2vw)/4)*3) !important;
+      }
+    }
+    .w19{
+      @include breakpoint(sm){
+        width: 19% !important;
+      }
+    }
+    .w38{
+      @include breakpoint(sm){
+        width: 38% !important;
+      }
+    }
+    .w100{
+      @include breakpoint(sm){
+        width: 100% !important;
+      }
+    }
+  }
+  &__btn{
+    @include breakpoint(sm){
+      margin-bottom: 1vw;
+      width: 24%;
+      padding: 0 .7vw;
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+  &__close{
+    text-align: right;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      display: none;
+    }
+  }
+  &__promotion{
+    display: none;
+  }
+  &__add{
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include breakpoint(sm){
+      font-size: 1vw;
+      margin-bottom: 1vw;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    span{
+      margin-left: 5px;
+      @include breakpoint(sm){
+        margin-left: .5vw;
+      }
+    }
+    svg,span{
+      vertical-align: middle;
+    }
+  }
+  &__remove{
+    @include breakpoint(xs){
+      position: absolute;
+      top: 30px;
+      right: 0;
+      bottom: 0;
+    }
+    @include breakpoint(sm){
+      margin-bottom: 2vw;
+      padding: 0 .7vw;
+    }
+    button{
+      @include breakpoint(xs){
+        border-radius: 4px;
+        background: $purple;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        svg{
+          path{
+            fill: #fff;
+            fill-opacity: 1;
+          }
+        }
+      }
+      @include breakpoint(sm){
+        font-size: 1vw;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      svg,span{
+        vertical-align: middle;
+      }
+      span{
+        @include breakpoint(xs){
+          display: none;
+        }
+        @include breakpoint(sm){
+          margin-left: .5vw;
+        }
+      }
+    }
+  }
+  &__booking{
+    .alert{
+      margin: 15px 0;
+      @include breakpoint(sm){
+        margin: 1vw 0;
+      }
+    }
+  }
+  &__status{
+    .searchBox__form{
+      @include breakpoint(sm){
+        justify-content: flex-end;
+      }
+    }
+  }
+  .iconLine{
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(sm){
+      margin-bottom: 1.8vw;
+      width: 19%;
+      padding: 0 .7vw;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.suggestDefault{
+  width: 50vw;
+  background-color: #fff;
+  box-shadow:0 0 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid $purple;
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: .7vw;
+  z-index: 10;
+  display: none;
+  &.open{
+    display: block;
+  }
+  &__header{
+    background-color: #f2f2f2;
+    padding: .8vw 1vw;
+    h5{
+      color: #878787;
+      font-weight: 400;
+      font-size: .8vw;
+    }
+  }
+  &__body{
+    display: flex;
+  }
+  &__tab{
+    width: 13vw;
+    li{
+      width: 100%;
+      &:last-child{
+        button{
+          border: none;
+        }
+      }
+      &.active{
+        button{
+          background: $purple;
+          color: #fff;
+        }
+      }
+      button{
+        background: #F2D8F8;
+        text-transform: uppercase;
+        font-size: 1vw;
+        font-weight: 500;
+        color: $purple;
+        display: block;
+        padding: 1vw;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  &__content{
+    width: calc(100% - 13vw);
+    //max-height: 30vw;
+    //overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      width:3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: #f2f2f2;
+      border-radius: 16px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background:#bcbcbc;
+      border-radius: 16px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #bcbcbc;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 33.333%;
+      button{
+        font-size: 1vw;
+        padding: 1vw;
+        color: $black85;
+        width: 100%;
+        text-align: left;
+        transition: all .1s;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+.suggestPlace{
+  background-color: #fff;
+  box-shadow: $shadow;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  border-bottom: 4px solid $purple;
+  border-radius: 4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+  @include breakpoint(xs){
+    width: 100%;
+    left: 0;
+    max-height: 400px;
+  }
+  @include breakpoint(sm){
+    width: 25vw;
+    left: .7vw;
+    max-height: 30vw;
+    &::-webkit-scrollbar {
+      width:4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: #f2f2f2;
+      border-radius: 16px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background:#bcbcbc;
+      border-radius: 16px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #bcbcbc;
+    }
+  }
+  &.open{
+    display: block;
+  }
+  &.suggestPlace_little{
+    @include breakpoint(sm){
+      width: 60vw;
+    }
+  }
+  &__list{
+    li{
+      &.liTitle{
+        background-color: #F2D8F8;
+        padding: 10px 15px;
+        color: $purple;
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        @include breakpoint(sm){
+          padding: 1vw;
+          font-size: 1vw;
+        }
+      }
+      button{
+        font-size: 14px;
+        color: #000;
+        padding: 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        @include breakpoint(sm){
+          font-size: 1vw;
+          padding: .5vw 1vw;
+          transition: .2s;
+          &:hover{
+            color: $orange;
+          }
+        }
+        span{
+          &.span2{
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  &__group{
+    @include breakpoint(xs){
+      padding-top: 15px;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      margin: 0 -1vw;
+      padding-top: 1vw;
+    }
+  }
+  &__col{
+    @include breakpoint(sm){
+      width: 20%;
+      padding: 0 1vw;
+    }
+  }
+  &__item{
+    li{
+      &.liTitle{
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $purple;
+        padding: 5px 15px;
+        @include breakpoint(sm){
+          font-size: 1vw;
+          padding: .5vw 1vw;
+        }
+      }
+      a{
+        font-size: 14px;
+        color: $black85;
+        transition: all .2s;
+        display: block;
+        padding: 3px 15px;
+        @include breakpoint(sm){
+          font-size: 1vw;
+          padding: .3vw 1vw;
+        }
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+#return{
+  &.disabled{
+    cursor: not-allowed;
+    opacity: .3;
+    .inputSvg{
+      pointer-events: none;
+    }
+  }
+
+}

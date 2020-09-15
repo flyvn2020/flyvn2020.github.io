@@ -1,0 +1,1246 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.flightPassenger
+                .flightHeader
+                    .container
+                        .flightHeader__left
+                            .flightStep
+                                .flightStep__item.step1.visited
+                                    .flightStep__numb 1
+                                    .flightStep__text Select Flight
+                                .flightStep__item.step2.active
+                                    .flightStep__numb 2
+                                    .flightStep__text Passenger
+                                .flightStep__item.step3
+                                    .flightStep__numb 3
+                                    .flightStep__text Review
+                                .flightStep__item.step4
+                                    .flightStep__numb 4
+                                    .flightStep__text Payment
+                            .flightStepMobile 02. Passenger
+                        .flightHeader__right
+                            button.btn.btn-orange-1(type='button' data-toggle="modal" data-target="#searchModal") EDIT SEARCH
+
+                .flightSelect
+                    .container
+                        .flightSelect__item
+                            .flightSelect__text
+                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.55')
+                                .d-flex
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 15:35 HAN
+                                    .d-icon
+                                        i.fas.fa-long-arrow-alt-right
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 17:40 HKT
+                        .flightSelect__item
+                            .flightSelect__text
+                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M14 -6.11959e-07L12 -5.24537e-07L7 8L1.5 8C1.10217 8 0.720644 8.15804 0.439339 8.43934C0.158035 8.72064 -4.32648e-07 9.10218 -4.15258e-07 9.5C-3.97869e-07 9.89782 0.158035 10.2794 0.43934 10.5607C0.720644 10.842 1.10217 11 1.5 11L7 11L12 19L14 19L11.5 11L17 11L18.5 13L20 13L19 9.5L20 6L18.5 6L17 8L11.5 8L14 -6.11959e-07Z', fill='black', fill-opacity='0.55')
+                                .d-flex
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 15:35 HAN
+                                    .d-icon
+                                        i.fas.fa-long-arrow-alt-right
+                                    .d-block
+                                        p.text12.colorBlack55 Wed, 15 Jan 2020
+                                        p.text14.colorBlack85 17:40 HKT
+                        .flightSelect__item
+                            .flightSelect__price
+                                p.text12.colorBlack55.mr15 Total price for all passengers
+                                p
+                                    span.text16.colorOrange.medium USD 600.88
+                                    button.viewMore.d-block.btn-yourBooking(type='button')
+                                        span Price details
+                                .yourBooking
+                                    .yourBooking__header
+                                        p.yourBooking__title Your booking
+                                        button.yourBooking__close(type='button')
+                                            svg.svg1(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                    .yourBooking__body
+                                        .yourBooking__item
+                                            p.text14.colorPurple.medium.mb15 Departing flight
+                                            .tripBox
+                                                .flTable__trip
+                                                    p.text20.medium
+                                                        span.colorBlack85 15:35
+                                                        span.colorBlack55 &nbsp;HAN
+                                                    p.text12.medium.colorBlack85 Hanoi, Vietnam
+                                                    p.text14.colorBlack65 Wed, 15 Jan
+                                                .stopBox
+                                                    .stopBox__line
+                                                        .stopBox__plane
+                                                            svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.45')
+                                                        .stopBox__dot.colorOrange
+                                                            i.fas.fa-circle
+                                                        .stopBox__dot.colorOrange
+                                                            i.fas.fa-circle
+                                                        .stopBox__dot.colorBlack15
+                                                            i.fas.fa-circle
+                                                    .stopBox__text
+                                                        span.bgOrange.text12 2 stop(s)
+                                                        p.text12.colorBlack65 02h05m
+                                                .flTable__trip
+                                                    p.text20.medium
+                                                        span.colorBlack85 17:40
+                                                        span.colorBlack55 &nbsp;HKT
+                                                    p.text12.medium.colorBlack85 Phuket, Thailand
+                                                    p.text14.colorBlack65 Wed, 15 Jan
+                                            p.text14.colorBlack85 Economy Saver
+                                        .yourBooking__item
+                                            p.text14.colorPurple.medium.mb15 Return flight
+                                            .tripBox
+                                                .flTable__trip
+                                                    p.text20.medium
+                                                        span.colorBlack85 15:35
+                                                        span.colorBlack55 &nbsp;HAN
+                                                    p.text12.medium.colorBlack85 Hanoi, Vietnam
+                                                    p.text14.colorBlack65 Wed, 15 Jan
+                                                .stopBox
+                                                    .stopBox__line
+                                                        .stopBox__plane
+                                                            svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.45')
+                                                        .stopBox__dot.colorOrange
+                                                            i.fas.fa-circle
+                                                        .stopBox__dot.colorBlack15
+                                                            i.fas.fa-circle
+                                                    .stopBox__text
+                                                        span.bgOrange.text12 2 stop(s)
+                                                        p.text12.colorBlack65 02h05m
+                                                .flTable__trip
+                                                    p.text20.medium
+                                                        span.colorBlack85 17:40
+                                                        span.colorBlack55 &nbsp;HKT
+                                                    p.text12.medium.colorBlack85 Phuket, Thailand
+                                                    p.text14.colorBlack65 Wed, 15 Jan
+                                            p.text14.colorBlack85 Economy Saver
+                                        .yourBooking__item
+                                            .yourBooking__traveler
+                                                .textIcon
+                                                    svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.55')
+                                                    span Traveler/s
+                                                p.text14.colorBlack55 2 adult
+                                        .yourBooking__item
+                                            .yourBooking__total
+                                                .d-flex
+                                                    .d-block
+                                                        p.text20.medium.colorBlack85 TOTAL
+                                                        p.text14.colorBlack55 2 adult
+                                                    .d-block.text-right
+                                                        p.text20.medium.colorOrange USD 600.88
+                                                        p.text14.colorBlack55 USD 300.44
+                                                p.text12.colorBlack55.mt15 * Final price for all travelers (included all taxes, fees & charges)
+                .flightPassenger__main
+                    .container
+                        .reservation
+                            .reservation__header
+                                .d-flex
+                                    .reservation__icon
+                                        svg(width='81', height='55', viewBox='0 0 81 55', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(fill-rule='evenodd', clip-rule='evenodd', d='M19.9315 11.1848L66.3092 0.614144C70.0423 -0.236718 73.6709 1.71793 74.4142 4.9808L80.8663 33.2889C81.5768 36.4063 79.3952 39.5915 75.9422 40.6105V17.5463C75.9425 14.0325 72.6839 11.1848 68.6636 11.1848H19.9315Z', fill='#662F8E')
+                                            rect(x='8', y='16', width='64', height='38', fill='white')
+                                            path(fill-rule='evenodd', clip-rule='evenodd', d='M7.41838 13.1753H67.1785C71.0073 13.1753 74.1108 15.8874 74.1105 19.2339V48.268C74.1105 51.6137 71.0063 54.3281 67.1774 54.3281H7.41838C3.59064 54.3281 0.486084 51.6148 0.486084 48.268V19.2339C0.486084 15.8882 3.59064 13.1753 7.41838 13.1753ZM19.4043 48.2009H24.2011V44.0725H19.4043V48.2009ZM19.4043 39.9437H24.2011V35.8161H19.4043V39.9437ZM19.4043 31.6877H24.2011V27.5589H19.4043V31.6877ZM19.4043 23.4305H24.2011V19.3028H19.4043V23.4305ZM60.166 45.924L58.0064 48.0836L52.0674 36.7456L46.1285 42.6846L46.6684 46.4639L45.0487 48.0836L42.3491 43.2245L37.49 40.525L39.1097 38.9053L42.889 39.4452L48.828 33.5062L37.49 27.5673L39.6496 25.4076L53.6871 28.6471L59.6261 22.7081C60.0556 22.2785 60.6383 22.0372 61.2458 22.0372C61.8533 22.0372 62.4359 22.2785 62.8655 22.7081C63.2951 23.1377 63.5364 23.7203 63.5364 24.3278C63.5364 24.9353 63.2951 25.518 62.8655 25.9475L56.9266 31.8865L60.166 45.924Z', fill='#662F8E')
+                                    .reservation__text
+                                        p.text16.medium.colorPurple Reservation code: JVHNKM
+                                        p.text14.colorBlack55.mb-0 E-ticket number can be used for check-in at the airport check-in counter
+                                button.btnYourLight(type='button')
+                                    span E-tickets for your flight
+                            .reservation__body
+                                button.reservation__close(type='button')
+                                    svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                .reservation__list
+                                    .reservation__col
+                                        ul
+                                            li
+                                                p 1. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 2. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 3. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 4. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 5. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 6. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 7. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 8. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                    .reservation__col
+                                        ul
+                                            li
+                                                p 1. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 2. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 3. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 4. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 5. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 6. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 7. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                                            li
+                                                p 8. Mr. Pham Duc Quang
+                                                p E-ticket 1234567890
+                        .formBox
+                            .formBox__header
+                                svg.svg1(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='#F79320')
+                                p.text14.colorOrange.medium Passenger details - 1 adult(s), 1 Child(ren), 1 Infant(s)
+                            .formBox__body
+                                .formBox__item
+                                    .formBox__text
+                                        h4.mb5 Adult 1
+                                        p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                        button.formBox__tip(type='button' data-toggle="modal" data-target="#tipsModal")
+                                            svg.svg1(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                            span Tips on entering your name
+                                    .formBox__row
+                                        .form-group
+                                            label Title
+                                            select.form-control
+                                                option Title 1
+                                                option Title 2
+                                    .formBox__row
+                                        .form-group
+                                            label.labelStar First/Given
+                                            input.form-control(type='text' placeholder='First/Given')
+                                        .form-group
+                                            label.labelStar Middle Name
+                                            input.form-control(type='text' placeholder='Middle Name')
+                                        .form-group
+                                            label.labelStar Last/ Family Name
+                                            input.form-control(type='text' placeholder='Last/ Family Name')
+                                    .formBox__row
+                                        .checkbox
+                                            input#pp13(type='checkbox')
+                                            label(for='pp13') This passenger does not have a first/given name in the passport
+                                    .formBox__row
+                                        .form-group
+                                            label Passport Number
+                                            input.form-control(type='text' placeholder='Passport Number')
+                                        .form-group
+                                            label Nationality
+                                            input.form-control(type='text' placeholder='Nationality')
+                                        .form-group
+                                            label Date of Issued
+                                            input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                        .form-group
+                                            label Date of Expired
+                                            input.form-control(type='text' placeholder='Date of Expired')
+                                    .formBox__row
+                                        .formBox__date
+                                            label.labelStar Date of Birth
+                                            .d-flex
+                                                .form-group
+                                                    select.form-control
+                                                        option Day
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Month
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Year
+                                                        option 2020
+                                                        option 2019
+                                                        option 2018
+
+                                    .formBox__frequent
+                                        button(type='button')
+                                            span Add frequent Flyer
+                                            svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                        .frequentBox
+                                            .frequentBox__cont
+                                                .form-group
+                                                    label Select
+                                                    select.form-control
+                                                        option Select 1
+                                                        option Select 2
+                                                .form-group
+                                                    label Card Number
+                                                    input.form-control(type='text' placeholder='Card Number')
+                                .formBox__item
+                                    .formBox__text
+                                        h4.mb5 Child 1
+                                        p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                    .formBox__row
+                                        .form-group
+                                            label Title
+                                            select.form-control
+                                                option Title 1
+                                                option Title 2
+                                    .formBox__row
+                                        .form-group
+                                            label.labelStar First/Given
+                                            input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                        .form-group
+                                            label.labelStar Middle Name
+                                            input.form-control(type='text' placeholder='Middle Name')
+                                        .form-group
+                                            label.labelStar Last/ Family Name
+                                            input.form-control(type='text' placeholder='Last/ Family Name')
+                                    .formBox__row
+                                        .checkbox
+                                            input#pp14(type='checkbox')
+                                            label(for='pp14') This passenger does not have a first/given name in the passport
+                                    .formBox__row
+                                        .form-group
+                                            label Passport Number
+                                            input.form-control(type='text' placeholder='Passport Number')
+                                        .form-group
+                                            label Nationality
+                                            input.form-control(type='text' placeholder='Nationality')
+                                        .form-group
+                                            label Date of Issued
+                                            input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                        .form-group
+                                            label Date of Expired
+                                            input.form-control(type='text' placeholder='Date of Expired')
+                                    .formBox__row
+                                        .formBox__date
+                                            label.labelStar Date of Birth
+                                            .d-flex
+                                                .form-group
+                                                    select.form-control
+                                                        option Day
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Month
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Year
+                                                        option 2020
+                                                        option 2019
+                                                        option 2018
+
+                                    .formBox__frequent
+                                        button(type='button')
+                                            span Add frequent Flyer
+                                            svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+
+                                        .frequentBox
+                                            .frequentBox__cont
+                                                .form-group
+                                                    label Select
+                                                    select.form-control
+                                                        option Select 1
+                                                        option Select 2
+                                                .form-group
+                                                    label Card Number
+                                                    input.form-control(type='text' placeholder='Card Number')
+                                .formBox__item
+                                    .formBox__text
+                                        h4.mb5 Infant 1
+                                        p.text12.colorBlack55 *Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).
+                                    .formBox__row
+                                        .form-group
+                                            label Accompanying adult passenger
+                                            select.form-control
+                                                option Ms Phuong Bui
+                                    .formBox__row
+                                        .form-group
+                                            label Title
+                                            select.form-control
+                                                option Title 1
+                                                option Title 2
+                                    .formBox__row
+                                        .form-group
+                                            label.labelStar First/Given
+                                            input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                        .form-group
+                                            label.labelStar Middle Name
+                                            input.form-control(type='text' placeholder='Middle Name')
+                                        .form-group
+                                            label.labelStar Last/ Family Name
+                                            input.form-control(type='text' placeholder='Last/ Family Name')
+                                    .formBox__row
+                                        .checkbox
+                                            input#pp15(type='checkbox')
+                                            label(for='pp15') This passenger does not have a first/given name in the passport
+                                    .formBox__row
+                                        .form-group
+                                            label Passport Number
+                                            input.form-control(type='text' placeholder='Passport Number')
+                                        .form-group
+                                            label Nationality
+                                            input.form-control(type='text' placeholder='Nationality')
+                                        .form-group
+                                            label Date of Issued
+                                            input.form-control(type='text' placeholder='Date of Issued')
+
+
+                                        .form-group
+                                            label Date of Expired
+                                            input.form-control(type='text' placeholder='Date of Expired')
+                                    .formBox__row
+                                        .formBox__date
+                                            label.labelStar Date of Birth
+                                            .d-flex
+                                                .form-group
+                                                    select.form-control
+                                                        option Day
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Month
+                                                        option 1
+                                                        option 2
+                                                        option 3
+                                                .form-group
+                                                    select.form-control
+                                                        option Year
+                                                        option 2020
+                                                        option 2019
+                                                        option 2018
+
+                                    .formBox__frequent
+                                        button(type='button')
+                                            span Add frequent Flyer
+                                            svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+
+                                        .frequentBox
+                                            .frequentBox__cont
+                                                .form-group
+                                                    label Select
+                                                    select.form-control
+                                                        option Select 1
+                                                        option Select 2
+                                                .form-group
+                                                    label Card Number
+                                                    input.form-control(type='text' placeholder='Card Number')
+                        .formBox
+                            .formBox__header
+                                svg.svg1(width='24', height='18', viewBox='0 0 24 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M21 5V4L18 6L15 4V5L18 7L21 5ZM22 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2L0 16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H22C22.5304 18 23.0391 17.7893 23.4142 17.4142C23.7893 17.0391 24 16.5304 24 16V2C24 1.46957 23.7893 0.960859 23.4142 0.585786C23.0391 0.210714 22.5304 0 22 0ZM8 3C8.79565 3 9.55871 3.31607 10.1213 3.87868C10.6839 4.44129 11 5.20435 11 6C11 6.79565 10.6839 7.55871 10.1213 8.12132C9.55871 8.68393 8.79565 9 8 9C7.20435 9 6.44129 8.68393 5.87868 8.12132C5.31607 7.55871 5 6.79565 5 6C5 5.20435 5.31607 4.44129 5.87868 3.87868C6.44129 3.31607 7.20435 3 8 3ZM14 15H2V14C2 12 6 10.9 8 10.9C10 10.9 14 12 14 14V15ZM22 9H14V3H22', fill='#F79320')
+
+                                p.text14.colorOrange.medium Contact Information - to receive updates when there are changes to your flights
+                            .formBox__body
+                                .formBox__item
+                                    .formBox__text
+                                        p.text14.colorBlack85 (Country Code) + (Phone Number). Ex: (+66) (1234567)
+                                        p.text12.colorBlack55 * Please fill in your mobile phone number to receive notification or any changes in your flight itinerary.
+                                    .formBox__row
+                                        .form-group
+                                            label.labelStar Country Code
+                                            input.form-control(type='text' placeholder='Country Code')
+                                        .form-group
+                                            label.labelStar Phone Number
+                                            input.form-control(type='text' placeholder='Phone Number')
+                                        .form-group
+                                            label.labelStar Your Email
+                                            input.form-control(type='text' placeholder='Your Email')
+                                        .form-group
+                                            label.labelStar Comfirm Email Address
+                                            input.form-control(type='text' placeholder='Comfirm Email Address')
+                                    .formBox__frequent
+                                        button(type='button')
+                                            span Special Request
+                                            svg.svg1(width='5', height='10', viewBox='0 0 5 10', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0 10L5 5L-4.37114e-07 0L0 10Z', fill='#318FDB')
+                                        .frequentBox
+                                            .frequentBox__cont
+                                                .d-block.w-100
+                                                    textarea.form-control(placeholder='Your Special Request')
+                        .textNote
+                            .textNote__icon
+                                img(src='images/protect-info.png')
+                            .textNote__text
+                                p.text16.colorGreen.medium.mb5 We have a responsibility to protect your information
+                                p.text14.colorBlack55 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .flightPassenger__btn
+                            .btnDesktop
+                                a.btn.btn-orange-1(href='flightReview.html') Continue
+                            .btnMobile
+                                .flightSelect__price
+                                    p.text12.colorBlack55.mr15 Total price for all passengers
+                                    p
+                                        span.text16.colorOrange.medium USD 600.88
+                                        button.viewMore.d-block.btn-yourBooking(type='button')
+                                            span Price details
+                                    .yourBooking
+                                        .yourBooking__header
+                                            p.yourBooking__title Your booking
+                                            button.yourBooking__close(type='button')
+                                                svg.svg1(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                                        .yourBooking__body
+                                            .yourBooking__item
+                                                p.text14.colorPurple.medium.mb15 Departing flight
+                                                .tripBox
+                                                    .flTable__trip
+                                                        p.text20.medium
+                                                            span.colorBlack85 15:35
+                                                            span.colorBlack55 &nbsp;HAN
+                                                        p.text12.medium.colorBlack85 Hanoi, Vietnam
+                                                        p.text14.colorBlack65 Wed, 15 Jan
+                                                    .stopBox
+                                                        .stopBox__line
+                                                            .stopBox__plane
+                                                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.45')
+                                                            .stopBox__dot.colorOrange
+                                                                i.fas.fa-circle
+                                                            .stopBox__dot.colorBlack15
+                                                                i.fas.fa-circle
+                                                        .stopBox__text
+                                                            span.bgOrange.text12 2 stop(s)
+                                                            p.text12.colorBlack65 02h05m
+                                                    .flTable__trip
+                                                        p.text20.medium
+                                                            span.colorBlack85 17:40
+                                                            span.colorBlack55 &nbsp;HKT
+                                                        p.text12.medium.colorBlack85 Phuket, Thailand
+                                                        p.text14.colorBlack65 Wed, 15 Jan
+                                                p.text14.colorBlack85 Economy Saver
+                                            .yourBooking__item
+                                                p.text14.colorPurple.medium.mb15 Return flight
+                                                .tripBox
+                                                    .flTable__trip
+                                                        p.text20.medium
+                                                            span.colorBlack85 15:35
+                                                            span.colorBlack55 &nbsp;HAN
+                                                        p.text12.medium.colorBlack85 Hanoi, Vietnam
+                                                        p.text14.colorBlack65 Wed, 15 Jan
+                                                    .stopBox
+                                                        .stopBox__line
+                                                            .stopBox__plane
+                                                                svg.svg1(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                                    path(d='M6 19L8 19L13 11L18.5 11C18.8978 11 19.2794 10.842 19.5607 10.5607C19.842 10.2794 20 9.89782 20 9.5C20 9.10218 19.842 8.72064 19.5607 8.43934C19.2794 8.15804 18.8978 8 18.5 8L13 8L8 -5.24537e-07L6 -6.11959e-07L8.5 8L3 8L1.5 6L-2.62268e-07 6L1 9.5L-5.68248e-07 13L1.5 13L3 11L8.5 11L6 19Z', fill='black', fill-opacity='0.45')
+                                                            .stopBox__dot.colorOrange
+                                                                i.fas.fa-circle
+                                                            .stopBox__dot.colorOrange
+                                                                i.fas.fa-circle
+                                                            .stopBox__dot.colorBlack15
+                                                                i.fas.fa-circle
+                                                        .stopBox__text
+                                                            span.bgOrange.text12 2 stop(s)
+                                                            p.text12.colorBlack65 02h05m
+                                                    .flTable__trip
+                                                        p.text20.medium
+                                                            span.colorBlack85 17:40
+                                                            span.colorBlack55 &nbsp;HKT
+                                                        p.text12.medium.colorBlack85 Phuket, Thailand
+                                                        p.text14.colorBlack65 Wed, 15 Jan
+                                                p.text14.colorBlack85 Economy Saver
+                                            .yourBooking__item
+                                                .yourBooking__traveler
+                                                    .textIcon
+                                                        svg(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.55')
+                                                        span Traveler/s
+                                                    p.text14.colorBlack55 2 adult
+                                            .yourBooking__item
+                                                .yourBooking__total
+                                                    .d-flex
+                                                        .d-block
+                                                            p.text20.medium.colorBlack85 TOTAL
+                                                            p.text14.colorBlack55 2 adult
+                                                        .d-block.text-right
+                                                            p.text20.medium.colorOrange USD 600.88
+                                                            p.text14.colorBlack55 USD 300.44
+                                                    p.text12.colorBlack55.mt15 * Final price for all travelers (included all taxes, fees & charges)
+                                a.btn.btn-orange-1(href='flightReview.html')
+                                    span CONTINUE
+        #searchModal.modal.fade
+            .modal-dialog.modal-search
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal')
+                            svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                        .modal-search__cont
+                            h2.mb30 MODIFY YOUR SEARCH
+                            .searchBox__trip
+                                .searchBox__radio
+                                    .radio
+                                        input#fl1(type='radio', name='fl' checked='')
+                                        label(for='fl1') Round Trip
+                                    .radio
+                                        input#fl2(type='radio', name='fl')
+                                        label(for='fl2') One Way
+
+                                    .radio
+                                        input#fl3(type='radio', name='fl')
+                                        label(for='fl3') Multi - Cities
+                                .noMulti
+                                    .searchBox__form
+                                        .form-group.w25
+                                            label Origin
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            include jades/suggestPlace
+                                        button.btnRound(type='button')
+                                            svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                        .form-group.w25
+                                            label Destination
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+
+                                            .suggestPlace.suggestPlace_little
+                                                .suggestPlace__group
+                                                    .suggestPlace__col
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                    .suggestPlace__col
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                    .suggestPlace__col
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                    .suggestPlace__col
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                    .suggestPlace__col
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                        ul.suggestPlace__item
+                                                            li.liTitle Thailand
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                                            li
+                                                                a(href='#') Bangkok (BKK)
+
+                                        .t-datepicker
+                                            .t-datepicker__item
+                                                label Depart
+                                                .t-check-in
+                                            .t-datepicker__item#return
+                                                label Return
+                                                .t-check-out
+                                        .form-group.w19
+                                            label
+                                                | Adults&nbsp;
+                                                i (>12 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Adults
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19
+                                            label
+                                                | Children&nbsp;
+                                                i (2 - 12 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Children
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19
+                                            label
+                                                | Infants&nbsp;
+                                                i (<2 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Children
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19.searchBox__promotion.show
+                                            label Promotion code
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                        .searchBox__btn
+                                            a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+                                .multi.hidden
+                                    .searchBox__form
+                                        .form-group.w25
+                                            label Origin
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Origin')
+                                                svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                            include jades/suggestPlace
+                                        button.btnRound(type='button')
+                                            svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                        .form-group.w25
+                                            label Destination
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Choose Destination')
+                                                svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                            include jades/suggestPlace
+                                        .t-datepicker.w25
+                                            .t-datepicker__item.w100
+                                                label Depart
+                                                .t-check-in
+                                    .searchBox__form.selected
+                                        .form-group.w25
+                                            label Origin
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                        button.btnRound(type='button')
+                                            svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                        .form-group.w25
+                                            label Destination
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' value='Tp Ho Chi Minh')
+                                                svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                        .t-datepicker.w25
+                                            .t-datepicker__item.w100
+                                                label Depart
+                                                .t-check-in
+                                        .searchBox__remove
+                                            button(type='button')
+                                                svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                span Remove Flight
+                                    .searchBox__form.selected
+                                        .form-group.w25
+                                            label Origin
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' value='Hanoi')
+                                                svg.svg1point5(width='22', height='18', viewBox='0 0 22 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M1.49984 15.9998H20.4998V17.9998H1.49984V15.9998ZM21.0698 6.63982C20.8598 5.83982 20.0298 5.35982 19.2298 5.57982L13.9198 6.99982L6.99984 0.569824L5.08984 1.07982L9.22984 8.24982L4.25984 9.57982L2.28984 8.03982L0.839844 8.42982L2.65984 11.5898L3.42984 12.9198L5.02984 12.4998L10.3398 11.0698L14.6898 9.90982L19.9998 8.49982C20.8098 8.25982 21.2798 7.43983 21.0698 6.63982Z', fill='black', fill-opacity='0.25')
+                                        button.btnRound(type='button')
+                                            svg.svg1point5(width='22', height='16', viewBox='0 0 22 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M18 4L14 8H17C17 9.5913 16.3679 11.1174 15.2426 12.2426C14.1174 13.3679 12.5913 14 11 14C10 14 9.03 13.75 8.2 13.3L6.74 14.76C7.97 15.54 9.43 16 11 16C13.1217 16 15.1566 15.1571 16.6569 13.6569C18.1571 12.1566 19 10.1217 19 8H22L18 4ZM5 8C5 6.4087 5.63214 4.88258 6.75736 3.75736C7.88258 2.63214 9.4087 2 11 2C12 2 12.97 2.25 13.8 2.7L15.26 1.24C14.03 0.46 12.57 0 11 0C8.87827 0 6.84344 0.842855 5.34315 2.34315C3.84285 3.84344 3 5.87827 3 8H0L4 12L8 8', fill='black', fill-opacity='0.45')
+
+                                        .form-group.w25
+                                            label Destination
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' value='Danang')
+                                                svg.svg1point5(width='20', height='19', viewBox='0 0 20 19', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M0.5 17H19.5V19H0.5V17ZM7.68 11.27L12.03 12.43L17.34 13.85C18.14 14.06 18.96 13.59 19.18 12.79C19.39 12 18.92 11.17 18.12 10.95L12.81 9.53L10.05 0.5L8.12 0V8.28L3.15 6.95L2.22 4.63L0.77 4.24V9.41L2.37 9.84L7.68 11.27Z', fill='black', fill-opacity='0.25')
+                                        .t-datepicker.w25
+                                            .t-datepicker__item.w100
+                                                label Depart
+                                                .t-check-in
+                                        .searchBox__remove
+                                            button(type='button')
+                                                svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.25')
+                                                span Remove Flight
+                                    button.searchBox__add(type='button')
+                                        svg.svg1point5(width='18', height='18', viewBox='0 0 18 18', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M14 10H10V14H8V10H4V8H8V4H10V8H14V10ZM16 0H2C0.89 0 0 0.89 0 2V16C0 16.5304 0.210714 17.0391 0.585786 17.4142C0.960859 17.7893 1.46957 18 2 18H16C16.5304 18 17.0391 17.7893 17.4142 17.4142C17.7893 17.0391 18 16.5304 18 16V2C18 0.89 17.1 0 16 0Z', fill='#F79320')
+                                        span ADD ANOTHER FLIGHT
+                                    .searchBox__form
+                                        .form-group.w19
+                                            label
+                                                | Adults&nbsp;
+                                                i (>12 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Adults
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19
+                                            label
+                                                | Children&nbsp;
+                                                i (2 - 12 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Children
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19
+                                            label
+                                                | Infants&nbsp;
+                                                i (<2 yrs)
+                                            .dropdown
+                                                button.dropdown-toggle.form-control.form-control-lg(type='button' data-toggle='dropdown')
+                                                    svg.svg1point5(width='16', height='16', viewBox='0 0 16 16', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                        path(d='M8 0C9.06087 0 10.0783 0.421427 10.8284 1.17157C11.5786 1.92172 12 2.93913 12 4C12 5.06087 11.5786 6.07828 10.8284 6.82843C10.0783 7.57857 9.06087 8 8 8C6.93913 8 5.92172 7.57857 5.17157 6.82843C4.42143 6.07828 4 5.06087 4 4C4 2.93913 4.42143 1.92172 5.17157 1.17157C5.92172 0.421427 6.93913 0 8 0ZM8 10C12.42 10 16 11.79 16 14V16H0V14C0 11.79 3.58 10 8 10Z', fill='black', fill-opacity='0.25')
+                                                    span Children
+                                                .dropdown-menu
+                                                    a.dropdown-item 1
+                                                    a.dropdown-item 2
+                                                    a.dropdown-item 3
+                                                    a.dropdown-item 4
+                                                    a.dropdown-item 5
+                                        .form-group.w19.searchBox__promotion.show
+                                            label Promotion code
+                                            .inputSvg
+                                                input.form-control.form-control-lg(type='text' placeholder='Code')
+                                                svg.svg1point5(width='22', height='21', viewBox='0 0 22 21', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                                    path(d='M8.06 0.930217C6.17 0.920217 4.33 2.74022 5.17 5.00022H2C1.46957 5.00022 0.960859 5.21093 0.585786 5.586C0.210714 5.96108 0 6.46978 0 7.00022V9.00022C0 9.26543 0.105357 9.51979 0.292893 9.70732C0.48043 9.89486 0.734784 10.0002 1 10.0002H10V7.00022H12V10.0002H21C21.2652 10.0002 21.5196 9.89486 21.7071 9.70732C21.8946 9.51979 22 9.26543 22 9.00022V7.00022C22 6.46978 21.7893 5.96108 21.4142 5.586C21.0391 5.21093 20.5304 5.00022 20 5.00022H16.83C18 1.73022 13.6 -0.579783 11.57 2.24022L11 3.00022L10.43 2.22022C9.8 1.33022 8.93 0.940217 8.06 0.930217ZM8 3.00022C8.89 3.00022 9.34 4.08022 8.71 4.71022C8.08 5.34022 7 4.89022 7 4.00022C7 3.735 7.10536 3.48065 7.29289 3.29311C7.48043 3.10557 7.73478 3.00022 8 3.00022ZM14 3.00022C14.89 3.00022 15.34 4.08022 14.71 4.71022C14.08 5.34022 13 4.89022 13 4.00022C13 3.735 13.1054 3.48065 13.2929 3.29311C13.4804 3.10557 13.7348 3.00022 14 3.00022ZM1 11.0002V19.0002C1 19.5307 1.21071 20.0394 1.58579 20.4144C1.96086 20.7895 2.46957 21.0002 3 21.0002H19C19.5304 21.0002 20.0391 20.7895 20.4142 20.4144C20.7893 20.0394 21 19.5307 21 19.0002V11.0002H12V19.0002H10V11.0002H1Z', fill='black', fill-opacity='0.25')
+                                        .searchBox__btn
+                                            a.btn.btn-orange-1.btn-lg(href='flightList.html') FIND FLIGHTS
+        #tipsModal.modal.fade
+            .modal-dialog.modal-tips
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal')
+                            svg.svg1point5(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                path(d='M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z', fill='black', fill-opacity='0.55')
+                        .modal-tips__cont
+                            .modal-tips__text.mb15
+                                h3.mb15 Tips on entering your name
+                                p.text14.colorBlack85 Enter your full name just as it appears on your passport. Use only alphabetical characters (A to Z), with a maximum of 25 characters for your first/given name, and 30 characters for your last/family name
+
+                            .tipsBox
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span No first name
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If you don't have a first name, check the box stating "This passenger does not have a first/given name".
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Phuong
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span No last name
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If you don’t have a last name, check the box stating “This passenger does not have a first/given name”. Then enter your first name in the last/family name field.
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Phuong
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given' disabled='disabled')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Last name contains a single letter
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your last name is made up of only one letter, double the letter in the last/given name field.
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Name contains special charaters
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Name contains a suffix
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span First name is too long
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+                                .tipsBox__item
+                                    button.tipsBox__btn(type='button')
+                                        span Last name is too long
+                                        i.fas.fa-chevron-down
+                                    .tipsBox__body
+                                        .tipsBox__cont
+                                            p.text14.colorBlack85.mb15 If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name
+                                            p.text14.colorBlack85 Name on the travel document:
+                                            p.text16.colorBlack85.medium.mb15 Join K
+                                            .form-group
+                                                label.labelStar First/Given
+                                                input.form-control(type='text' placeholder='First/Given')
+                                            .checkbox.mb15
+                                                input#pp11(type='checkbox')
+                                                label(for='pp11') This passenger does not have a first/given name in the passport
+                                            .form-group
+                                                label.labelStar Last/Family Name
+                                                input.form-control(type='text' value='Phuong')
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+        script.
+            $('.btn-yourBooking').click(function () {
+                $('.yourBooking').toggleClass('open');
+            });
+            $('.yourBooking__close').click(function () {
+                $('.yourBooking').removeClass('open');
+            });
+        script.
+            $('.formBox__frequent > button').click(function () {
+                $(this).next('.frequentBox').slideToggle(300);
+                $(this).toggleClass('rotate');
+            });
+        script.
+            $(".tipsBox__btn").on("click", function () {
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    $(this)
+                        .siblings(".tipsBox__body")
+                        .slideUp(200);
+                    $(".tipsBox__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                } else {
+                    $(".tipsBox__btn i")
+                        .removeClass("fa-chevron-up")
+                        .addClass("fa-chevron-down");
+                    $(this)
+                        .find("i")
+                        .removeClass("fa-chevron-down")
+                        .addClass("fa-chevron-up");
+                    $(".tipsBox__btn").removeClass("active");
+                    $(this).addClass("active");
+                    $(".tipsBox__body").slideUp(200);
+                    $(this)
+                        .siblings(".tipsBox__body")
+                        .slideDown(200);
+                }
+            });
+        script.
+            $('.btnYourLight').click(function () {
+                $('.reservation__body').addClass('open');
+            });
+            $('.reservation__close').click(function () {
+                $('.reservation__body').removeClass('open');
+            });
+
+
+
+

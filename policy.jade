@@ -1,0 +1,101 @@
+- var page = "index";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+
+        main.wrapper
+            section.layoutInfo
+                .layoutInfo__banner(style='background-image: url("../images/layoutInfo__banner.jpg");')
+                    .container
+                        h2 Hello. How can Cambodia help you?
+                .layoutInfo__body
+                    .container
+                        h2.mb15 Privacy Policy
+                        .layoutInfo__box
+                            ul.layoutInfo__navbar
+                                li
+                                    a(href='contactUs.html')
+                                        span Contact us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='aboutUs.html')
+                                        span About us
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='faq.html')
+                                        span FAQ
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li.active
+                                    a(href='policy.html')
+                                        span Privacy Policy
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+                                li
+                                    a(href='termsOfUse.html')
+                                        span Terms of Use
+                                        svg(width='8', height='12', viewBox='0 0 8 12', fill='none', xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z', fill='black', fill-opacity='0.55')
+
+                            .layoutInfo__cont
+                                .policy
+                                    h3.mb15 Privacy Policy
+                                    p.medium Disclaimer
+                                    p Please be reminded that this website is an agency’s property and not the airlines’ official website. All information about flight time, flight titles, destinations is well updated according to the airlines’ notification, other information may differ from the airlines to follow our Regulations. If you do not feel happy with us or our conditions, kindly stop using our website and leave immediately. Once payment made, it implies that you’re totally agree with all of our information and conditions.
+                                    p Your use of our website is free of charge for searching or referencing. If you purchase our product, service fees should be collected. Your feedback/comments in regards to any incorrect information or improperly services by email, phone, fax is highly appreciated and much thanks.
+                                    p.medium Privacy Policy
+                                    p Passenger’s privacy is always our first and most important mission.
+                                    p.medium Information Provided
+                                    p Visitors: No personal information is needed if your use of our website for searching and referencing only.
+                                    p Purchasers: you’re required to provide below information (can be updated later by email or phone call):
+                                    p Full name as shown in passport (Middle and First name/Last name)
+                                    p Date of birth (can be updated later at check-in counter without any charge)
+                                    p Passport information (can be updated later at check-in counter without any charge)
+                                    p Personal email address (for e-ticket received) & phone number for urgent contact. Company email will have strict conditions, so you’re recommended to provide us your personal email address to ensure you can receive e-ticket/booking confirmation.
+                                    p.medium Information Using
+                                    p Your personal information shall be sent to the third party that performs services – in this case is Philippines Airlines. We will not share your information to anyone else unless:
+                                    p - Required by Laws
+                                    p - Investigating, preventing, or taking action regarding illegal activities
+                                    p - Identifying of fraud or error
+                                    p - Protecting our rights and safety
+                                    p The third party (Philippines Airlines) that we share the information take full responsibility to protect your personal information and must only use it for the purpose for which it was collected.
+                                    p In case you purchase our services for others, please ensure that they’re aware and fully understand our Privacy Policy, Terms & Conditions and allows you to disclose their information to us.
+                                    p.medium Modification
+                                    p We reserve the right to modify, change or update this Privacy Statement without prior notice. All passengers are recommended to visit and check out our Terms & Conditions regularly to keep yourself updated.
+                                    p.medium Copyright
+                                    p All information posted on this website is specially prepared for our business, which must not be copied, changed or modified by any individual or organization. Failing of this condition shall be involved to The Law.
+                                    p For any inquiry or better support, kindly email to booking@camdiaangkorailine.com
+                                    p Thank you & Have a nice trip!
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+
+
+        script.
+            $('.camNavbar__toggle').click(function () {
+                $('.camNavbar__main').addClass('open');
+            });
+
+            $('.camNavbar__close, .camNavbar__backdrop').click(function () {
+                $('.camNavbar__main').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.camNavbar__link').click(function () {
+                    $(this).next('.camNavbar__sub').slideToggle(200);
+                    $(this).parent('li').toggleClass('active');
+                });
+            };
+            if (screen.width < 768) {
+                $('.footer__top').css('background-image', 'url("images/footer-bg-mobile.jpg")')
+            };
+
+
+
+
