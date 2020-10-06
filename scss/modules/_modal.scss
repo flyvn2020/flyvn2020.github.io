@@ -9,7 +9,7 @@
 }
 .modal-body{
   padding: 24px;
-  @include breakpoint(only-ipad){
+  @include breakpoint(ipad){
     padding: 1.5vw;
   }
 }
@@ -19,7 +19,7 @@ button.close{
   position: absolute;
   top: 15px;
   right: 15px;
-  @include breakpoint(only-ipad){
+  @include breakpoint(ipad){
     padding: .5vw;
     top: 1vw;
     right: 1vw;

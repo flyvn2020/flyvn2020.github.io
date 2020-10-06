@@ -15,7 +15,7 @@
     padding-left: 30px;
     font-size: 14px;
     color: $black85;
-    @include breakpoint(only-ipad){
+    @include breakpoint(ipad){
       font-size: 1vw;
       padding-left: 2vw;
     }
@@ -50,7 +50,7 @@
     border: solid #fff;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-    @include breakpoint(only-ipad){
+    @include breakpoint(ipad){
       width: .5vw;
       height: 1vw;
       top: 1px;

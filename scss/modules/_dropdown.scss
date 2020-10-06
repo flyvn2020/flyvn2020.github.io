@@ -2,13 +2,13 @@
   border: none;
   border-bottom: 4px solid $purple;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
-  @include breakpoint(only-ipad){
+  @include breakpoint(ipad){
     padding: 0;
   }
 }
 .dropdown-item{
   font-size: 14px;
-  @include breakpoint(only-ipad){
+  @include breakpoint(ipad){
     font-size: 1vw;
     padding: .5vw 1vw;
   }
@@ -20,13 +20,13 @@
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    @include breakpoint(only-ipad){
+    @include breakpoint(ipad){
       right: 1vw;
     }
   }
   > svg{
     margin-right: 5px;
-    @include breakpoint(only-ipad){
+    @include breakpoint(ipad){
       margin-right: .5vw;
     }
   }
