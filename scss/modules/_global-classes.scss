@@ -1,269 +1,299 @@
-h1{
+h1 {
   font-size: 26px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 3vw;
   }
 }
-h2{
+
+h2 {
   font-size: 22px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 2vw;
   }
 }
-h3{
+
+h3 {
   font-size: 18px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1.6vw;
   }
 }
-h4{
+
+h4 {
   font-size: 16px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1.2vw;
   }
 }
-h5{
+
+h5 {
   font-size: 13px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: .8vw;
   }
 }
-.mb5{
+
+.mb5 {
   margin-bottom: 5px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-bottom: .5vw;
   }
 }
-.mb15{
+
+.mb15 {
   margin-bottom: 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-bottom: 1vw;
   }
 }
-.ml15{
+
+.ml15 {
   margin-left: 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-left: 1vw;
   }
 }
-.ml10{
+
+.ml10 {
   margin-left: 10px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-left: .8vw;
   }
 }
-.mb30{
+
+.mb30 {
   margin-bottom: 30px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-bottom: 2vw;
   }
 }
 
-.mt5{
+.mt5 {
   margin-top: 5px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-top: .5vw;
   }
 }
-.mt15{
+
+.mt15 {
   margin-top: 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-top: 1vw;
   }
 }
-.ml5{
+
+.ml5 {
   margin-left: 5px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-left: .5vw;
   }
 }
-.mr5{
+
+.mr5 {
   margin-right: 5px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-right: .5vw;
   }
 }
-.mr15{
+
+.mr15 {
   margin-right: 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin-right: 1vw;
   }
 }
-.mrl15{
+
+.mrl15 {
   margin: 0 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     margin: 0 1vw;
   }
 }
-.bgGreen{
+
+.bgGreen {
   background: $green;
 }
-.bgYellow{
+
+.bgYellow {
   background: $yellow;
 }
-.bgPink{
+
+.bgPink {
   background: $pink;
 }
-.bgRed{
+
+.bgRed {
   background: $red;
 }
-.bgBlack{
+
+.bgBlack {
   background: $black;
 }
-.bgPurple{
+
+.bgPurple {
   background: $purple;
 }
-.bgGray{
+
+.bgGray {
   background: $gray;
 }
-.bgOrange{
+
+.bgOrange {
   background: $orange;
 }
 
-.colorOrange{
+.colorOrange {
   color: $orange;
 }
-.colorGreen{
+
+.colorGreen {
   color: $green;
 }
-.colorYellow{
+
+.colorYellow {
   color: $yellow;
 }
-.colorPink{
+
+.colorPink {
   color: $pink;
 }
-.colorRed{
+
+.colorRed {
   color: $red;
 }
-.colorBlack{
+
+.colorBlack {
   color: $black;
 }
-.colorPurple{
+
+.colorPurple {
   color: $purple;
 }
-.colorGray{
+
+.colorGray {
   color: $gray;
 }
-.colorBlack85{
+
+.colorBlack85 {
   color: $black85;
 }
-.colorBlack75{
+
+.colorBlack75 {
   color: $black75;
 }
-.colorBlack65{
+
+.colorBlack65 {
   color: $black65;
 }
-.colorBlack55{
+
+.colorBlack55 {
   color: $black55;
 }
-.colorBlack45{
+
+.colorBlack45 {
   color: $black45;
 }
-.colorBlack35{
+
+.colorBlack35 {
   color: $black35;
 }
-.colorBlack25{
+
+.colorBlack25 {
   color: $black25;
 }
-.colorBlack15{
+
+.colorBlack15 {
   color: $black15;
 }
-.colorBlack5{
+
+.colorBlack5 {
   color: $black5;
 }
-.colorWhite{
+
+.colorWhite {
   color: #fff;
 }
-.text12{
+
+.text12 {
   font-size: 12px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: .9vw;
   }
 }
-.text14{
+
+.text14 {
   font-size: 14px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1vw;
   }
 }
-.text16{
+
+.text16 {
   font-size: 16px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1.1vw;
   }
 }
-.text18{
+
+.text18 {
   font-size: 18px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1.2vw;
   }
 }
-.text20{
+
+.text20 {
   font-size: 20px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad) {
     font-size: 1.3vw;
   }
 }
 
-.semibold{
+.semibold {
   font-weight: $semibold;
 }
-.medium{
+
+.medium {
   font-weight: $medium;
 }
-.w-33{
+
+.w-33 {
   width: 33.333% !important;
 }
 
-.svg1{
-  @include breakpoint(only-ipad){
+.svg1 {
+  @include breakpoint(only-ipad) {
     width: 1vw;
     height: 1vw;
   }
 }
-.svg1point5{
-  @include breakpoint(only-ipad){
+
+.svg1point5 {
+  @include breakpoint(only-ipad) {
     width: 1.5vw;
     height: 1.5vw;
   }
 }
-.svg2{
-  @include breakpoint(only-ipad){
+
+.svg2 {
+  @include breakpoint(only-ipad) {
     width: 2vw;
     height: 2vw;
   }
 }
 
-.iconLine{
-  display: flex;
-  align-items: baseline;
-  color: $purple;
-  font-size: 14px;
-  @include breakpoint(sm){
-    font-size: 1vw;
-  }
-  span{
-    margin-left: 5px;
-    @include breakpoint(sm){
-      margin-left: .5vw;
-    }
-  }
+.hidden {
+  display: none !important;
 }
-.hidden{
-  display: none!important;
+
+.show {
+  display: block !important;
 }
-.show{
-  display: block!important;
-}
-.inline-block{
+
+.inline-block {
   display: inline-block;
-  vertical-align: middle;
 }
-.t-day{
-  &:hover{
-    background: #f5f5f5;
-  }
-}
-.italic{
+
+.italic {
   font-style: italic;
 }

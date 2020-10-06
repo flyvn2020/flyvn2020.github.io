@@ -6,13 +6,10 @@
   @include breakpoint(md){
     max-width: 790px;
   }
-  @include breakpoint(lg){
-    max-width: calc(80% - 30px);
-  }
 }
 .modal-body{
   padding: 24px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad){
     padding: 1.5vw;
   }
 }
@@ -22,7 +19,7 @@ button.close{
   position: absolute;
   top: 15px;
   right: 15px;
-  @include breakpoint(sm){
+  @include breakpoint(only-ipad){
     padding: .5vw;
     top: 1vw;
     right: 1vw;

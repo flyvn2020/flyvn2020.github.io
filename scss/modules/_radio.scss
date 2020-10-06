@@ -9,7 +9,7 @@
     padding-left:30px;
     color: #000;
     font-size: 14px;
-    @include breakpoint(sm){
+    @include breakpoint(only-ipad){
       font-size: 1vw;
       padding-left: 2vw;
       transition: all .2s;
@@ -30,7 +30,7 @@
     border: 1px solid #D3D6E9;
     border-radius: 50%;
     background-color:#fff;
-    @include breakpoint(sm){
+    @include breakpoint(only-ipad){
       width: 1.2vw;
       height: 1.2vw;
       top: 1px;
