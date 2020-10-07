@@ -1,24 +1,17 @@
 .inputSearch {
-  position: relative;
-  @include breakpoint(ipad) {
-    width: 13vw;
+  display: flex;
+  padding: 15px;
+  @include breakpoint(ipad){
+    padding: 1vw;
   }
-
-  > svg {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 15px;
-    @include breakpoint(ipad) {
-      left: 1vw;
-    }
+  .form-control{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
-
-  .form-control {
-    padding-left: 40px;
-    @include breakpoint(ipad) {
-      padding-left: 2.5vw;
-    }
+  .btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 
@@ -30,6 +23,7 @@
     height: 2.8vw;
     font-size: 1vw;
     padding: 0 1vw;
+    border-radius: .2vw;
   }
 
   &:focus {
@@ -83,9 +77,21 @@ select.form-control {
   }
 }
 
-.labelStar {
-  &:after {
-    content: ' *';
-    color: $red;
+.inputSvg{
+  position: relative;
+  svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    @include breakpoint(ipad){
+      left: 1vw;
+    }
+  }
+  .form-control{
+    padding-left: 45px;
+    @include breakpoint(ipad){
+      padding-left: 2.5vw;
+    }
   }
 }

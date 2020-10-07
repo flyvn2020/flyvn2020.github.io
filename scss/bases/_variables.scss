@@ -14,8 +14,6 @@ $regular:400;
 $medium:500;
 $semibold:600;
 $bold:700;
-$heavy:800;
-$black:900;
 
 //Responsive
 $screen-xs:767px;
@@ -34,12 +32,13 @@ $gray:#888;
 $yellow: #FDC702;
 $pink: #FFD8DC;
 $red: #F93243;
-$black: #282527;
+$black: #000;
 $blue: #410099;
-$orange: #F79320;
-$orange-1: #F15A26;
+$orange: #EA6200;
+$dark-green: #0F5A5E;
 
-$shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+$shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+$border-color: rgba(0, 0, 0, 0.15);
 
 $black85: rgba(0, 0, 0, 0.85);
 $black75: rgba(0, 0, 0, 0.75);

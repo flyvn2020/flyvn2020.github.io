@@ -297,3 +297,28 @@ h5 {
 .italic {
   font-style: italic;
 }
+
+.logo{
+  a{
+    display: block;
+    img{
+      width: 210px;
+      display: block;
+      @include breakpoint(ipad){
+        width: 15vw;
+      }
+    }
+  }
+}
+.flexGroup1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexGroup2{
+  display: flex;
+  align-items: center;
+}
+.flex1{
+  flex: 1;
+}

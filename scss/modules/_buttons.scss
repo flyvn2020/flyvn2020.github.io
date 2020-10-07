@@ -12,6 +12,7 @@
     font-size: 1vw;
     padding: 0 1vw;
     height: 2.8vw;
+    border-radius: .2vw;
   }
   &:focus{
     outline: none;
@@ -41,11 +42,6 @@
     color: #fff;
     background-color: $orange;
     border-color: $orange;
-  }
-  &.btn-orange-1{
-    color: #fff;
-    background-color: $orange-1;
-    border-color: $orange-1;
   }
   &.btn-outline{
     border-color: #ced4da;
