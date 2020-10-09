@@ -4,6 +4,7 @@
   background-size: cover;
   height: 256px;
   padding-top: 50px;
+  position: relative;
   @include breakpoint(ipad){
     height: 20vw;
     padding-top: 5vw;
@@ -13,6 +14,12 @@
     padding-top: 70px;
   }
   &__cont{
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     h2{
       font-size: 20px;
       @include breakpoint(ipad){
@@ -30,5 +37,14 @@
         font-size: 20px;
       }
     }
+  }
+  &__backdrop{
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

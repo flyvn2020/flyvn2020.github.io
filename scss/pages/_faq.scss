@@ -1,0 +1,37 @@
+.faq{
+  &__body{
+    margin: 35px 0;
+  }
+  &__item{
+    padding: 15px;
+    box-shadow: $shadow;
+    margin-bottom: 25px;
+    border-radius: 4px;
+  }
+  &__title{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titleIcon{
+      padding-left: 10px;
+      svg{
+        display: none;
+      }
+    }
+  }
+  &__cont{
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #EA6200;
+  }
+}
+
+//svg{
+//  position: absolute;
+//  right: 10px;
+//  top: 50%;
+//  transform: translateY(-50%);
+//  transition: 0.4s;
+//}
