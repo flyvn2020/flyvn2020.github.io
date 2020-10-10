@@ -1,0 +1,122 @@
+.searchBox {
+  margin-top: -85px;
+  @include breakpoint(ipad){
+    margin-top: -3.7vw;
+  }
+  &__main {
+  }
+
+  &__header {
+    background-color: $dark-green;
+    padding: 5px 15px;
+    border-radius: 4px 4px 0 0;
+    @include breakpoint(ipad) {
+      border-radius: .2vw .2vw 0 0;
+      padding: .5vw 1vw;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: $shadow;
+    padding: 15px;
+    @include breakpoint(ipad) {
+      border-radius: 0 0 .2vw .2vw;
+      padding: 1vw;
+    }
+  }
+
+  &__action {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    @include breakpoint(ipad) {
+      margin-bottom: 1vw;
+    }
+    .dropdown{
+      margin-right: 30px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-right: 8px;
+      @include breakpoint(ipad) {
+        margin-right: .7vw;
+      }
+    }
+  }
+
+  &__cont {
+  }
+
+  &__form {
+    @include breakpoint(sm) {
+      display: flex;
+    }
+
+    .pd4 {
+      @include breakpoint(xs){
+        margin-bottom: 15px;
+      }
+      @include breakpoint(sm) {
+        padding: 0 .3vw;
+      }
+      @include breakpoint(lg) {
+        padding: 0 4px;
+      }
+    }
+
+    .col2 {
+      @include breakpoint(ipad) {
+        width: calc((100% - 5vw) / 4);
+      }
+      @include breakpoint(lg) {
+        width: calc((100% - 70px) / 4);
+      }
+    }
+
+    .w70 {
+      @include breakpoint(ipad) {
+        width: 5vw;
+      }
+      @include breakpoint(lg) {
+        width: 70px;
+      }
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    > svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+      @include breakpoint(ipad) {
+        left: 1vw;
+      }
+    }
+
+    .form-control {
+      padding-left: 50px;
+      @include breakpoint(ipad) {
+        padding-left: 3vw;
+      }
+    }
+  }
+
+  &__date{
+    @include breakpoint(xs){
+      position: relative;
+    }
+  }
+
+  &__btn {
+  }
+}
