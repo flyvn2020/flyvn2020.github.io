@@ -1,77 +1,63 @@
 .t-datepicker{
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   float: none;
-  @include breakpoint(sm){
-    margin-bottom: 1vw;
-    width: calc((100% - 2.2vw)/ 2);
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  height: 48px;
+  padding-left: 50px;
+  padding-right: 15px;
+  line-height: initial;
+  @include breakpoint(xs){
+    position: initial;
   }
-  &__item{
-    width: 100%;
-    @include breakpoint(xs){
-      margin-bottom: 15px;
-    }
-    @include breakpoint(sm){
-      width: 50%;
-      padding: 0 .7vw;
-    }
-    > label{
-      font-size: 14px;
-      margin-bottom: 8px;
-      @include breakpoint(sm){
-        font-size: 1vw;
-        margin-bottom: .7vw;
-      }
+  @include breakpoint(ipad){
+    border-radius: .2vw;
+    height: 3.3vw;
+    padding-left: 3vw;
+    padding-right: 1vw;
+    font-size: 1vw;
+  }
+  .t-check-in{
+    &:after{
+      content: '-';
+      padding: 0 5px;
+      font-weight: 500;
     }
   }
   .t-check-in, .t-check-out{
-    width: 100%;
     border: none;
     border-radius: 0;
-  }
-  .t-dates{
-    color: #495057;
+    height: 100%;
+    float: none;
     display: flex;
     align-items: center;
-    border: 1px solid #ced4da;
-    border-radius: .3rem;
+    width: auto;
     @include breakpoint(xs){
-      height: 48px;
+      position: initial;
     }
-    @include breakpoint(sm){
-      height: 3.3vw;
-      font-size: 1vw;
-      padding: 0 1vw;
-    }
-    > span{
-      margin: 0 2px;
-    }
-    i.fas{
-      color: #bcbcbc;
-      font-size: 18px;
-      margin-right: 15px;
-      @include breakpoint(sm){
-        font-size: 1.2vw;
-        margin-right: 1vw;
-      }
+  }
+  .t-dates{
+    padding: 0;
+    height: auto;
+    span{
+      color: #000;
     }
     .t-date-info-title{
-      left: 45px;
-      top: 50%;
-      transform: translateY(-50%);
+      position: initial;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.45);
       opacity: 1;
-      @include breakpoint(sm){
-        left: 3vw;
-        font-size: 1vw;
-      }
+      @include breakpoint(ipad){font-size: 1vw;}
     }
   }
 }
 .t-datepicker-days{
   @include breakpoint(xs){
     width: 100%;
+    left: 0;
   }
-  @include breakpoint(sm){
+  @include breakpoint(ipad){
     width: 45vw;
   }
 }
@@ -85,14 +71,13 @@
   }
 }
 .t-datepicker-day{
-  @include breakpoint(sm){
-    border-bottom: 4px solid $purple;
+  @include breakpoint(ipad){
     top: calc(100% + .5vw);
     padding: .8vw 0;
   }
 }
 .t-next, .t-prev, .t-table-condensed td, .t-table-condensed th{
-  @include breakpoint(sm){
+  @include breakpoint(ipad){
     padding: .8vw;
     font-size: 1vw;
     line-height: 1.5;

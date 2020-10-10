@@ -19,12 +19,18 @@
   height: 40px;
   font-size: 14px;
   padding: 0 15px;
+  border: 1px solid $border-color;
+  color: #000;
   @include breakpoint(ipad) {
     height: 2.8vw;
     font-size: 1vw;
     padding: 0 1vw;
     border-radius: .2vw;
   }
+  &::-webkit-input-placeholder {color:rgba(0, 0, 0, 0.45);}
+  &::-moz-placeholder {color:rgba(0, 0, 0, 0.45);}
+  &:-ms-input-placeholder {color:rgba(0, 0, 0, 0.45);}
+  &:-moz-placeholder {color:rgba(0, 0, 0, 0.45);}
 
   &:focus {
     box-shadow: none;
