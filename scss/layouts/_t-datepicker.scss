@@ -18,8 +18,8 @@
     padding-right: 1vw;
     font-size: 1vw;
   }
-  .t-check-in{
-    &:after{
+  .t-check-out{
+    &:before{
       content: '-';
       padding: 0 5px;
       font-weight: 500;

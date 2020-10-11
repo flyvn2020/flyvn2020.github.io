@@ -1,5 +1,6 @@
 .searchBox {
   margin-top: -85px;
+  position: relative;
   @include breakpoint(ipad){
     margin-top: -3.7vw;
   }
@@ -37,6 +38,9 @@
     .dropdown{
       margin-right: 30px;
     }
+    .dropdown-menu{
+      z-index: 200!important;
+    }
   }
 
   &__toggle {
@@ -52,13 +56,6 @@
   }
 
   &__cont {
-  }
-
-  &__form {
-    @include breakpoint(sm) {
-      display: flex;
-    }
-
     .pd4 {
       @include breakpoint(xs){
         margin-bottom: 15px;
@@ -90,6 +87,14 @@
     }
   }
 
+  &__form {
+    @include breakpoint(sm) {
+      display: flex;
+    }
+    @include breakpoint(ipad){margin: 0 -.3vw;}
+    @include breakpoint(lg){margin: 0 -4px;}
+  }
+
   &__input {
     position: relative;
 
@@ -114,6 +119,73 @@
   &__date{
     @include breakpoint(xs){
       position: relative;
+    }
+  }
+
+  &__flex{
+    @include breakpoint(sm){
+      display: flex;
+    }
+    @include breakpoint(ipad){margin: 0 -.3vw;}
+    @include breakpoint(lg){margin: 0 -4px;}
+
+    .searchBox__code{
+      @include breakpoint(ipad){
+        width: calc(100% - ((100% - 5vw)/ 4) - 5vw);
+      }
+      @include breakpoint(lg){
+        width: calc(100% - ((100% - 70px)/ 4) - 70px);
+      }
+    }
+  }
+
+  &__remove{
+    @include breakpoint(xs){
+      text-align: center;
+    }
+    @include breakpoint(ipad){
+      padding-left: 2vw;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
+    @include breakpoint(lg){
+      padding-left: 24px;
+    }
+    button{
+      color: rgba(0, 0, 0, 0.45);
+      &:hover{
+        text-decoration: underline;
+      }
+      span{
+        padding-left: 8px;
+        @include breakpoint(ipad){padding-left: .9vw}
+      }
+    }
+  }
+
+  &__add{
+    margin-bottom: 24px;
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(ipad){
+      margin-bottom: 2vw;
+    }
+  }
+
+  &__group{
+    .searchBox__form{
+      margin-bottom: 24px;
+      @include breakpoint(xs){
+        border-bottom: 1px solid $border-color;
+        margin: 0 -15px 15px;
+        padding: 0 15px 15px;
+      }
+      @include breakpoint(ipad){
+        margin-bottom: 2vw;
+      }
     }
   }
 
