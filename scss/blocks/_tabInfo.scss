@@ -9,14 +9,15 @@
     padding: 0 10px;
   }
   li{
-    padding: 10px 24px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     a{
       color: $black45;
       font-weight: 600;
       white-space: nowrap;
+      padding: 10px 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      display: block;
     }
-    &.active, &:hover{
+    &.active a, &:hover a{
       border-bottom: 3px solid #FBB040;
       a{
         color: $black85;
