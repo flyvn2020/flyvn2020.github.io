@@ -33,6 +33,10 @@ h5 {
   }
 }
 
+.mb0 {
+  margin-bottom: 0;
+}
+
 .mb5 {
   margin-bottom: 5px;
   @include breakpoint(ipad) {
@@ -298,27 +302,102 @@ h5 {
   font-style: italic;
 }
 
-.logo{
-  a{
+.logo {
+  a {
     display: block;
-    img{
+
+    img {
       width: 210px;
       display: block;
-      @include breakpoint(ipad){
+      @include breakpoint(ipad) {
         width: 15vw;
       }
     }
   }
 }
-.flexGroup1{
+
+.flexGroup1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.flexGroup2{
+
+.flexGroup2 {
   display: flex;
   align-items: center;
 }
-.flex1{
+
+.flex1 {
   flex: 1;
+}
+
+.pd4 {
+  @include breakpoint(xs) {
+    margin-bottom: 15px;
+  }
+  @include breakpoint(sm) {
+    padding: 0 .3vw;
+  }
+  @include breakpoint(lg) {
+    padding: 0 4px;
+  }
+}
+.col1 {
+  @include breakpoint(ipad){
+    width: calc((100% - 14vw) / 2);
+  }
+  @include breakpoint(lg) {
+    width: calc((100% - 180px) / 2);
+  }
+}
+
+.col2 {
+  @include breakpoint(ipad) {
+    width: calc((100% - 5vw) / 4);
+  }
+  @include breakpoint(lg) {
+    width: calc((100% - 70px) / 4);
+  }
+}
+.col3 {
+  @include breakpoint(ipad){
+    width: calc((100% - 8vw) / 3);
+  }
+  @include breakpoint(lg) {
+    width: calc((100% - 120px) / 3);
+  }
+}
+.col4{
+  @include breakpoint(ipad){
+    width: calc(100% - (((100% - 8vw) / 3) + 8vw));
+  }
+  @include breakpoint(lg){
+    width: calc(100% - (((100% - 120px) / 3) + 120px));
+  }
+}
+
+.w70 {
+  @include breakpoint(ipad) {
+    width: 5vw;
+  }
+  @include breakpoint(lg) {
+    width: 70px;
+  }
+}
+.w120{
+  @include breakpoint(ipad){
+    width: 8vw;
+  }
+  @include breakpoint(lg){
+    width: 120px;
+  }
+}
+
+.w180 {
+  @include breakpoint(ipad) {
+    width: 14vw;
+  }
+  @include breakpoint(lg) {
+    width: 180px;
+  }
 }

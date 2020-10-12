@@ -48,3 +48,260 @@
     bottom: 0;
   }
 }
+.homeBook{
+  margin-bottom: 50px;
+  @include breakpoint(ipad){
+    margin-bottom: 20vw;
+  }
+  @include breakpoint(lg){
+    margin-bottom: 270px;
+  }
+  &__row{
+    @include breakpoint(sm){
+      display: flex;
+      position: relative;
+    }
+    @include breakpoint(ipad){
+      margin: 0 -1vw;
+    }
+    @include breakpoint(lg){
+      margin: 0 -15px;
+    }
+  }
+  &__col{
+    @include breakpoint(xs){
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px dashed $border-color;
+      &:last-child{
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint(sm){
+      width: 33.333%;
+    }
+    @include breakpoint(ipad){
+      padding: 0 1vw;
+    }
+    @include breakpoint(lg){
+      padding: 0 15px;
+    }
+  }
+  &__item{
+    text-align: center;
+  }
+  &__icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #ffe9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    @include breakpoint(ipad){
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+  &__title{
+    margin: 15px 0;
+    @include breakpoint(ipad){
+      margin: 1vw 0;
+    }
+  }
+  &__text{
+    color: rgba(0, 0, 0, 0.45);
+  }
+  &__plus{
+    margin-top: 15px;
+    @include breakpoint(ipad){
+      margin-top: 1vw;
+    }
+    button{
+      .svgMinus{
+        display: none;
+      }
+      &.active{
+        .svgPlus{
+          display: none;
+        }
+        .svgMinus{
+          display: block;
+        }
+      }
+    }
+  }
+  &__form{
+    background-color: #fff;
+    box-shadow: $shadow;
+    border-radius: 4px;
+    padding: 15px;
+    position: relative;
+    margin-top: 15px;
+    display: none;
+    animation: opacityShow .3s ease-in-out;
+    @include breakpoint(ipad){
+      border-radius: .2vw;
+      padding: 2vw 5vw;
+      margin-top: 1vw;
+    }
+    @include breakpoint(sm){
+      position: absolute;
+      top: 100%;
+      left: 1vw;
+      right: 1vw;
+    }
+    @include breakpoint(lg){
+      padding: 30px 50px;
+      left: 15px;
+      right: 15px;
+    }
+    &.open{
+      display: block;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #fff transparent;
+      top: -20px;
+      @include breakpoint(xs){
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @include breakpoint(ipad){
+        border-width: .8vw;
+        top: -1.6vw;
+      }
+      @include breakpoint(lg){}
+    }
+  }
+  #formBook-1{
+    &:before{
+      @include breakpoint(ipad){
+        left: 13.5vw;
+      }
+      @include breakpoint(lg){
+        left: 164px;
+      }
+    }
+  }
+  #formBook-2{
+    &:before{
+      @include breakpoint(sm){
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  #formBook-3{
+    &:before{
+      @include breakpoint(ipad){
+        right: 13.5vw;
+      }
+      @include breakpoint(lg){
+        right: 164px;
+      }
+    }
+  }
+}
+.homeLetter{
+  margin-bottom: 50px;
+  &__row{
+    @include breakpoint(sm){
+      display: flex;
+    }
+    @include breakpoint(ipad){
+      margin: 0 -1vw;
+    }
+    @include breakpoint(lg){
+      margin: 0 -15px;
+    }
+  }
+  &__col{
+    @include breakpoint(sm){
+      width: 50%;
+    }
+    @include breakpoint(ipad){
+      padding: 0 1vw;
+    }
+    @include breakpoint(lg){
+      padding: 0 15px;
+    }
+  }
+  &__item{
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    padding: 15px;
+    @include breakpoint(xs){
+      margin-bottom: 15px;
+    }
+    @include breakpoint(ipad){
+      border-radius: .2vw;
+      padding: 1vw 2vw;
+      height: 10vw;
+    }
+    @include breakpoint(sm){
+      display: flex;
+      align-items: center;
+    }
+    @include breakpoint(lg){
+      padding: 15px 30px;
+      height: 120px;
+    }
+  }
+  &__title{
+    @include breakpoint(xs){
+      font-size: 16px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      width: calc(100% - 30px);
+      padding-left: 15px;
+    }
+    @include breakpoint(ipad){
+      font-size: 1.3vw;
+    }
+    @include breakpoint(lg){
+      font-size: 20px;
+    }
+  }
+  &__icon{
+    @include breakpoint(xs){
+      float: left;
+    }
+    svg{
+      @include breakpoint(xs){
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  &__cont{
+    @include breakpoint(ipad){
+      padding-left: 2vw;
+    }
+    @include breakpoint(sm){
+      flex: 1;
+    }
+    @include breakpoint(lg){
+      padding-left: 30px;
+    }
+  }
+  &__input{
+    display: flex;
+    @include breakpoint(xs){
+      margin-top: 15px;
+    }
+    .form-control{
+      margin-right: 15px;
+      @include breakpoint(ipad){
+        margin-right: 1vw;
+      }
+    }
+  }
+}

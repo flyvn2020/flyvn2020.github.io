@@ -1,10 +1,10 @@
 .searchBox {
   margin-top: -85px;
+  margin-bottom: 50px;
   position: relative;
   @include breakpoint(ipad){
     margin-top: -3.7vw;
-  }
-  &__main {
+    margin-bottom: 5vw;
   }
 
   &__header {
@@ -51,38 +51,6 @@
       margin-right: 8px;
       @include breakpoint(ipad) {
         margin-right: .7vw;
-      }
-    }
-  }
-
-  &__cont {
-    .pd4 {
-      @include breakpoint(xs){
-        margin-bottom: 15px;
-      }
-      @include breakpoint(sm) {
-        padding: 0 .3vw;
-      }
-      @include breakpoint(lg) {
-        padding: 0 4px;
-      }
-    }
-
-    .col2 {
-      @include breakpoint(ipad) {
-        width: calc((100% - 5vw) / 4);
-      }
-      @include breakpoint(lg) {
-        width: calc((100% - 70px) / 4);
-      }
-    }
-
-    .w70 {
-      @include breakpoint(ipad) {
-        width: 5vw;
-      }
-      @include breakpoint(lg) {
-        width: 70px;
       }
     }
   }
@@ -189,6 +157,53 @@
     }
   }
 
-  &__btn {
+  &__dropdown {
+    .form-control{
+      .svgArrow{
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        @include breakpoint(ipad){
+          right: 1vw;
+        }
+      }
+    }
+    .dropdown-menu{
+      min-width: 100%;
+    }
+  }
+
+  &__tab{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    li{
+      width: 50%;
+      border-bottom: 1px solid $border-color;
+      @include breakpoint(sm){
+        width: 20%;
+      }
+      &.active{
+        button{
+          border-color: #FBB040;
+          color: #FBB040;;
+        }
+      }
+      button{
+        width: 100%;
+        padding: 10px 15px;
+        border-bottom: 3px solid transparent;
+        transform: translateY(2px);
+        transition: all .2s;
+        @include breakpoint(ipad){
+          border-bottom: .3vw solid transparent;
+          transform: translateY(.2vw);
+        }
+        &:hover{
+          color: #FBB040;
+        }
+      }
+    }
   }
 }

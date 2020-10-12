@@ -84,6 +84,7 @@ body {
   color:$base-font-color;
   background-color:$base-background-color;
   -webkit-font-smoothing: antialiased;
+  animation: opacityShow 1.5s;
   @include breakpoint(ipad){
     font-size: 1vw;
   }
