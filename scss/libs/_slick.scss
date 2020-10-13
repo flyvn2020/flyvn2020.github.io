@@ -122,47 +122,47 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-arrow{
   position: absolute;
-  display: block;
-  width: 10px;
-  height: 20px;
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #0F5A5E;
   font-size: 0;
   cursor: pointer;
   top: 50%;
   transform: translate(0, -50%);
   padding: 0;
-  border: 2px solid rgba(0, 0, 0, 0.35);
+  border: 1px solid #0F5A5E;
   border-radius: 50%;
   outline: none;
   z-index: 1;
-  @media (min-width: 768px){
-    width: 2.3vw;
-    height: 2.3vw;
-    &:hover{
-      border-color: #F79320;
-      &:before{
-        color: #F79320;
-      }
+  transition: all .2s;
+  @media (min-width: 768px) and (max-width: 1199px){
+    width: 2vw;
+    height: 2vw;
+  }
+  &:hover{
+    background-color: #fff;
+    &:before{
+      color: #0F5A5E;
     }
   }
   &:before {
     font-family: $slick-font-family;
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.35);
+    font-size: 13px;
+    color: #fff;
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @media (min-width: 768px){
-      font-size: 1.1vw;
+    @media (min-width: 768px) and (max-width: 1199px){
+      font-size: .9vw;
     }
   }
 }
 
 .slick-prev {
   left:0;
-  @media (min-width: 768px){
-    left: -3vw;
-  }
   &:before {
     content: $slick-prev-character;
   }
@@ -170,9 +170,6 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-next {
   right:0;
-  @media (min-width: 768px){
-    right: -3vw;
-  }
   &:before {
     content: $slick-next-character;
   }
@@ -199,7 +196,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
   position: absolute;
-  bottom:15px;
+  bottom:0;
   left: 0;
   right: 0;
   list-style: none;
@@ -208,16 +205,13 @@ $slick-opacity-not-active: 0.25 !default;
   padding: 0;
   margin: 0;
   width: 100%;
-  @media (min-width: 768px){
-    bottom: 1vw;
-  }
   li {
     position: relative;
     display: inline-block;
     margin: 0 5px;
     padding: 0;
     cursor: pointer;
-    @media (min-width: 768px){
+    @media (min-width: 768px) and (max-width: 1199px){
       margin: 0 .4vw;
     }
     button {
@@ -230,7 +224,7 @@ $slick-opacity-not-active: 0.25 !default;
       background: #FBCA7E;
       cursor: pointer;
       border-radius: 50%;
-      @media (min-width: 768px){
+      @media (min-width: 768px) and (max-width: 1199px){
         width: .7vw;
         height: .7vw;
       }
