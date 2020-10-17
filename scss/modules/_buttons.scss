@@ -91,11 +91,12 @@
   color: #318FDB;
   @include breakpoint(ipad){
     font-size: 1vw;
-    &:hover{
-      color: #318FDB;
-      span{
-        text-decoration: underline;
-      }
+
+  }
+  &:hover{
+    color: #318FDB;
+    span{
+      text-decoration: underline;
     }
   }
   svg{

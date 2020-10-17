@@ -557,13 +557,15 @@
   }
 
   &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(4.62deg, #FFFFFF 3.74%, rgba(255, 255, 255, 0) 56.06%);
+    @include breakpoint(xs){
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(4.62deg, #FFFFFF 3.74%, rgba(255, 255, 255, 0) 56.06%);
+    }
   }
 
   &__main {
