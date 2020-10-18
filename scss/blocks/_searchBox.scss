@@ -222,4 +222,28 @@
       }
     }
   }
+  &__main{
+    &.collapseMobile{
+      @include breakpoint(xs){
+        display: none;
+      }
+    }
+  }
+}
+.btnEditSearch{
+  padding: 15px;
+  border-bottom: 1px solid $border-color;
+  background-color: #fff;
+  margin: 0 -15px;
+  @include breakpoint(sm){
+    display: none;
+  }
+  &.rotate{
+    svg{
+      transform: rotate(180deg);
+    }
+  }
+  svg{
+    transition: all .3s ease-in-out;
+  }
 }

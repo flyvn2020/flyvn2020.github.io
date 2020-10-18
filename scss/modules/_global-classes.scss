@@ -229,6 +229,10 @@ h5 {
   color: $dark-green;
 }
 
+.colorBlue {
+  color: $blue;
+}
+
 .text12 {
   font-size: 12px;
   @include breakpoint(ipad) {
@@ -428,12 +432,19 @@ h5 {
     display: none !important;
   }
 }
-.bgDarkGreen1{
+
+.bgDarkGreen1 {
   background-color: #3A9E9B;
 }
-.bgDarkGreen2{
+
+.bgDarkGreen2 {
   background-color: #0F5A5E;
 }
-.bgDarkGreen3{
+
+.bgDarkGreen3 {
   background-color: #0A4750;
+}
+
+.bgLightGreen {
+  background-color: rgba(15, 90, 94, 0.16);
 }

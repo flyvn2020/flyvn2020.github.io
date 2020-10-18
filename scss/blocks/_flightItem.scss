@@ -94,6 +94,10 @@
       display: flex;
       border-radius: 4px 4px 0 0;
       overflow: hidden;
+      margin-bottom: 1px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       @include breakpoint(ipad) {
         border-radius: .2vw .2vw 0 0;
       }
@@ -118,12 +122,21 @@
     &__right {
       width: 50%;
       display: flex;
+      border-left: 1px solid $border-color;
+      .flightItem__table__cell{
+        border-right: 1px solid $border-color;
+        &:last-child{
+          border-right: none;
+        }
+      }
     }
 
     &__row {
-      display: flex;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-      margin-bottom: 15px;
+      margin-bottom: 8px;
+      @include breakpoint(sm){
+        display: flex;
+      }
       @include breakpoint(ipad){
         margin-bottom: 1vw;
       }
@@ -131,10 +144,12 @@
 
     &__cell {
       flex: 1;
-      position: relative;
-      display: flex;
-      align-items: center;
       padding: 15px;
+      @include breakpoint(sm){
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
       @include breakpoint(ipad){
         padding: 1vw;
       }
@@ -147,6 +162,19 @@
       @include breakpoint(ipad) {
         top: .5vw;
         right: .5vw;
+      }
+    }
+
+    &__price{
+      background-color: $light-green;
+      padding: 10px 15px;
+      &.rotate{
+        svg.svgArrow{
+          transform: rotate(180deg);
+        }
+      }
+      svg.svgArrow{
+        transition: all .3s ease-in-out;
       }
     }
   }
@@ -200,7 +228,6 @@
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid $border-color;
   transition: all .2s;
   &:hover{
     .priceBox__check{border-color: #fff;}
@@ -235,11 +262,10 @@
   }
   &.soldOut{
     pointer-events: none;
-    opacity: .5;
+    background-color: #ddd;
 
   }
   &:nth-child(1){
-    border-left: 1px solid $border-color;
     &:hover,
     &.active{
       background-color: #3A9E9B;
@@ -252,7 +278,6 @@
     }
   }
   &:nth-child(3){
-    border-right: none;
     &:hover,
     &.active{
       background-color: #0A4750;
@@ -295,6 +320,88 @@
     }
     svg{
       display: none;
+    }
+  }
+}
+.priceBoxMobile{
+  display: none;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed $border-color;
+    padding: 15px;
+    &:last-child{
+      border-bottom: none;
+    }
+    &.darkGreen1{
+      .priceBoxMobile{
+        &__name{
+          color: #3A9E9B;
+          svg{
+            path{
+              fill: #3A9E9B;
+            }
+          }
+        }
+        &__right{
+          .btn{
+            background-color: #3A9E9B;
+          }
+        }
+      }
+    }
+    &.darkGreen2{
+      .priceBoxMobile{
+        &__name{
+          color: #0F5A5E;
+          svg{
+            path{
+              fill: #0F5A5E;
+            }
+          }
+        }
+        &__right{
+          .btn{
+            background-color: #0F5A5E;
+          }
+        }
+      }
+    }
+    &.darkGreen3{
+      .priceBoxMobile{
+        &__name{
+          color: #0A4750;
+          svg{
+            path{
+              fill: #0A4750;
+            }
+          }
+        }
+        &__right{
+          .btn{
+            background-color: #0A4750;
+          }
+        }
+      }
+    }
+  }
+  &__left{
+    width: calc(100% - 112px);
+    padding-right: 15px;
+  }
+  &__name{
+    font-weight: 500;
+    svg{
+      vertical-align: baseline;
+    }
+  }
+  &__right{
+    width: 112px;
+    .btn{
+      width: 100%;
+      text-transform: uppercase;
+      color: #fff;
     }
   }
 }

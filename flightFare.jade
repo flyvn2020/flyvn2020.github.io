@@ -1,0 +1,483 @@
+- var page = "index1";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+
+        main.wrapper
+            .flightHeader
+                .container
+                    .flightHeader__cont
+                        .flightHeader__logo
+                            .logo
+                                a(href='index.html')
+                                    img(src='images/logo.png')
+                        .flightHeader__step
+                            .flStep
+                                .flStep__item.active
+                                    p.mb0.colorWhite.medium Select Flight
+                                .flStep__item
+                                    p.mb0.colorWhite.medium Passenger
+
+                                .flStep__item
+                                    p.mb0.colorWhite.medium Review
+
+
+                                .flStep__item
+                                    p.mb0.colorWhite.medium Payment
+
+
+            section.flightFare
+                .container
+                    .title1
+                        span Hanoi to Bangkok and back - Round trip
+                    .flightFare__action.mb15
+                        .flexGroup2
+                            svg.svg1(width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M10.3333 2.66683C10.3333 2.40161 10.4387 2.14726 10.6262 1.95972C10.8137 1.77219 11.0681 1.66683 11.3333 1.66683C11.5985 1.66683 11.8529 1.77219 12.0404 1.95972C12.228 2.14726 12.3333 2.40161 12.3333 2.66683C12.3333 2.93205 12.228 3.1864 12.0404 3.37394C11.8529 3.56147 11.5985 3.66683 11.3333 3.66683C11.0681 3.66683 10.8137 3.56147 10.6262 3.37394C10.4387 3.1864 10.3333 2.93205 10.3333 2.66683ZM7.27997 13.2735L13.28 7.2735C13.52 7.0335 13.6666 6.70016 13.6666 6.3335V1.66683C13.6666 0.926829 13.0733 0.333496 12.3333 0.333496L7.66664 0.333496C7.29997 0.333496 6.96664 0.480163 6.72664 0.726829L0.726641 6.72016C0.486641 6.96683 0.333307 7.30016 0.333307 7.66683C0.333307 8.0335 0.486641 8.36683 0.726641 8.60683L5.39331 13.2735C5.63331 13.5202 5.96664 13.6668 6.33331 13.6668C6.70664 13.6668 7.03997 13.5135 7.27997 13.2735Z' fill='#EA6200')
+                            span.ml5 Best fare
+                        .flexGroup2.ml15
+                            svg.svg1(width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M8.5 4H23C23.2652 4 23.5196 3.89464 23.7071 3.70711C23.8946 3.51957 24 3.26522 24 3C24 2.73478 23.8946 2.48043 23.7071 2.29289C23.5196 2.10536 23.2652 2 23 2H8.5C8.23478 2 7.98043 2.10536 7.79289 2.29289C7.60536 2.48043 7.5 2.73478 7.5 3C7.5 3.26522 7.60536 3.51957 7.79289 3.70711C7.98043 3.89464 8.23478 4 8.5 4Z' fill='#0F5A5E')
+                                path(d='M23 10H8.5C8.23478 10 7.98043 10.1054 7.79289 10.2929C7.60536 10.4804 7.5 10.7348 7.5 11C7.5 11.2652 7.60536 11.5196 7.79289 11.7071C7.98043 11.8946 8.23478 12 8.5 12H23C23.2652 12 23.5196 11.8946 23.7071 11.7071C23.8946 11.5196 24 11.2652 24 11C24 10.7348 23.8946 10.4804 23.7071 10.2929C23.5196 10.1054 23.2652 10 23 10Z' fill='#0F5A5E')
+                                path(d='M23 18H8.5C8.23478 18 7.98043 18.1054 7.79289 18.2929C7.60536 18.4804 7.5 18.7348 7.5 19C7.5 19.2652 7.60536 19.5196 7.79289 19.7071C7.98043 19.8946 8.23478 20 8.5 20H23C23.2652 20 23.5196 19.8946 23.7071 19.7071C23.8946 19.5196 24 19.2652 24 19C24 18.7348 23.8946 18.4804 23.7071 18.2929C23.5196 18.1054 23.2652 18 23 18Z' fill='#0F5A5E')
+                                path(d='M3.5 1.49805H1.5C1.22386 1.49805 1 1.7219 1 1.99805V3.99805C1 4.27419 1.22386 4.49805 1.5 4.49805H3.5C3.77614 4.49805 4 4.27419 4 3.99805V1.99805C4 1.7219 3.77614 1.49805 3.5 1.49805Z' fill='#0F5A5E')
+                                path(d='M3.5 0.5H1.5C1.10218 0.5 0.720644 0.658035 0.43934 0.93934C0.158035 1.22064 0 1.60218 0 2L0 4C0 4.39782 0.158035 4.77936 0.43934 5.06066C0.720644 5.34196 1.10218 5.5 1.5 5.5H3.5C3.89782 5.5 4.27936 5.34196 4.56066 5.06066C4.84196 4.77936 5 4.39782 5 4V2C5 1.60218 4.84196 1.22064 4.56066 0.93934C4.27936 0.658035 3.89782 0.5 3.5 0.5ZM4 4C4 4.13261 3.94732 4.25979 3.85355 4.35355C3.75979 4.44732 3.63261 4.5 3.5 4.5H1.5C1.36739 4.5 1.24021 4.44732 1.14645 4.35355C1.05268 4.25979 1 4.13261 1 4V2C1 1.86739 1.05268 1.74021 1.14645 1.64645C1.24021 1.55268 1.36739 1.5 1.5 1.5H3.5C3.63261 1.5 3.75979 1.55268 3.85355 1.64645C3.94732 1.74021 4 1.86739 4 2V4Z' fill='#0F5A5E')
+                                path(d='M3.5 9.49805H1.5C1.22386 9.49805 1 9.7219 1 9.99805V11.998C1 12.2742 1.22386 12.498 1.5 12.498H3.5C3.77614 12.498 4 12.2742 4 11.998V9.99805C4 9.7219 3.77614 9.49805 3.5 9.49805Z' fill='#0F5A5E')
+                                path(d='M3.5 8.5H1.5C1.10218 8.5 0.720644 8.65804 0.43934 8.93934C0.158035 9.22064 0 9.60218 0 10L0 12C0 12.3978 0.158035 12.7794 0.43934 13.0607C0.720644 13.342 1.10218 13.5 1.5 13.5H3.5C3.89782 13.5 4.27936 13.342 4.56066 13.0607C4.84196 12.7794 5 12.3978 5 12V10C5 9.60218 4.84196 9.22064 4.56066 8.93934C4.27936 8.65804 3.89782 8.5 3.5 8.5ZM4 12C4 12.1326 3.94732 12.2598 3.85355 12.3536C3.75979 12.4473 3.63261 12.5 3.5 12.5H1.5C1.36739 12.5 1.24021 12.4473 1.14645 12.3536C1.05268 12.2598 1 12.1326 1 12V10C1 9.86739 1.05268 9.74021 1.14645 9.64645C1.24021 9.55268 1.36739 9.5 1.5 9.5H3.5C3.63261 9.5 3.75979 9.55268 3.85355 9.64645C3.94732 9.74021 4 9.86739 4 10V12Z' fill='#0F5A5E')
+                                path(d='M3.5 17.498H1.5C1.22386 17.498 1 17.7219 1 17.998V19.998C1 20.2742 1.22386 20.498 1.5 20.498H3.5C3.77614 20.498 4 20.2742 4 19.998V17.998C4 17.7219 3.77614 17.498 3.5 17.498Z' fill='#0F5A5E')
+                                path(d='M3.5 16.5H1.5C1.10218 16.5 0.720644 16.658 0.43934 16.9393C0.158035 17.2206 0 17.6022 0 18L0 20C0 20.3978 0.158035 20.7794 0.43934 21.0607C0.720644 21.342 1.10218 21.5 1.5 21.5H3.5C3.89782 21.5 4.27936 21.342 4.56066 21.0607C4.84196 20.7794 5 20.3978 5 20V18C5 17.6022 4.84196 17.2206 4.56066 16.9393C4.27936 16.658 3.89782 16.5 3.5 16.5ZM4 20C4 20.1326 3.94732 20.2598 3.85355 20.3536C3.75979 20.4473 3.63261 20.5 3.5 20.5H1.5C1.36739 20.5 1.24021 20.4473 1.14645 20.3536C1.05268 20.2598 1 20.1326 1 20V18C1 17.8674 1.05268 17.7402 1.14645 17.6464C1.24021 17.5527 1.36739 17.5 1.5 17.5H3.5C3.63261 17.5 3.75979 17.5527 3.85355 17.6464C3.94732 17.7402 4 17.8674 4 18V20Z' fill='#0F5A5E')
+
+
+
+                            span.text16.colorDarkGreen.medium.ml5 List flight
+
+                    .showDesktop
+                        .flightFare__table
+                            .flightFare__table__vertical
+                                button.d-block.viewMore.arrowUp(type='button')
+                                    svg.m-0.svg1point5(width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M8.00003 -3.55878e-06C8.21809 -0.00027343 8.4337 0.0459703 8.63246 0.13564C8.83123 0.22531 9.00859 0.356345 9.1527 0.519997L15.6934 7.95466C15.9001 8.20103 16.0022 8.5185 15.9779 8.83919C15.9536 9.15988 15.8048 9.45833 15.5633 9.67074C15.3218 9.88314 15.0068 9.99263 14.6857 9.9758C14.3645 9.95897 14.0627 9.81715 13.8447 9.58066L8.12536 3.07933C8.10972 3.06148 8.09045 3.04718 8.06883 3.03739C8.04722 3.02759 8.02376 3.02252 8.00003 3.02252C7.9763 3.02252 7.95284 3.02759 7.93123 3.03739C7.90961 3.04718 7.89034 3.06148 7.8747 3.07933L2.15536 9.58066C2.04987 9.70638 1.92032 9.80974 1.77431 9.88467C1.6283 9.9596 1.46879 10.0046 1.30515 10.017C1.1415 10.0294 0.977033 10.0089 0.821402 9.95688C0.665771 9.9048 0.522119 9.82214 0.39889 9.71376C0.275662 9.60537 0.175344 9.47344 0.10383 9.32573C0.0323182 9.17802 -0.00894633 9.01751 -0.0175351 8.85362C-0.0261248 8.68973 -0.00186526 8.52578 0.053815 8.3714C0.109495 8.21703 0.195473 8.07534 0.306696 7.95466L6.84536 0.522663C6.98973 0.358607 7.16735 0.227151 7.36643 0.137035C7.56552 0.0469181 7.7815 0.000204323 8.00003 -3.55878e-06Z' fill='#318FDB')
+                                    span.d-block Previous
+
+                                .flightFare__table__main
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                button.d-block.viewMore.arrowDown(type='button')
+                                    svg.m-0.svg1point5(width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M7.99997 11C7.78191 11.0003 7.5663 10.954 7.36754 10.8644C7.16877 10.7747 6.99141 10.6437 6.8473 10.48L0.306637 3.04534C0.0999104 2.79897 -0.00222275 2.4815 0.022077 2.16081C0.0463768 1.84012 0.195181 1.54167 0.43667 1.32926C0.67816 1.11686 0.993168 1.00737 1.31434 1.0242C1.6355 1.04103 1.93734 1.18285 2.1553 1.41934L7.87464 7.92067C7.89028 7.93851 7.90955 7.95281 7.93117 7.96261C7.95278 7.97241 7.97624 7.97748 7.99997 7.97748C8.0237 7.97748 8.04716 7.97241 8.06877 7.96261C8.09039 7.95281 8.10966 7.93851 8.1253 7.92067L13.8446 1.41934C13.9501 1.29362 14.0797 1.19026 14.2257 1.11533C14.3717 1.0404 14.5312 0.995412 14.6949 0.983012C14.8585 0.970612 15.023 0.99105 15.1786 1.04312C15.3342 1.0952 15.4779 1.17786 15.6011 1.28624C15.7243 1.39463 15.8247 1.52655 15.8962 1.67427C15.9677 1.82198 16.0089 1.98249 16.0175 2.14638C16.0261 2.31027 16.0019 2.47422 15.9462 2.6286C15.8905 2.78297 15.8045 2.92466 15.6933 3.04534L9.15464 10.4773C9.01027 10.6414 8.83265 10.7728 8.63357 10.863C8.43448 10.9531 8.2185 10.9998 7.99997 11Z' fill='#318FDB')
+                                    span.d-block Next
+                            .flightFare__table__cont
+                                .flightFare__table__header
+                                    .flightFare__table__arrow
+                                        button.viewMore.arrowLeft(type='button')
+                                            svg.m-0.svg1point5(width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M-3.2099e-06 7.99997C-0.00027309 7.78191 0.0459706 7.5663 0.13564 7.36754C0.22531 7.16877 0.356345 6.99141 0.519997 6.8473L7.95466 0.306637C8.20103 0.0999103 8.5185 -0.00222282 8.83919 0.022077C9.15988 0.0463768 9.45833 0.195181 9.67074 0.43667C9.88314 0.67816 9.99263 0.993168 9.9758 1.31434C9.95897 1.6355 9.81715 1.93734 9.58066 2.1553L3.07933 7.87464C3.06148 7.89028 3.04719 7.90955 3.03739 7.93117C3.02759 7.95278 3.02252 7.97624 3.02252 7.99997C3.02252 8.0237 3.02759 8.04716 3.03739 8.06877C3.04719 8.09039 3.06148 8.10966 3.07933 8.1253L9.58066 13.8446C9.70638 13.9501 9.80974 14.0797 9.88467 14.2257C9.9596 14.3717 10.0046 14.5312 10.017 14.6949C10.0294 14.8585 10.0089 15.023 9.95688 15.1786C9.9048 15.3342 9.82214 15.4779 9.71376 15.6011C9.60537 15.7243 9.47345 15.8247 9.32573 15.8962C9.17802 15.9677 9.01751 16.0089 8.85362 16.0175C8.68973 16.0261 8.52578 16.0019 8.3714 15.9462C8.21703 15.8905 8.07534 15.8045 7.95466 15.6933L0.522664 9.15464C0.358607 9.01027 0.227151 8.83265 0.137035 8.63357C0.0469185 8.43448 0.000204682 8.2185 -3.2099e-06 7.99997Z' fill='#318FDB')
+                                            span.ml10 Previous
+
+                                        button.viewMore.arrowRight(type='button')
+                                            svg.m-0.svg1point5(width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M11 8.00003C11.0003 8.21809 10.954 8.4337 10.8644 8.63246C10.7747 8.83123 10.6437 9.00859 10.48 9.1527L3.04534 15.6934C2.79897 15.9001 2.4815 16.0022 2.16081 15.9779C1.84012 15.9536 1.54167 15.8048 1.32926 15.5633C1.11686 15.3218 1.00737 15.0068 1.0242 14.6857C1.04103 14.3645 1.18285 14.0627 1.41934 13.8447L7.92067 8.12536C7.93851 8.10972 7.95281 8.09045 7.96261 8.06883C7.97241 8.04722 7.97748 8.02376 7.97748 8.00003C7.97748 7.9763 7.97241 7.95284 7.96261 7.93123C7.95281 7.90961 7.93851 7.89034 7.92067 7.8747L1.41934 2.15536C1.29362 2.04987 1.19026 1.92032 1.11533 1.77431C1.0404 1.6283 0.995411 1.46879 0.983011 1.30515C0.970612 1.1415 0.991049 0.977033 1.04312 0.821402C1.0952 0.665771 1.17786 0.522119 1.28624 0.39889C1.39463 0.275661 1.52655 0.175343 1.67426 0.10383C1.82198 0.0323181 1.98249 -0.00894646 2.14638 -0.0175353C2.31027 -0.026125 2.47422 -0.00186545 2.6286 0.0538148C2.78297 0.109495 2.92466 0.195473 3.04534 0.306696L10.4773 6.84536C10.6414 6.98972 10.7728 7.16735 10.863 7.36643C10.9531 7.56552 10.9998 7.7815 11 8.00003Z' fill='#318FDB')
+                                            span.ml10 Next
+
+                                    .flightFare__table__group
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+
+                                .flightFare__table__body
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen.active
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                    .showMobile
+                        .flightFare__table
+                            .flightFare__table__vertical
+                                button.d-block.viewMore.arrowUp(type='button')
+                                    svg.m-0.svg1point5(width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M8.00003 -3.55878e-06C8.21809 -0.00027343 8.4337 0.0459703 8.63246 0.13564C8.83123 0.22531 9.00859 0.356345 9.1527 0.519997L15.6934 7.95466C15.9001 8.20103 16.0022 8.5185 15.9779 8.83919C15.9536 9.15988 15.8048 9.45833 15.5633 9.67074C15.3218 9.88314 15.0068 9.99263 14.6857 9.9758C14.3645 9.95897 14.0627 9.81715 13.8447 9.58066L8.12536 3.07933C8.10972 3.06148 8.09045 3.04718 8.06883 3.03739C8.04722 3.02759 8.02376 3.02252 8.00003 3.02252C7.9763 3.02252 7.95284 3.02759 7.93123 3.03739C7.90961 3.04718 7.89034 3.06148 7.8747 3.07933L2.15536 9.58066C2.04987 9.70638 1.92032 9.80974 1.77431 9.88467C1.6283 9.9596 1.46879 10.0046 1.30515 10.017C1.1415 10.0294 0.977033 10.0089 0.821402 9.95688C0.665771 9.9048 0.522119 9.82214 0.39889 9.71376C0.275662 9.60537 0.175344 9.47344 0.10383 9.32573C0.0323182 9.17802 -0.00894633 9.01751 -0.0175351 8.85362C-0.0261248 8.68973 -0.00186526 8.52578 0.053815 8.3714C0.109495 8.21703 0.195473 8.07534 0.306696 7.95466L6.84536 0.522663C6.98973 0.358607 7.16735 0.227151 7.36643 0.137035C7.56552 0.0469181 7.7815 0.000204323 8.00003 -3.55878e-06Z' fill='#318FDB')
+                                    span.d-block Previous
+
+                                .flightFare__table__main
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                    .flightFare__table__cell.bgDarkGreen2
+                                        .flightFare__table__date.colorWhite
+                                            p Return
+                                            p 21 Jul (Wed)
+                                button.d-block.viewMore.arrowDown(type='button')
+                                    svg.m-0.svg1point5(width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M7.99997 11C7.78191 11.0003 7.5663 10.954 7.36754 10.8644C7.16877 10.7747 6.99141 10.6437 6.8473 10.48L0.306637 3.04534C0.0999104 2.79897 -0.00222275 2.4815 0.022077 2.16081C0.0463768 1.84012 0.195181 1.54167 0.43667 1.32926C0.67816 1.11686 0.993168 1.00737 1.31434 1.0242C1.6355 1.04103 1.93734 1.18285 2.1553 1.41934L7.87464 7.92067C7.89028 7.93851 7.90955 7.95281 7.93117 7.96261C7.95278 7.97241 7.97624 7.97748 7.99997 7.97748C8.0237 7.97748 8.04716 7.97241 8.06877 7.96261C8.09039 7.95281 8.10966 7.93851 8.1253 7.92067L13.8446 1.41934C13.9501 1.29362 14.0797 1.19026 14.2257 1.11533C14.3717 1.0404 14.5312 0.995412 14.6949 0.983012C14.8585 0.970612 15.023 0.99105 15.1786 1.04312C15.3342 1.0952 15.4779 1.17786 15.6011 1.28624C15.7243 1.39463 15.8247 1.52655 15.8962 1.67427C15.9677 1.82198 16.0089 1.98249 16.0175 2.14638C16.0261 2.31027 16.0019 2.47422 15.9462 2.6286C15.8905 2.78297 15.8045 2.92466 15.6933 3.04534L9.15464 10.4773C9.01027 10.6414 8.83265 10.7728 8.63357 10.863C8.43448 10.9531 8.2185 10.9998 7.99997 11Z' fill='#318FDB')
+                                    span.d-block Next
+                            .flightFare__table__cont
+                                .flightFare__table__header
+                                    .flightFare__table__arrow
+                                        button.viewMore.arrowLeft(type='button')
+                                            svg.m-0.svg1point5(width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M-3.2099e-06 7.99997C-0.00027309 7.78191 0.0459706 7.5663 0.13564 7.36754C0.22531 7.16877 0.356345 6.99141 0.519997 6.8473L7.95466 0.306637C8.20103 0.0999103 8.5185 -0.00222282 8.83919 0.022077C9.15988 0.0463768 9.45833 0.195181 9.67074 0.43667C9.88314 0.67816 9.99263 0.993168 9.9758 1.31434C9.95897 1.6355 9.81715 1.93734 9.58066 2.1553L3.07933 7.87464C3.06148 7.89028 3.04719 7.90955 3.03739 7.93117C3.02759 7.95278 3.02252 7.97624 3.02252 7.99997C3.02252 8.0237 3.02759 8.04716 3.03739 8.06877C3.04719 8.09039 3.06148 8.10966 3.07933 8.1253L9.58066 13.8446C9.70638 13.9501 9.80974 14.0797 9.88467 14.2257C9.9596 14.3717 10.0046 14.5312 10.017 14.6949C10.0294 14.8585 10.0089 15.023 9.95688 15.1786C9.9048 15.3342 9.82214 15.4779 9.71376 15.6011C9.60537 15.7243 9.47345 15.8247 9.32573 15.8962C9.17802 15.9677 9.01751 16.0089 8.85362 16.0175C8.68973 16.0261 8.52578 16.0019 8.3714 15.9462C8.21703 15.8905 8.07534 15.8045 7.95466 15.6933L0.522664 9.15464C0.358607 9.01027 0.227151 8.83265 0.137035 8.63357C0.0469185 8.43448 0.000204682 8.2185 -3.2099e-06 7.99997Z' fill='#318FDB')
+                                            span.ml10 Previous
+
+                                        button.viewMore.arrowRight(type='button')
+                                            svg.m-0.svg1point5(width='11' height='16' viewBox='0 0 11 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M11 8.00003C11.0003 8.21809 10.954 8.4337 10.8644 8.63246C10.7747 8.83123 10.6437 9.00859 10.48 9.1527L3.04534 15.6934C2.79897 15.9001 2.4815 16.0022 2.16081 15.9779C1.84012 15.9536 1.54167 15.8048 1.32926 15.5633C1.11686 15.3218 1.00737 15.0068 1.0242 14.6857C1.04103 14.3645 1.18285 14.0627 1.41934 13.8447L7.92067 8.12536C7.93851 8.10972 7.95281 8.09045 7.96261 8.06883C7.97241 8.04722 7.97748 8.02376 7.97748 8.00003C7.97748 7.9763 7.97241 7.95284 7.96261 7.93123C7.95281 7.90961 7.93851 7.89034 7.92067 7.8747L1.41934 2.15536C1.29362 2.04987 1.19026 1.92032 1.11533 1.77431C1.0404 1.6283 0.995411 1.46879 0.983011 1.30515C0.970612 1.1415 0.991049 0.977033 1.04312 0.821402C1.0952 0.665771 1.17786 0.522119 1.28624 0.39889C1.39463 0.275661 1.52655 0.175343 1.67426 0.10383C1.82198 0.0323181 1.98249 -0.00894646 2.14638 -0.0175353C2.31027 -0.026125 2.47422 -0.00186545 2.6286 0.0538148C2.78297 0.109495 2.92466 0.195473 3.04534 0.306696L10.4773 6.84536C10.6414 6.98972 10.7728 7.16735 10.863 7.36643C10.9531 7.56552 10.9998 7.7815 11 8.00003Z' fill='#318FDB')
+                                            span.ml10 Next
+
+                                    .flightFare__table__group
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+                                        .flightFare__table__cell.bgDarkGreen2
+                                            .flightFare__table__date.colorWhite
+                                                p Return
+                                                p 21 Jul (Wed)
+
+                                .flightFare__table__body
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen.active
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+                                    .flightFare__table__row
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+                                        .flightFare__table__cell.bgLightGreen
+                                            .flightFare__table__price.text-center.colorDarkGreen
+                                                p USD 566.88
+
+        include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '',
+                iconArrowTop: false
+            });
+        script.
+            // header
+            $(".header__toggle").click(function () {
+                $('.navbarBox').addClass('open');
+            });
+            $(".navbarBox__close, .navbarBox__backdrop").click(function () {
+                $('.navbarBox').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.navbarBox__list ul').slideUp(300);
+                $(".navbarBox__title").click(function () {
+                    $(this).toggleClass('active');
+                    $(this).next('.navbarBox__list ul').slideToggle(300);
+                });
+            };
+        script.
+            $("#btnOneWay").click(function () {
+                $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('One way');
+                $('.wayBox .dropdown-item').removeClass('active');
+                $(this).addClass('active');
+
+                $('.t-check-out').addClass('d-none');
+
+                $('.noMulti').removeClass('d-none');
+                $('.multi').addClass('d-none');
+            });
+            $("#btnRoundTrip").click(function () {
+                $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('Round trip');
+                $('.wayBox .dropdown-item').removeClass('active');
+                $(this).addClass('active');
+
+                $('.t-check-out').removeClass('d-none');
+
+                $('.noMulti').removeClass('d-none');
+                $('.multi').addClass('d-none');
+            });
+            $("#btnMulti").click(function () {
+                $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('Multi - cities');
+                $('.wayBox .dropdown-item').removeClass('active');
+                $(this).addClass('active');
+
+                $('.noMulti').addClass('d-none');
+                $('.multi').removeClass('d-none');
+            });
+            $(".inputPlace").click(function () {
+                $(this).next('.suggestion').addClass('open');
+            });
+            $(document).mouseup(function (e) {
+                var suggestion = $('.suggestion');
+                if (!suggestion.is(e.target) && suggestion.has(e.target).length === 0) {
+                    $('.suggestion').removeClass('open');
+                }
+                ;
+            });
+        script.
+            $('.priceBox').click(function () {
+                $('.priceBox').removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.flightItem__table__price').click(function () {
+                $(this).next('.priceBoxMobile').slideToggle(300);
+                $(this).toggleClass('rotate');
+            });
+        script.
+            $('.tripSummary__title').click(function () {
+                $(this).next('.tripSummary__cont').slideToggle(300);
+                $(this).toggleClass('rotate');
+            });
+        script.
+            $('.flightFare__table__cell.bgLightGreen').click(function () {
+                $('.flightFare__table__cell.bgLightGreen').removeClass('active');
+                $(this).addClass('active');
+            });
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 .footer{
   &__top{
-    background-color: #e5e5e5;
+    background-color: rgba(0, 0, 0, 0.04);
     padding: 50px 0;
     @include breakpoint(ipad){
       padding: 3vw 0;
