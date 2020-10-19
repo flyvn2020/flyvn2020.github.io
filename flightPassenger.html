@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>Fly Vietnam Airlines</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/libs/t-datepicker.min.css">
+    <link rel="stylesheet" href="css/libs/t-datepicker-purple.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body ontouchstart="">
+    <main class="wrapper">
+      <div class="flightHeader">
+        <div class="container">
+          <div class="flightHeader__cont">
+            <div class="flightHeader__logo">
+              <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            </div>
+            <div class="flightHeader__step">
+              <div class="flStep">
+                <div class="flStep__item active">
+                  <p class="mb0 colorWhite medium">Select Flight</p>
+                </div>
+                <div class="flStep__item active">
+                  <p class="mb0 colorWhite medium">Passenger</p>
+                </div>
+                <div class="flStep__item">
+                  <p class="mb0 colorWhite medium">Review</p>
+                </div>
+                <div class="flStep__item">
+                  <p class="mb0 colorWhite medium">Payment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="flightPassenger">
+        <div class="container">
+          <div class="title1"><span>Passenger</span></div>
+          <div class="flightPassenger__row">
+            <div class="flightPassenger__left">
+              <div class="formBox">
+                <div class="formBox__header">
+                  <p class="text20 colorWhite medium">Adult 1</p>
+                </div>
+                <div class="formBox__body">
+                  <div class="formBox__item">
+                    <div class="formBox__text">
+                      <p class="text12 colorBlack55">*Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).</p>
+                      <button type="button" data-toggle="modal" data-target="#tipsModal" class="formBox__tip">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path fill="#44B7FF" d="M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z"></path>
+                        </svg><span>Tips on entering your name</span>
+                      </button>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <select class="form-control">
+                          <option>Title 1</option>
+                          <option>Title 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group w-50">
+                        <label class="labelStar">First/Given & Middle Name</label>
+                        <input type="text" placeholder="First/Given &amp; Middle Name" class="form-control">
+                      </div>
+                      <div class="form-group w-50">
+                        <label class="labelStar">Last/ Family Name</label>
+                        <input type="text" placeholder="Last/ Family Name" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="checkbox">
+                        <input id="pp13" type="checkbox">
+                        <label for="pp13">This passenger does not have a first/given name in the passport</label>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="formBox__date">
+                        <label class="labelStar">Date of Birth</label>
+                        <div class="d-flex">
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Month</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Year</option>
+                              <option>2020</option>
+                              <option>2019</option>
+                              <option>2018</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formBox__frequent">
+                      <button type="button"><span>Add frequent Flyer</span>
+                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M0 10L5 5L-4.37114e-07 0L0 10Z" fill="#318FDB"></path>
+                        </svg>
+                      </button>
+                      <div class="frequentBox">
+                        <div class="frequentBox__cont">
+                          <div class="form-group">
+                            <label>Select</label>
+                            <select class="form-control">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="Card Number" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text16 medium mb15 mt15">Passport detail</p>
+                    <div class="formBox__row mb0">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group mb-0">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="formBox">
+                <div class="formBox__header">
+                  <p class="text20 colorWhite medium">Child 1</p>
+                </div>
+                <div class="formBox__body">
+                  <div class="formBox__item">
+                    <div class="formBox__text">
+                      <p class="text12 colorBlack55">*Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).</p>
+                      <button type="button" data-toggle="modal" data-target="#tipsModal" class="formBox__tip">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path fill="#44B7FF" d="M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z"></path>
+                        </svg><span>Tips on entering your name</span>
+                      </button>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <select class="form-control">
+                          <option>Title 1</option>
+                          <option>Title 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group w-50">
+                        <label class="labelStar">First/Given & Middle Name</label>
+                        <input type="text" placeholder="First/Given &amp; Middle Name" class="form-control">
+                      </div>
+                      <div class="form-group w-50">
+                        <label class="labelStar">Last/ Family Name</label>
+                        <input type="text" placeholder="Last/ Family Name" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="checkbox">
+                        <input id="pp135" type="checkbox">
+                        <label for="pp135">This passenger does not have a first/given name in the passport</label>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="formBox__date">
+                        <label class="labelStar">Date of Birth</label>
+                        <div class="d-flex">
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Month</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Year</option>
+                              <option>2020</option>
+                              <option>2019</option>
+                              <option>2018</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formBox__frequent">
+                      <button type="button"><span>Add frequent Flyer</span>
+                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M0 10L5 5L-4.37114e-07 0L0 10Z" fill="#318FDB"></path>
+                        </svg>
+                      </button>
+                      <div class="frequentBox">
+                        <div class="frequentBox__cont">
+                          <div class="form-group">
+                            <label>Select</label>
+                            <select class="form-control">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="Card Number" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text16 medium mb15 mt15">Passport detail</p>
+                    <div class="formBox__row mb0">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group mb-0">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="formBox">
+                <div class="formBox__header">
+                  <p class="text20 colorWhite medium">Infant 1</p>
+                </div>
+                <div class="formBox__body">
+                  <div class="formBox__item">
+                    <div class="formBox__text">
+                      <p class="text12 colorBlack55">*Please make sure that you enter the names of all passengers as shown on passports. This will avoid problems at the airport. Name changes are not permitted once the booking has been finalised. The maximum characters allowed for YOUR FULL NAME are 32. If it's over, please use the short name (i.e: Peter Adam Smith -> Peter A Smith).</p>
+                      <button type="button" data-toggle="modal" data-target="#tipsModal" class="formBox__tip">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path fill="#44B7FF" d="M0.589844 10.58L5.16984 6L0.589844 1.41L1.99984 0L7.99984 6L1.99984 12L0.589844 10.58Z"></path>
+                        </svg><span>Tips on entering your name</span>
+                      </button>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <select class="form-control">
+                          <option>Title 1</option>
+                          <option>Title 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group w-50">
+                        <label class="labelStar">First/Given & Middle Name</label>
+                        <input type="text" placeholder="First/Given &amp; Middle Name" class="form-control">
+                      </div>
+                      <div class="form-group w-50">
+                        <label class="labelStar">Last/ Family Name</label>
+                        <input type="text" placeholder="Last/ Family Name" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="checkbox">
+                        <input id="pp137" type="checkbox">
+                        <label for="pp137">This passenger does not have a first/given name in the passport</label>
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="formBox__date">
+                        <label class="labelStar">Date of Birth</label>
+                        <div class="d-flex">
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Day</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Month</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option>Year</option>
+                              <option>2020</option>
+                              <option>2019</option>
+                              <option>2018</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="formBox__frequent">
+                      <button type="button"><span>Add frequent Flyer</span>
+                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M0 10L5 5L-4.37114e-07 0L0 10Z" fill="#318FDB"></path>
+                        </svg>
+                      </button>
+                      <div class="frequentBox">
+                        <div class="frequentBox__cont">
+                          <div class="form-group">
+                            <label>Select</label>
+                            <select class="form-control">
+                              <option>Select 1</option>
+                              <option>Select 2</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="Card Number" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text16 medium mb15 mt15">Passport detail</p>
+                    <div class="formBox__row mb0">
+                      <div class="form-group">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Passport Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nationality</label>
+                        <input type="text" placeholder="Nationality" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Date of Issued</label>
+                        <input type="text" placeholder="Date of Issued" class="form-control">
+                      </div>
+                      <div class="form-group mb-0">
+                        <label>Date of Expired</label>
+                        <input type="text" placeholder="Date of Expired" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="formBox">
+                <div class="formBox__header">
+                  <p class="text20 colorWhite medium">Contact information</p>
+                </div>
+                <div class="formBox__body">
+                  <div class="formBox__item">
+                    <div class="formBox__text">
+                      <p>(Country Code) + (Phone Number). Ex: (+66) (1234567)</p>
+                      <p class="text12 colorBlack55">* Please fill in your mobile phone number to receive notification or any changes in your flight itinerary.</p>
+                    </div>
+                    <div class="formBox__row">
+                      <div class="form-group">
+                        <label class="labelStar">Country Code</label>
+                        <input type="text" placeholder="Country Code" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="labelStar">Phone Number</label>
+                        <input type="text" placeholder="Phone Number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="labelStar">Your Email</label>
+                        <input type="text" placeholder="Your Email" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="labelStar">Comfirm Email Address</label>
+                        <input type="text" placeholder="Comfirm Email Address" class="form-control">
+                      </div>
+                    </div>
+                    <div class="formBox__frequent">
+                      <button type="button"><span>Special Request</span>
+                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M0 10L5 5L-4.37114e-07 0L0 10Z" fill="#318FDB"></path>
+                        </svg>
+                      </button>
+                      <div class="frequentBox">
+                        <div class="frequentBox__cont">
+                          <div class="d-block w-100">
+                            <textarea placeholder="Your Special Request" class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flightPassenger__btn"><a href="flightReview.html" class="btn btn-orange btn-lg text-uppercase">Continue</a></div>
+            </div>
+            <div class="flightPassenger__right">
+              <div class="tripSummary">
+                <div class="tripSummary__header"><span class="text20 colorWhite medium">Trip summary</span></div>
+                <div class="tripSummary__body">
+                  <div class="tripSummary__group">
+                    <div class="tripSummary__item">
+                      <div class="tripSummary__title"><span class="text16 medium">Passenger</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M1.06254 1.9393L5.43066 7.0368C5.50107 7.11892 5.58841 7.18484 5.68669 7.23003C5.78497 7.27522 5.89186 7.29862 6.00004 7.29862C6.10821 7.29862 6.2151 7.27522 6.31338 7.23003C6.41166 7.18484 6.499 7.11892 6.56941 7.0368L10.9375 1.9393C11.3544 1.45273 11.0088 0.701172 10.3682 0.701172H1.63066C0.990037 0.701172 0.644412 1.45273 1.06254 1.9393Z" fill="black" fill-opacity="0.25"></path>
+                        </svg>
+                      </div>
+                      <div class="tripSummary__cont">
+                        <p class="medium colorBlack65">3 Passenger</p>
+                        <p>2 Adult, 1 child</p>
+                      </div>
+                    </div>
+                    <div class="tripSummary__item">
+                      <div class="tripSummary__title"><span class="text16 medium">Flights</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M1.06254 1.9393L5.43066 7.0368C5.50107 7.11892 5.58841 7.18484 5.68669 7.23003C5.78497 7.27522 5.89186 7.29862 6.00004 7.29862C6.10821 7.29862 6.2151 7.27522 6.31338 7.23003C6.41166 7.18484 6.499 7.11892 6.56941 7.0368L10.9375 1.9393C11.3544 1.45273 11.0088 0.701172 10.3682 0.701172H1.63066C0.990037 0.701172 0.644412 1.45273 1.06254 1.9393Z" fill="black" fill-opacity="0.25"></path>
+                        </svg>
+                      </div>
+                      <div class="tripSummary__cont">
+                        <ul class="tripSummary__trip">
+                          <li>
+                            <p class="medium text16">HAN - BKK</p>
+                            <p class="p1"><span>Wed, 15 Jan 2020</span><span>08:45 - 11:00</span></p>
+                            <p class="p1"><span>Duration: 02h05m</span><span class="medium text12">1 stop (SGN)</span></p>
+                            <div class="flightTime__code__item mr-0"><img src="images/logo-vnairline.png"><span class="ml5">VN 231</span></div>
+                            <div class="tripSummary__label colorWhite medium bgDarkGreen1">Eco promotion</div>
+                            <div class="flexGroup1 mt15">
+                              <p class="medium">Fare</p>
+                              <p class="medium colorYellow">USD 566.88</p>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="medium text16">HAN - BKK</p>
+                            <p class="p1"><span>Wed, 15 Jan 2020</span><span>08:45 - 11:00</span></p>
+                            <p class="p1"><span>Duration: 02h05m</span><span class="medium text12">1 stop (SGN)</span></p>
+                            <div class="flightTime__code__item mr-0"><img src="images/logo-vnairline.png"><span class="ml5">VN 231</span></div>
+                            <div class="tripSummary__label colorWhite medium bgDarkGreen2">Economy saver</div>
+                            <div class="flexGroup1 mt15">
+                              <p class="medium">Fare</p>
+                              <p class="medium colorYellow">USD 566.88</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="tripSummary__item">
+                      <div class="tripSummary__title"><span class="text16 medium">Price</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1">
+                          <path d="M1.06254 1.9393L5.43066 7.0368C5.50107 7.11892 5.58841 7.18484 5.68669 7.23003C5.78497 7.27522 5.89186 7.29862 6.00004 7.29862C6.10821 7.29862 6.2151 7.27522 6.31338 7.23003C6.41166 7.18484 6.499 7.11892 6.56941 7.0368L10.9375 1.9393C11.3544 1.45273 11.0088 0.701172 10.3682 0.701172H1.63066C0.990037 0.701172 0.644412 1.45273 1.06254 1.9393Z" fill="black" fill-opacity="0.25"></path>
+                        </svg>
+                      </div>
+                      <div class="tripSummary__cont">
+                        <ul class="tripSummary__price">
+                          <li>
+                            <p class="medium">Adult:</p>
+                            <p><span>2x&nbsp;</span><span class="colorYellow medium">USD 1233.76</span></p>
+                          </li>
+                          <li>
+                            <p class="medium">Child:</p>
+                            <p><span>2x&nbsp;</span><span class="colorYellow medium">USD 1233.76</span></p>
+                          </li>
+                          <li class="liTotal">
+                            <p class="medium">Total</p>
+                            <p><span class="colorYellow medium">USD 16233.88</span></p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flexGroup2 mt15">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg2">
+                  <path d="M16.0005 31.7053C17.7753 30.9367 19.4721 29.999 21.0673 28.9053H10.9336C12.5288 29.999 14.2256 30.9366 16.0005 31.7053Z" fill="#0F5A5E"></path>
+                  <path d="M28.4671 7.68807C27.7511 7.77213 27.0309 7.81507 26.31 7.81663C22.4749 7.88401 18.7688 6.43238 15.9997 3.77832C13.2309 6.43301 9.52469 7.88526 5.68938 7.81832C4.96844 7.81701 4.24819 7.77407 3.53226 7.68976C3.19707 11.2308 3.68601 14.8013 4.96082 18.1218C5.02457 18.2858 5.00763 18.4703 4.91513 18.6201H27.0814C26.9889 18.4703 26.9719 18.2859 27.0358 18.1218C28.3116 14.8009 28.8015 11.2298 28.4671 7.68807Z" fill="#0F5A5E"></path>
+                  <path d="M3.94926 18.6188C3.93214 18.5965 3.91664 18.573 3.90295 18.5485C2.49395 14.866 1.9977 10.8971 2.45664 6.98102C2.47401 6.82715 2.55314 6.68696 2.67583 6.59246C2.79851 6.49796 2.95426 6.45734 3.10751 6.47984C3.96326 6.60677 4.82701 6.67165 5.69208 6.67415C9.41701 6.74215 13.0023 5.2574 15.5886 2.57584C15.6963 2.46446 15.8446 2.40152 15.9995 2.40152C16.1545 2.40152 16.3027 2.4644 16.4104 2.57584C18.9968 5.25852 22.5829 6.7439 26.3087 6.67584C27.1738 6.67315 28.0375 6.60821 28.8933 6.48152C29.0464 6.45902 29.2023 6.49965 29.3249 6.59415C29.4476 6.68859 29.5268 6.82884 29.5441 6.98271C30.0023 10.899 29.5051 14.868 28.095 18.5501C28.0841 18.574 28.0713 18.5969 28.0567 18.6187H29.2904C30.8723 14.2703 31.2554 9.5764 30.3995 5.02902C21.7481 7.05477 17.4201 2.33765 15.9996 0.295898C14.579 2.33759 10.2539 7.0559 1.59958 5.02902C0.744452 9.57665 1.12833 14.2705 2.71101 18.6187H3.94926V18.6188Z" fill="#0F5A5E"></path>
+                  <path d="M30.2857 19.7617H1.71431C0.7675 19.7617 0 20.5292 0 21.476V26.0474C0 26.9942 0.7675 27.7617 1.71431 27.7617H30.2857C31.2325 27.7617 32.0001 26.9942 32.0001 26.0474V21.476C32 20.5292 31.2325 19.7617 30.2857 19.7617ZM7.98838 25.6277C7.93606 25.8275 7.78006 25.9835 7.58025 26.0358C7.38044 26.0882 7.168 26.0285 7.0245 25.88L5.71419 24.5697L4.40387 25.88C4.17969 26.0966 3.82325 26.0935 3.60281 25.8731C3.38238 25.6527 3.37931 25.2963 3.59588 25.072L4.90619 23.7617L3.59588 22.4514C3.37931 22.2272 3.38244 21.8708 3.60281 21.6503C3.82325 21.4299 4.17963 21.4268 4.40387 21.6434L5.71419 22.9537L7.0245 21.6434C7.24869 21.4268 7.60512 21.43 7.82556 21.6503C8.046 21.8708 8.04906 22.2272 7.8325 22.4514L6.52219 23.7617L7.8325 25.072C7.98112 25.2155 8.04069 25.4279 7.98838 25.6277ZM14.8456 25.6277C14.7933 25.8275 14.6372 25.9835 14.4374 26.0358C14.2376 26.0882 14.0252 26.0285 13.8818 25.88L12.5714 24.5697L11.2611 25.88C11.0369 26.0966 10.6805 26.0935 10.4601 25.8731C10.2396 25.6527 10.2366 25.2963 10.4531 25.072L11.7634 23.7617L10.4531 22.4514C10.2366 22.2272 10.2397 21.8708 10.4601 21.6503C10.6805 21.4299 11.0369 21.4268 11.2611 21.6434L12.5714 22.9537L13.8818 21.6434C14.1059 21.4268 14.4624 21.43 14.6828 21.6503C14.9032 21.8708 14.9063 22.2272 14.6897 22.4514L13.3794 23.7617L14.6897 25.072C14.8383 25.2155 14.8978 25.4279 14.8456 25.6277ZM21.7027 25.6277C21.6504 25.8275 21.4944 25.9835 21.2946 26.0358C21.0948 26.0882 20.8823 26.0285 20.7389 25.88L19.4286 24.5697L18.1182 25.88C17.8941 26.0966 17.5376 26.0935 17.3172 25.8731C17.0968 25.6527 17.0937 25.2963 17.3102 25.072L18.6206 23.7617L17.3102 22.4514C17.0937 22.2272 17.0968 21.8708 17.3172 21.6503C17.5376 21.4299 17.894 21.4268 18.1182 21.6434L19.4286 22.9537L20.7389 21.6434C20.9631 21.4268 21.3195 21.43 21.5399 21.6503C21.7604 21.8708 21.7634 22.2272 21.5469 22.4514L20.2366 23.7617L21.5469 25.072C21.6954 25.2155 21.755 25.4279 21.7027 25.6277ZM28.5598 25.6277C28.5075 25.8275 28.3515 25.9835 28.1517 26.0358C27.9519 26.0882 27.7394 26.0285 27.596 25.88L26.2857 24.5697L24.9754 25.88C24.7512 26.0966 24.3948 26.0935 24.1743 25.8731C23.9539 25.6527 23.9508 25.2963 24.1674 25.072L25.4777 23.7617L24.1674 22.4514C23.9508 22.2272 23.9539 21.8708 24.1743 21.6503C24.3948 21.4299 24.7511 21.4268 24.9754 21.6434L26.2857 22.9537L27.596 21.6434C27.8202 21.4268 28.1766 21.43 28.3971 21.6503C28.6175 21.8708 28.6206 22.2272 28.404 22.4514L27.0937 23.7617L28.404 25.072C28.5526 25.2155 28.6121 25.4279 28.5598 25.6277Z" fill="#0F5A5E"></path>
+                </svg><span class="colorDarkGreen ml15 flex1">We have a responsibility to protect your information</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="tipsModal" class="modal fade">
+        <div class="modal-dialog modal-tips">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" data-dismiss="modal" class="close">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg1point5">
+                  <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="black" fill-opacity="0.55"></path>
+                </svg>
+              </button>
+              <div class="modal-tips__cont">
+                <div class="modal-tips__text mb15">
+                  <h3 class="mb15 mt15 colorDarkGreen">Tips on entering your name</h3>
+                  <p>Enter your full name just as it appears on your passport. Use only alphabetical characters (A to Z), with a maximum of 25 characters for your first/given name, and 30 characters for your last/family name</p>
+                </div>
+                <div class="tipsBox">
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>No first name</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If you don't have a first name, check the box stating "This passenger does not have a first/given name".</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Phuong</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" disabled="disabled" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>No last name</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If you don’t have a last name, check the box stating “This passenger does not have a first/given name”. Then enter your first name in the last/family name field.</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Phuong</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" disabled="disabled" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>Last name contains a single letter</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If your last name is made up of only one letter, double the letter in the last/given name field.</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Join K</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>Name contains special charaters</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Join K</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>Name contains a suffix</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Join K</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>First name is too long</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Join K</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tipsBox__item">
+                    <button type="button" class="tipsBox__btn"><span>Last name is too long</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="tipsBox__body">
+                      <div class="tipsBox__cont">
+                        <p class="text14 colorBlack85 mb15">If your name is made up of special characters such as hyphens or apostrophes, remove them when you enter your name</p>
+                        <p class="text14 colorBlack85">Name on the travel document:</p>
+                        <p class="text16 colorBlack85 medium mb15">Join K</p>
+                        <div class="form-group">
+                          <label class="labelStar">First/Given</label>
+                          <input type="text" placeholder="First/Given" class="form-control">
+                        </div>
+                        <div class="checkbox mb15">
+                          <input id="pp11" type="checkbox">
+                          <label for="pp11">This passenger does not have a first/given name in the passport</label>
+                        </div>
+                        <div class="form-group">
+                          <label class="labelStar">Last/Family Name</label>
+                          <input type="text" value="Phuong" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__list">
+            <ul>
+              <li class="liTitle text16 medium mb15">FlyVietnamAirlines</li>
+              <li><a href="aboutUs.html">About Us</a></li>
+              <li><a href="termsOfUse.html">Terms of Use</a></li>
+              <li><a href="policy.html">Privacy Policy</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contactUs.html">Contact us</a></li>
+            </ul>
+            <ul>
+              <li class="liTitle text16 medium mb15">Travel Information</li>
+              <li><a href="newAndUpdate.html">News & Updates</a></li>
+              <li><a href="baggageInfo.html">Baggage Information</a></li>
+              <li><a href="flightRoutes.html">Flight Routes</a></li>
+              <li><a href="fleet.html">Fleet Revitalization</a></li>
+              <li><a href="favDes.html">Favourite Destinations</a></li>
+            </ul>
+            <ul>
+              <li class="liTitle text16 medium mb15">Manage Booking</li>
+              <li><a href="bookingStatus.html">Booking Status</a></li>
+              <li><a href="fareRules.html">Fare Rules</a></li>
+              <li><a href="paymentGuide.html">Payment Guide</a></li>
+              <li><a href="refundRequest.html">Refund Request</a></li>
+              <li><a href="bookingChange.html">Booking Change</a></li>
+            </ul>
+            <ul>
+              <li class="liTitle text16 medium mb15">Extra Services</li>
+              <li><a href="hotels.html">Hotels</a></li>
+              <li><a href="tours.html">Tours</a></li>
+              <li><a href="carRentals.html">Car Rentals</a></li>
+            </ul>
+            <ul>
+              <li class="liTitle text16 medium mb15">Welcome to FlyVietnamAirlines</li>
+              <li>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's, Lorem Ipsum has been the industry's standard</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <p class="colorWhite mb0">Copyright © 2020 All Rights Reserved.</p>
+            </div>
+            <div class="col-6">
+              <div class="footer__group">
+                <div class="footer__icon">
+                  <ul>
+                    <li><a href="#"><img src="images/i-card.png"></a></li>
+                    <li><a href="#"><img src="images/i-mastercard.png"></a></li>
+                    <li><a href="#"><img src="images/i-jcb.png"></a></li>
+                  </ul>
+                </div>
+                <div class="footer__icon">
+                  <ul>
+                    <li><a href="#"><img src="images/i-facebook.png"></a></li>
+                    <li><a href="#"><img src="images/i-google.png"></a></li>
+                    <li><a href="#"><img src="images/i-youtube.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/t-datepicker.min.js"></script>
+    <script>
+      $('.t-datepicker').tDatePicker({
+          autoClose: true,
+          titleCheckIn: 'Depart',
+          titleCheckOut: 'Return',
+          titleDateRange: 'day',
+          titleDateRanges: 'days',
+          iconDate: '',
+          iconArrowTop: false
+      });
+    </script>
+    <script>
+      // header
+      $(".header__toggle").click(function () {
+          $('.navbarBox').addClass('open');
+      });
+      $(".navbarBox__close, .navbarBox__backdrop").click(function () {
+          $('.navbarBox').removeClass('open');
+      });
+      if (screen.width < 768) {
+          $('.navbarBox__list ul').slideUp(300);
+          $(".navbarBox__title").click(function () {
+              $(this).toggleClass('active');
+              $(this).next('.navbarBox__list ul').slideToggle(300);
+          });
+      };
+    </script>
+    <script>
+      $("#btnOneWay").click(function () {
+          $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('One way');
+          $('.wayBox .dropdown-item').removeClass('active');
+          $(this).addClass('active');
+      
+          $('.t-check-out').addClass('d-none');
+      
+          $('.noMulti').removeClass('d-none');
+          $('.multi').addClass('d-none');
+      });
+      $("#btnRoundTrip").click(function () {
+          $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('Round trip');
+          $('.wayBox .dropdown-item').removeClass('active');
+          $(this).addClass('active');
+      
+          $('.t-check-out').removeClass('d-none');
+      
+          $('.noMulti').removeClass('d-none');
+          $('.multi').addClass('d-none');
+      });
+      $("#btnMulti").click(function () {
+          $(this).parents('.dropdown').find('.searchBox__toggle').find('span').text('Multi - cities');
+          $('.wayBox .dropdown-item').removeClass('active');
+          $(this).addClass('active');
+      
+          $('.noMulti').addClass('d-none');
+          $('.multi').removeClass('d-none');
+      });
+      $(".inputPlace").click(function () {
+          $(this).next('.suggestion').addClass('open');
+      });
+      $(document).mouseup(function (e) {
+          var suggestion = $('.suggestion');
+          if (!suggestion.is(e.target) && suggestion.has(e.target).length === 0) {
+              $('.suggestion').removeClass('open');
+          }
+          ;
+      });
+    </script>
+    <script>
+      $('.tripSummary__title').click(function () {
+          $(this).next('.tripSummary__cont').slideToggle(300);
+          $(this).toggleClass('rotate');
+      });
+    </script>
+    <script>
+      $('.formBox__frequent > button').click(function () {
+          $(this).next('.frequentBox').slideToggle(300);
+          $(this).toggleClass('rotate');
+      });
+    </script>
+    <script>
+      $(".tipsBox__btn").on("click", function () {
+          if ($(this).hasClass("active")) {
+              $(this).removeClass("active");
+              $(this)
+                  .siblings(".tipsBox__body")
+                  .slideUp(200);
+              $(".tipsBox__btn i")
+                  .removeClass("fa-chevron-up")
+                  .addClass("fa-chevron-down");
+          } else {
+              $(".tipsBox__btn i")
+                  .removeClass("fa-chevron-up")
+                  .addClass("fa-chevron-down");
+              $(this)
+                  .find("i")
+                  .removeClass("fa-chevron-down")
+                  .addClass("fa-chevron-up");
+              $(".tipsBox__btn").removeClass("active");
+              $(this).addClass("active");
+              $(".tipsBox__body").slideUp(200);
+              $(this)
+                  .siblings(".tipsBox__body")
+                  .slideDown(200);
+          }
+      });
+    </script>
+  </body>
+</html>
