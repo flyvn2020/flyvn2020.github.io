@@ -1,7 +1,7 @@
 .formBox{
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   @include breakpoint(ipad){
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
   }
   &__header{
     background-color: $dark-green;
@@ -14,16 +14,13 @@
       border-radius: .2vw .2vw 0 0;
     }
   }
-  &__body{}
-  &__item{
+  &__body{
     background: #FFFFFF;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 4px 4px;
-    margin-bottom: 15px;
     padding: 15px;
     @include breakpoint(ipad){
       padding: 2vw;
-      margin-bottom: 1vw;
       border-radius: 0 0 .2vw .2vw;
     }
   }
@@ -176,7 +173,7 @@
     }
   }
   &__sub{
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: $light-green;
     border-radius: 4px;
     padding: 15px;
     @include breakpoint(ipad){
@@ -246,55 +243,17 @@
   }
   &__itinerary{
     &__trip{
-      padding-left: 15px;
-      position: relative;
-      margin: 15px 0;
-      @include breakpoint(ipad){
-        padding-left: 2vw;
-        margin: 1vw 0;
+      @include breakpoint(sm){
+        display: flex;
       }
-      @include breakpoint(lg){
-        padding-left: 30px;
-      }
-      &:before{
-        content: '';
-        width: 1px;
-        height: 75%;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.25);
+      .flightDuration{
+        align-items: initial;
+        height: auto;
         @include breakpoint(ipad){
-          top: .9vw;
+          margin-left: 2vw;
         }
-      }
-      li{
-        position: relative;
-        &:first-child,
-        &:last-child{
-          &:before{
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: -20px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            border: 1px solid rgba(0, 0, 0, 0.25);
-            background-color: #fff;
-            @include breakpoint(ipad){
-              width: .9vw;
-              height: .9vw;
-              top: .3vw;
-              left: -2.4vw;
-            }
-          }
-        }
-        &:nth-child(2){
-          padding: 30px 0;
-          @include breakpoint(ipad){
-            padding: 2vw 0;
-          }
+        @include breakpoint(lg){
+          margin-left: 30px;
         }
       }
     }
@@ -417,13 +376,13 @@
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background:$purple;
+      background:$dark-green;
       border-radius: 16px;
     }
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: $purple;
+      background: $dark-green;
     }
     p{
       margin-bottom: 15px;
@@ -472,6 +431,15 @@
     }
     > label{
       font-weight: 400;
+    }
+  }
+  .borderBottom{
+    border-bottom: 1px dashed $border-color;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    @include breakpoint(ipad){
+      padding-bottom: 1vw;
+      margin-bottom: 1vw;
     }
   }
 }

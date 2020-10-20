@@ -78,6 +78,12 @@ h5 {
     margin-top: .5vw;
   }
 }
+.mt10{
+  margin-top: 10px;
+  @include breakpoint(ipad){
+    margin-top: .8vw;
+  }
+}
 
 .mt15 {
   margin-top: 15px;
@@ -267,13 +273,21 @@ h5 {
     font-size: 1.3vw;
   }
 }
-
+.text24 {
+  font-size: 24px;
+  @include breakpoint(ipad) {
+    font-size: 1.5vw;
+  }
+}
 .semibold {
   font-weight: $semibold;
 }
 
 .medium {
   font-weight: $medium;
+}
+.regular{
+  font-weight: 400;
 }
 
 .textCenter {
