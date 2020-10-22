@@ -1,0 +1,144 @@
+- var page = "index1";
+doctype html
+html(lang="vi")
+    head
+        include jades/head
+    body(ontouchstart='')
+        include jades/header
+        main.wrapper
+            section.fareRules
+                .homeBanner(style='background-image: url(images/fare-rules.jpg)')
+                    .homeBanner__backdrop
+                    .homeBanner__cont.colorWhite.textCenter
+                        h2.mb5 Fare Rules
+                        p.mb0 Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                .container
+                    ul.tabInfo
+                        li
+                            a(href='bookingStatus.html')
+                                span Booking status
+                        li
+                            a(href='refundRequest.html')
+                                span Refund request
+                        li
+                            a(href='paymentGuide.html')
+                                span Payment guide
+                        li.active
+                            a(href='fareRules.html')
+                                span Fare rules
+                        li
+                            a(href='bookingChange.html')
+                                span Booking change
+
+
+
+                .fareRules__main
+                   .container
+                       .fareRules__cont
+                           h3.text20.medium.mb15 Fare Rules
+                           p.medium Name change: Not permitted. Please go to refund process instead.
+                           p • Misspelling name: Must be the same person and apply the same fee as refund for promotional fares and nonrefundable fares - apply refund fee of refundable fare in the same sector.
+                           p • Depending our the fare type, you may request to cancel or change your current ticket to other travel date or flight title with same ticket class or higher classes (not allowed downing grade to lower classes) and charges (change/refund fee + different fee between two flights - if available) should be applied:
+                           table
+                               thead.textCenter
+                                   tr.head1
+                                       td.green1(rowspan='2') CONDITIONS
+                                       td.green1(colspan='5') FARE TYPE
+                                   tr.head2
+                                       td.green2(colspan='1') Eco Promotion
+                                       td.green1(colspan='1') Economy Saver
+                                       td.green3(colspan='1') Economy
+                                       td.green4(colspan='1') Premium Economy
+                                       td.green5(colspan='1') Business
+                               tbody
+                                   tr
+                                       td.medium Booking class
+                                       td.textCenter (L, W, V, S)
+                                       td.textCenter (K,T)
+                                       td.textCenter (Q,H, M,Y,B)
+                                       td.textCenter (U)
+                                       td.textCenter (J, Z, D, C)
+                                   tr
+                                       td.medium Refund
+                                       td Passengers are allowed to change tickets before the departure date for the applicable fee and are not allowed to change tickets on / after the departure date
+                                           p.mt15 Charge difference in fare, if any
+                                       td Passengers are allowed to change tickets before/on/after the departure date for the applicable fee
+                                           p.mt15 Charge difference in fare, if any
+                                       td Passengers are allowed to change tickets before/on/after the departure date for the applicable fee
+                                           p.mt15 Charge difference in fare, if any
+                                       td Passengers are allowed to change tickets before/on/after the departure date for the applicable fee
+                                           p.mt15 Charge difference in fare, if any
+                                       td Passengers are allowed to change tickets before/on/after the departure date for the applicable fee
+                                           p.mt15 Charge difference in fare, if any
+                                   tr
+                                       td.medium Change
+                                       td Passengers are not refundable in any case
+                                       td Passengers are refunded for cancellation before/on/after the departure date
+                                       td Passengers are refunded for cancellation before/on/after the departure date
+                                       td Passengers are refunded for cancellation before/on/after the departure date
+                                       td Passengers are refunded for cancellation before/on/after the departure date
+                                   tr
+                                       td.medium Service
+                                       td Economy Class
+                                       td Economy Class
+                                       td Economy Class
+                                       td Premium Class
+                                       td Business Class
+                                   tr
+                                       td.medium Now-show
+                                       td The No-show fee is 50% of the fare
+                                       td The No-show fee is 50% of the fare
+                                       td The No-show fee is 50% of the fare
+                                       td The No-show fee is 50% of the fare
+                                       td The No-show fee is 50% of the fare
+                           p.medium Change fee:
+                           p •    Change fee is not permitted to refund.
+                           p •    Change fee rate depending on the route and different fee between original booking and new booking, please contact us via website https://www.flythaiairways.com/ or email support 24/7: reservations@flythaiairways.com for support on change procedure and fee.
+                           p •    Multiple change fees: Highest change fee of all change fare component applied.
+                           p.medium Cancellation:
+                           p •    The cancellation fee depending on the route, please contact us via website https://www.flythaiairways.com/ or email support 24/7: reservations@flythaiairways.com for support on cancellation fee.
+                           p •    We support passengers to cancel their tickets right after issuance with charges (advised on request) and conditions applied (ticket cancellation request should be sent to us within the issued date and before 23:00 PM following Thailand Time).
+                           p.medium Combination:
+                           p •    Permitted with most restricted condition applied
+                           p •    Combination fare between promotion and other classes will not be permitted for cancellation or refund
+                           p.medium Note:
+                           p •    Taxes and Airport fee is not refundable for promotion class.
+                           p •    Combination fare between Web promotion and other classes will not be permitted for cancellation or refund.
+                           p •    The above general fare rules are for reference only. Specific fare rules may vary and different from the general fare rules and provided during the booking process. Please contact us via website https://www.flythaiairways.com/ or email support 24/7: reservations@flythaiairways.com for further support
+
+include jades/footer
+        script(src='js/jquery-3.3.1.min.js')
+        script(src='js/popper.min.js')
+        script(src='/js/bootstrap.min.js')
+        script(src='/js/slick.min.js')
+        script(src='/js/t-datepicker.min.js')
+
+        script.
+            $('.t-datepicker').tDatePicker({
+                autoClose: true,
+                titleCheckIn: 'Depart',
+                titleCheckOut: 'Return',
+                titleDateRange: 'day',
+                titleDateRanges: 'days',
+                iconDate: '<i class="fas fa-calendar-alt"></i>',
+                iconArrowTop: false
+            });
+        script.
+            // header
+            $(".header__toggle").click(function () {
+                $('.navbarBox').addClass('open');
+            });
+            $(".navbarBox__close, .navbarBox__backdrop").click(function () {
+                $('.navbarBox').removeClass('open');
+            });
+            if (screen.width < 768) {
+                $('.navbarBox__list ul').slideUp(300);
+                $(".navbarBox__title").click(function () {
+                    $(this).toggleClass('active');
+                    $(this).next('.navbarBox__list ul').slideToggle(300);
+                });
+            };
+
+
+
+
