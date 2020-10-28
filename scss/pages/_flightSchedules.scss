@@ -29,6 +29,7 @@
         .flightItem__table__cell{
           padding: 0;
           transition: 0.3s;
+          cursor: pointer;
           p:nth-child(2){
             white-space: nowrap;
           }
