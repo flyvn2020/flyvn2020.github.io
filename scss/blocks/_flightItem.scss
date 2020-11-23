@@ -93,13 +93,26 @@
     &__header {
       display: flex;
       border-radius: 4px 4px 0 0;
-      overflow: hidden;
       margin-bottom: 1px;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 9;
       @include breakpoint(ipad) {
         border-radius: .2vw .2vw 0 0;
+      }
+      .flightItem__table__left{
+        .flightItem__table__cell{
+          &:first-child{
+            border-top-left-radius: 4px;
+          }
+        }
+      }
+      .flightItem__table__right{
+        .flightItem__table__cell{
+          &:last-child{
+            border-top-right-radius: 4px;
+          }
+        }
       }
     }
 
@@ -162,6 +175,71 @@
       @include breakpoint(ipad) {
         top: .5vw;
         right: .5vw;
+      }
+      > svg{
+        cursor: pointer;
+      }
+      &:hover{
+        .flightItem__table__tooltip{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__tooltip{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      z-index: 15;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .1s;
+      @include breakpoint(ipad){
+        width: 25vw;
+        border-radius: .2vw;
+        bottom: calc(100% + 1.1vw);
+      }
+      @include breakpoint(lg){
+        width: 334px;
+        border-radius: 4px;
+        bottom: calc(100% + 15px);
+      }
+      &:before{
+        content: '';
+        border-width: 10px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @include breakpoint(ipad){
+          bottom: -2vw;
+        }
+        @include breakpoint(lg){
+          bottom: -19px;
+        }
+      }
+      .dTitle{
+        color: #fff;
+        text-align: center;
+        border-radius: 4px 4px 0 0;
+        @include breakpoint(ipad){
+          padding: .5vw 1vw;
+        }
+        @include breakpoint(lg){
+          padding: 5px 15px;
+        }
+      }
+      .dCont{
+        @include breakpoint(ipad){
+          padding: .5vw 1vw;
+        }
+        @include breakpoint(lg){
+          padding: 5px 15px;
+        }
       }
     }
 
